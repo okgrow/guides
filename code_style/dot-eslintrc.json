@@ -2,8 +2,10 @@
   "env": {
     "es6": true
   },
-  "ecmaFeatures": {
+  "parserOptions": {
+    "ecmaFeatures": {
       "jsx": true
+    },
   },
   "rules": {
     "no-alert": 0,
