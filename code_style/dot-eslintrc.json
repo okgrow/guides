@@ -5,7 +5,7 @@
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
-    },
+    }
   },
   "rules": {
     "no-alert": 0,
@@ -155,7 +155,7 @@
     "generator-star-spacing": 0,
     "global-require": 0,
     "guard-for-in": 0,
-    "handle-callback-err": [2, "^.*(e|E)rr" ], // Rule configured to warn if an unhandled error is detected where the name of the error variable matches any string that contains err or Err (e. g. err, error, anyError, some_err will match).
+    "handle-callback-err": [2, "^.*(e|E)rr" ],
     "id-length": 0,
     "indent": 0,
     "init-declarations": 0,
@@ -237,6 +237,6 @@
     "react/require-extension": 1,
     "react/self-closing-comp": 1,
     "react/sort-comp": 1,
-    "react/wrap-multilines": 1,
+    "react/wrap-multilines": 1
   }
 }
