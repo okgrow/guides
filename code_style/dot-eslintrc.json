@@ -1,4 +1,7 @@
 {
+  "plugins": [
+    "react"
+  ],
   "env": {
     "es6": true
   },
@@ -124,7 +127,6 @@
     "no-warning-comments": 0,
     "no-with": 0,
     "no-magic-numbers": 0,
-
     "array-bracket-spacing": 0,
     "array-callback-return": 0,
     "arrow-body-style": 0,
