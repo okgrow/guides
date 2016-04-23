@@ -1,6 +1,10 @@
 {
   "plugins": [
+    "meteor",
     "react"
+  ],
+  "extends": [
+    "plugin:meteor/recommended"
   ],
   "env": {
     "es6": true
