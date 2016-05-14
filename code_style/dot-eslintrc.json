@@ -4,6 +4,7 @@
     "react"
   ],
   "extends": [
+    "airbnb/base",
     "eslint:recommended",
     "plugin:meteor/recommended",
     "plugin:react/recommended"
