@@ -13,7 +13,12 @@
   },
   "parserOptions": {
     "ecmaFeatures": {
-      "jsx": true
+      "modules": true,
+      "jsx": true,
+      "destructuring": true,
+      "spread": true,
+      "arrowFunctions": true,
+      "blockBindings": true
     }
   },
   "rules": {
