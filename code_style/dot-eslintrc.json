@@ -24,6 +24,9 @@
   },
   "rules": {
     "semi": 2,
-    "no-console": 1
+    "no-console": 1,
+    "import/no-unresolved": [
+        2, { "ignore": ["^meteor/"] }
+      ]
   }
 }
