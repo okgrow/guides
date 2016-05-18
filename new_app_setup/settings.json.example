@@ -1,0 +1,14 @@
+{
+  "aws" : {
+    "accessKeyId" : "AKIAI7G3RNFA4L2EHJ7A",
+    "secretAccessKey" : "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",
+    "bucketName" : "okgrow-test",
+    "bucketUrl" : "https://okgrow-test.s3.amazonaws.com/"
+  },
+  "public": {
+    "analyticsSettings": {
+      "Google Analytics" : {"trackingId": "UA-67489410-1"},
+      "Mixpanel"         : {"token":  "891dca8a6b8138412cd4001f63658da6", "people": true}
+    }
+  }
+}
