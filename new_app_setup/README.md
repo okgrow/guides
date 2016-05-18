@@ -15,7 +15,7 @@ New App Setup
     * TODO
 1. Configure Mandrill
     * TODO
-        * set email address to <project>@okgrow.com) https://mandrillapp.com/account/contact
+        * set email address to <project>@okgrow.com https://mandrillapp.com/account/contact
         * Turn off weekly account activity email
 1. Configure Kadira
     * Create a new app in Kadira Dashboard
