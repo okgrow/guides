@@ -17,6 +17,7 @@ Semaphore config:
       * Go to https://semaphoreci.com/okgrow/<PROJECT_NAME>/settings
       * Set the Node version to node.js 0.12
       * add each of these lines under setup
+
 ```
 curl -o meteor_install_script.sh https://install.meteor.com/
 chmod +x meteor_install_script.sh
@@ -28,6 +29,7 @@ git submodule init
 git submodule update
 cp settings.json.example settings.json
 ```
+
       * add the test runner under thread
           * TODO
   1. In Meteor Accounts: add accountssemaphoredeploy user as a collaborator the client organization
