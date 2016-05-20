@@ -25,8 +25,12 @@
   "rules": {
     "semi": 2,
     "no-console": 1,
+    "react-in-jsx-scope": 0,
+    "meteor/eventmap-params": [
+        2, { "templateInstanceParamName": "instance" }
+      ],
     "import/no-unresolved": [
         2, { "ignore": ["^meteor/"] }
-      ]
+      ],
   }
 }
