@@ -11,7 +11,7 @@ WARNING this will overwrite your current ``~/.eslintrc.json` if you have one.
 
 `ln -s THIS_REPO/code_style/dot-eslintrc.json ~/.eslintrc.json`
 
-To install eslint: `npm install -g eslint eslint-plugin-meteor eslint-plugin-react eslint-config-airbnb`
+To install eslint: `npm install -g eslint eslint-plugin-meteor eslint-plugin-react eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y`
 
 Atom setup:
 
