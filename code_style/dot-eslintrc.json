@@ -26,6 +26,7 @@
     "semi": 2,
     "no-console": 1,
     "no-undef": 0,
+    "comma-dangle": 0,
     "quotes": [
         2, "double", { "avoidEscape": true, "allowTemplateLiterals": true}
       ],
