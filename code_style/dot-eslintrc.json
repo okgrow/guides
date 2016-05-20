@@ -26,6 +26,9 @@
     "semi": 2,
     "no-console": 1,
     "no-undef": 0,
+    "quotes": [
+        2, "double", { "avoidEscape": true, "allowTemplateLiterals": true}
+      ],
     "react/react-in-jsx-scope": 0,
     "meteor/eventmap-params": [
         2, { "templateInstanceParamName": "instance" }
