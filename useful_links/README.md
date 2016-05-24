@@ -20,3 +20,4 @@ Useful Links
 ### React
 
 * https://blog.risingstack.com/react-js-best-practices-for-2016/ - Best practices for React
+* https://github.com/coryhouse/react-slingshot - React starter kit
