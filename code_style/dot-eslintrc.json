@@ -25,9 +25,8 @@
   "rules": {
     "semi": 2,
     "no-console": 1,
-    "comma-dangle": 0,
     "quotes": [
-        2, "double", { "avoidEscape": true, "allowTemplateLiterals": true}
+        2, "double", { "avoidEscape": true, "allowTemplateLiterals": true }
       ],
     "react/no-danger": 1,
     "react/react-in-jsx-scope": 0,
