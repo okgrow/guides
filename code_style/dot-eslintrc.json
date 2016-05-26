@@ -14,12 +14,12 @@
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
-      "modules": true,
       "jsx": true,
-      "destructuring": true,
       "spread": true,
-      "arrowFunctions": true,
-      "blockBindings": true
+      "modules": true,
+      "blockBindings": true,
+      "destructuring": true,
+      "arrowFunctions": true
     }
   },
   "rules": {
