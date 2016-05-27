@@ -14,27 +14,22 @@
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true,
-      "spread": true,
-      "modules": true,
+      "arrowFunctions": true,
       "blockBindings": true,
       "destructuring": true,
-      "arrowFunctions": true
+      "jsx": true,
+      "modules": true,
+      "spread": true
     }
   },
   "rules": {
-    "semi": 2,
+    "import/no-unresolved": [2, { "ignore": ["^meteor/"] }],
+    "meteor/eventmap-params": [2, { "templateInstanceParamName": "instance" }],
     "no-console": 1,
-    "quotes": [
-        2, "double", { "avoidEscape": true, "allowTemplateLiterals": true }
-      ],
+    "no-underscore-dangle": 0,
+    "quotes": [2, "double", { "avoidEscape": true, "allowTemplateLiterals": true }],
     "react/no-danger": 1,
     "react/react-in-jsx-scope": 0,
-    "meteor/eventmap-params": [
-        2, { "templateInstanceParamName": "instance" }
-      ],
-    "import/no-unresolved": [
-        2, { "ignore": ["^meteor/"] }
-      ]
+    "semi": 2
   }
 }
