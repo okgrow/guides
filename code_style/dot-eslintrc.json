@@ -26,6 +26,7 @@
     "import/no-unresolved": [2, { "ignore": ["^meteor/"] }],
     "meteor/eventmap-params": [2, { "templateInstanceParamName": "instance" }],
     "no-console": 1,
+    "no-underscore-dangle": 0,
     "quotes": [2, "double", { "avoidEscape": true, "allowTemplateLiterals": true }],
     "react/no-danger": 1,
     "react/react-in-jsx-scope": 0,
