@@ -1,0 +1,12 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "no-extra-parens": 0, // Interferes with jsx
+    "no-underscore-dangle": 0, // Mongo _id
+    "react/prefer-stateless-function": 1, // We'll choose manually
+    "react/prop-types": 1, // Slows down while prototyping / experimenting
+  },
+  "settings": {
+    "import/resolver": "meteor",
+  }
+}
