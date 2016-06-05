@@ -1,19 +1,21 @@
-Code Style
-==========
+# Code Style
 
-We're attempting to converge on a standard [ESLint](http://eslint.org/) config
-that we all use in order to help prevent bugs
-and make sure that we have consistent code style.
+## Linting
 
-To use our ESLint config file right from this repo,
-check out the repo and do the following at a command-line.
-WARNING this will overwrite your current ``~/.eslintrc.json` if you have one.
+**Every new project should contain a `.eslintrc` file in its root.  We will keep an up-to-date starting point for this file in this repo.**
 
-`ln -s THIS_REPO/code_style/dot-eslintrc.json ~/.eslintrc.json`
+We will stay as close to the [AirBnb style guide](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) as possible as it has quickly become an industry standard with ~36k stars on GitHub (more than Meteor!).
 
-To install eslint: `npm install -g eslint eslint-plugin-meteor eslint-plugin-react eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y`
+## Installation & Setup
 
-Atom setup:
+Install the eslint, airbnb and meteor specific modules to the project itself (not global):
 
-1. Install linter-eslint package
-1. In package settings set "Global Node Installation Path" and "Use global ESLint installation"
+```
+npm install --save-dev eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint eslint-import-resolver-meteor
+```
+
+Copy the latest `.eslintrc` to your root:
+
+```
+https://raw.githubusercontent.com/okgrow/guides/master/code_style/.eslintrc
+```
