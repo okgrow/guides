@@ -18,4 +18,4 @@ Install the eslint, airbnb and meteor specific modules to the project itself (no
 
 Copy the latest `.eslintrc` to your root:
 
-`curl -O https://raw.githubusercontent.com/okgrow/guides/master/code_style/.eslintrc.json`
+`curl -O https://raw.githubusercontent.com/okgrow/guides/master/code_style/.eslintrc`
