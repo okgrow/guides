@@ -6,6 +6,7 @@
     "react/prefer-stateless-function": 1, // We'll choose manually
     "react/prop-types": 1, // Slows down while prototyping / experimenting
     "max-len": 1, // Sometimes necessary to have long strings and not risk whitespace
+    "no-param-reassign": [2, { "props": false }], // Allows assignment of new properties
   },
   "settings": {
     "import/resolver": "meteor",
