@@ -8,6 +8,25 @@ Issues:
  * If possible link to example app which replicates the problem
  * If it's a security issue, please email us rather than filing an issue
 
+Issues can will be labled to be in one of the following categories:
+
+* **bug**: an issue that causes a problem in the app. 
+* **question**: asking for guidance on how to do a certain task.
+* **enhancement**: feature requests.
+
+After consideration of the issue, one of the following decisions will be made and labled on the issue until the issue is closed:
+
+* **in-progress**
+* **pull-requests-encouraged**
+* **wontfix**
+* **duplicate**
+
+If the issue labled as bug, it will go through the following life-cycle: 
+
+* **unconfirmed**: when the issue is created
+* **confirmed** or **can't-reproduce**: depending if the issue was reproducable
+
+
 Pull Requests:
 --------------
 
