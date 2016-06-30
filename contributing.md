@@ -10,31 +10,50 @@
 
 OK GROW! follows a issue labelling system which is described below.
 
-####Primary:
+####Primary label:
 
 All issues are to have a primary label applied.
 
-* **bug**: An issue that causes a problem in the app.
-* **question**: Asking for clarification or guidance regarding to the specific package.
-* **enhancement**: Feature requests.
+* **bug**
+  * An issue that causes a problem in the app.
+* **question** 
+  * Asking for clarification or guidance regarding to the specific package.
+* **enhancement** 
+  * Feature request for the specific package.
 
-####Secondary:
+####Secondary label:
 
 A secondary label will be applied once a member of OK GROW! has reviewed the issue.
 
-* **fixed**: Issue has been resolved.
-* **wont-fix**: OK GROW! will not be implementing a fix for the specific issue raised.
-* **duplicate**: Issue has been previously raised, this Issue will be closed and link to the original issue raised.
-* **in-progress**: Issue is currently being worked on to resolve. *NOTE:* This label is to be removed once completed.
-* **under-consideration**: Enhancement is currently being considered by members of OK GROW!.
-* **pull-requests-encouraged**: Community solution is encrouged and more likely to be accepted into the package.
+* **fixed**
+  * Issue has been resolved.
+* **wont-fix**
+  * OK GROW! will not be implementing a fix for the specific issue raised.
+* **duplicate**
+  * Issue has been previously raised, this Issue will be closed and link to the original issue raised.
+* **in-progress**
+  * Issue is currently being worked on to resolve.
+  * *NOTE:* This label is to be removed once completed.
+* **under-consideration**
+  * Enhancement is currently being considered by members of OK GROW!.
+  * *NOTE:* This label is to be removed once the enhancement has been accepted or rejected.
+* **pull-requests-encouraged**
+  * Community solution is encrouged and more likely to be accepted into the package.
 
-####Additional:
-Issues labelled with bug, will have an additional label applied.
+####Additional label:
+Issues labelled with `bug` or `enhancement`, can have one of the following labels applied.
 
-* **confirmed**: Bug has been confirmed via a reproduction or a member of OK GROW!.
-* **unconfirmed**: Bug which has been reported but yet to be confirmed by a member of OK GROW!.
-* **can't-reproduce**: Bug which has been unable to be reproduced. The issue will be closed until it can be reproduced and verified by a member of OK GROW!.
+* **will-add**
+  * Enhancement (feature request) will be added to the packages current roadmap.
+* **wont-add**
+  * Enhancement (feature request) will not be added to the packages current roadmap. 
+* **confirmed**
+  * Bug has been confirmed via a reproduction or a member of OK GROW!.
+* **unconfirmed**
+  * Bug which has been reported but yet to be confirmed by a member of OK GROW!.
+* **can't-reproduce**
+  * Bug which has been unable to be reproduced. The issue will be closed until it can be reproduced and verified by a member of OK GROW!.
+
 
 
 #Pull Requests:
