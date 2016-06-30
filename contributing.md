@@ -36,21 +36,22 @@ A secondary label will be applied once a member of OK GROW! has reviewed the iss
   * *NOTE:* This label is to be removed once completed.
 * **under-consideration**
   * Enhancement is currently being considered by members of OK GROW!.
+  * Pull Requests and community solution is encrouged
   * *NOTE:* This label is to be removed once the enhancement has been accepted or rejected.
 * **pull-requests-encouraged**
   * Community solution is encrouged and more likely to be accepted into the package.
 
 ####Additional label:
-Issues labelled with `bug` or `enhancement`, can have one of the following labels applied.
+Issues labeled with `bug` or `enhancement`, can have one of the following labels applied.
 
 * **will-add**
   * Enhancement (feature request) will be added to the packages current roadmap.
 * **wont-add**
   * Enhancement (feature request) will not be added to the packages current roadmap. 
 * **confirmed**
-  * Bug has been confirmed via a reproduction or a member of OK GROW!.
+  * Bug has been confirmed via a reproduction or a member.
 * **unconfirmed**
-  * Bug which has been reported but yet to be confirmed by a member of OK GROW!.
+  * Bug which has been reported but yet to be confirmed by a member.
 * **can't-reproduce**
   * Bug which has been unable to be reproduced. The issue will be closed until it can be reproduced and verified by a member of OK GROW!.
 
