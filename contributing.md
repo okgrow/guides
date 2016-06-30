@@ -6,9 +6,9 @@
  * If possible link to example app which replicates the problem.
  * If it's a security issue, please email us rather than filing an issue.
 
-###Labelling system:
+###Labeling system:
 
-OK GROW! follows a issue labelling system which is described below.
+OK GROW! follows a issue labeling system which is described below.
 
 ####Primary label:
 
