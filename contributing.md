@@ -3,12 +3,12 @@
 
 ##Issues:##
 
- * If possible link to example app which replicates the problem.
+ * If possible link to an example app which replicates the problem.
  * If it's a security issue, please email us rather than filing an issue.
 
 ###Labeling system:
 
-OK GROW! follows a issue labeling system which is described below.
+OK GROW! follows an issue labeling system which is described below.
 
 ####Primary label:
 
@@ -36,22 +36,22 @@ A secondary label will be applied once a member of OK GROW! has reviewed the iss
   * *NOTE:* This label is to be removed once completed.
 * **under-consideration**
   * Enhancement is currently being considered by members of OK GROW!.
-  * Pull Requests and community solution is encrouged
+  * Pull Requests and community solutions are encouraged.
   * *NOTE:* This label is to be removed once the enhancement has been accepted or rejected.
 * **pull-requests-encouraged**
-  * Community solution is encrouged and more likely to be accepted into the package.
+  * Community solution is encouraged and more likely to be accepted into the package.
 
 ####Additional label:
-Issues labeled with `bug` or `enhancement`, can have one of the following labels applied.
+Issues labeled with `bug` or `enhancement` can have one of the following labels applied.
 
 * **will-add**
-  * Enhancement (feature request) will be added to the packages current roadmap.
+  * Enhancement (feature request) will be added to the package's current roadmap.
 * **wont-add**
-  * Enhancement (feature request) will not be added to the packages current roadmap. 
+  * Enhancement (feature request) will not be added to the package's current roadmap. 
 * **confirmed**
-  * Bug has been confirmed via a reproduction or a member.
+  * Bug has been confirmed via a reproduction or a member of OK GROW!.
 * **unconfirmed**
-  * Bug which has been reported but yet to be confirmed by a member.
+  * Bug which has been reported but yet to be confirmed by a member of OK GROW!.
 * **can't-reproduce**
   * Bug which has been unable to be reproduced. The issue will be closed until it can be reproduced and verified by a member of OK GROW!.
 
