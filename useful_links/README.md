@@ -21,3 +21,8 @@ Useful Links
 
 * https://blog.risingstack.com/react-js-best-practices-for-2016/ - Best practices for React
 * https://github.com/coryhouse/react-slingshot - React starter kit
+* 
+
+### Dev Tools
+
+* [GitX-dev] (https://rowanj.github.io/gitx/) - GUI for the git version-control system
