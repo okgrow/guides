@@ -16,6 +16,10 @@ Install the eslint, airbnb and meteor specific modules to the project itself (no
 
 `npm install --save-dev eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint eslint-import-resolver-meteor`
 
+NOTE: If you get [peer dependency errors](https://github.com/airbnb/javascript/issues/952) use this instead:
+
+`npm install --save-dev eslint@\^2.10.2 eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y@\^1.2.2 eslint-import-resolver-meteor`
+
 Copy the latest `.eslintrc` to your root:
 
 `curl -O https://raw.githubusercontent.com/okgrow/guides/master/code_style/.eslintrc`
