@@ -1,11 +1,35 @@
-Useful Links
+Useful Guides, Tools and Links
 ==========
 
-### Code
+## Guides
+| Name				  | Description		 | Extra Links |
+| -----------   | :------------: | :------------: |
+| [HEAD](http://gethead.info/) | A list of everything that could go in the `<head>` of your document. | [Github](https://github.com/joshbuchea/HEAD)|
+| [es6-features](http://es6-features.org/) | ECMAScript 6: Feature Overview & Comparison | [Github](https://github.com/rse/es6-features)|
 
-* https://github.com/joshbuchea/HEAD - A collection of HTML head elements.
-* https://github.com/lukehoban/es6features - Handy es6 features
-* https://regex101.com/ - Handy regex helper
+## Tools
+
+### Javascript
+
+| Name				  | Description		 |    NPM     |  Github  |
+| -----------   | :------------: | :--------: | :------: |
+| [Regex101](https://regex101.com/) | Handy regex helper.  | N/A | N/A |
+
+
+
+### React
+
+| Name				  | Description		 |    NPM     |  Github  |
+| -----------   | :------------: | :--------: | :------: |
+| React Slingshot | React + Redux starter kit with Babel, hot reloading, testing, linting and a working example app, all built in. | N/A |[react-slingshot](https://github.com/coryhouse/react-slingshot)|
+
+
+### Version Control
+| Name				  | Description		 |    NPM     |  Github  |
+| -----------   | :------------: | :--------: | :------: |
+|[GitX-dev] (https://rowanj.github.io/gitx/)|GUI for the git version-control system| N/A |[GitX-dev] (https://github.com/rowanj/gitx)|
+
+## Links
 
 ### UX/UI
 
@@ -19,10 +43,10 @@ Useful Links
 
 ### React
 
-* https://blog.risingstack.com/react-js-best-practices-for-2016/ - Best practices for React
-* https://github.com/coryhouse/react-slingshot - React starter kit
-* 
+| Name				  | Description		 | Extra Links |
+| -----------   | :------------: | :------------: |
+| [React.js best practices](https://blog.risingstack.com/react-js-best-practices-for-2016/) | Blog post on React.js best practices in 2016. | N/A |
 
-### Dev Tools
 
-* [GitX-dev] (https://rowanj.github.io/gitx/) - GUI for the git version-control system
+
+
