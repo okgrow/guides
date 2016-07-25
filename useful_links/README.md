@@ -33,13 +33,13 @@ Useful Guides, Tools and Links
 
 ### UX/UI
 
-* http://www.nickkolenda.com/user-experience/ - 125 Easy Tweaks to Optimize Your Website’s Usability.
-* https://csstriggers.com/ - A collection of what happens on each browser during CSS triggers.
-* https://www.youtube.com/watch?v=Z_YwyMssN0Y - [MOVIE] Design Thinking
-* http://www.lolcolors.com/palettes/popular - Color Palettes
-* https://color.adobe.com/explore/most-popular/?time=all - Color Palettes
-* http://easings.net/ - Javascript animation easings
-* http://hellohappy.org/beautiful-web-type/?1 - Fonts that work well together
+* [User-Experience](http://www.nickkolenda.com/user-experience/) - 125 Easy Tweaks to Optimize Your Website’s Usability.
+* [CSS-Triggers](https://csstriggers.com/) - A collection of what happens on each browser during CSS triggers.
+* [Design Thinking](https://www.youtube.com/watch?v=Z_YwyMssN0Y) - [MOVIE] Design Thinking.
+* [Colour Palettes](http://www.lolcolors.com/palettes/popular) - Popular Colour Palettes.
+* [Colour Palettes] (https://color.adobe.com/explore/most-popular/?time=all) - Adobe Popular Color Palettes.
+* [Easings] (http://easings.net/) - Javascript animation easings.
+* [Hello Happy - Fonts] (http://hellohappy.org/beautiful-web-type/?1) - Fonts that work well together.
 
 ### React
 
