@@ -43,9 +43,7 @@ Useful Guides, Tools and Links
 
 ### React
 
-| Name				  | Description		 | Extra Links |
-| -----------   | :------------: | :------------: |
-| [React.js best practices](https://blog.risingstack.com/react-js-best-practices-for-2016/) | Blog post on React.js best practices in 2016. | N/A |
+* [React.js best practices](https://blog.risingstack.com/react-js-best-practices-for-2016/) - Blog post on React.js best practices in 2016. 
 
 
 
