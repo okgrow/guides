@@ -3,6 +3,7 @@ Code style at OK GROW!
 ---
 
 We are passionate about our code style here at OK GROW!.  
+
 We strongly believe that enforcing a consistent style and standard helps us produce maintainable code for our clients.
 
 You can check out our styling opinions below:
