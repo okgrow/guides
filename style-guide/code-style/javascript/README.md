@@ -1,4 +1,6 @@
-# Code Style
+# Javascript Code Style
+
+We practice and preach the usage of ECMAScript 2015 (ES6) here at OK GROW!
 
 ## Linting
 
@@ -22,4 +24,4 @@ NOTE: If you get [peer dependency errors](https://github.com/airbnb/javascript/i
 
 Copy the latest `.eslintrc` to your root:
 
-`curl -O https://raw.githubusercontent.com/okgrow/guides/master/code_style/.eslintrc`
+`curl -O https://raw.githubusercontent.com/okgrow/guides/master/style-guide/code-style/javascript/.eslintrc`
