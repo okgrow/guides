@@ -1,3 +1,3 @@
 # Code Style - HTML/CSS at OK GROW!
 
-TODO: Complete
+Currently under-construction...
