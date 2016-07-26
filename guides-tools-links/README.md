@@ -1,6 +1,6 @@
 Useful Guides, Tools and Links
 ==========
-A collection of useful guides, tools and links that we use at OK GROW!
+A collection of useful guides, tools and links that we love at OK GROW!
 
 ---
 ## Guides
@@ -51,8 +51,6 @@ A collection of useful guides, tools and links that we use at OK GROW!
 
 ### React
 
-* [React.js best practices](https://blog.risingstack.com/react-js-best-practices-for-2016/) - Blog post on React.js best practices in 2016. 
+* [React.js best practices](https://blog.risingstack.com/react-js-best-practices-for-2016/) - Blog post on React.js best practices in 2016.
 
 ---
-
-

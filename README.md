@@ -14,3 +14,4 @@ Guides:
   * [Meteor](https://github.com/okgrow/guides/tree/master/performance/meteor)
 * Security
   * [Meteor](https://github.com/okgrow/guides/tree/master/security/meteor)
+* [Useful Guides, Tools & Links](https://github.com/okgrow/guides/tree/master/guides-tools-links)
