@@ -1,6 +1,6 @@
-How we do things at OK GROW!
+# How we do things at OK GROW!
 
-Guides:
+Directory:
 =======
 
 * [Style Guide](https://github.com/okgrow/guides/tree/master/style-guide)
