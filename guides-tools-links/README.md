@@ -29,6 +29,12 @@ A collection of useful guides, tools and links that we love at OK GROW!
 | -----------   | :------------: | :--------: | :------: |
 | React Slingshot | React + Redux starter kit with Babel, hot reloading, testing, linting and a working example app, all built in. | N/A |[react-slingshot](https://github.com/coryhouse/react-slingshot)|
 
+### Testing
+
+| Name				  | Description		 |    NPM     |  Github  |
+| -----------   | :------------: | :--------: | :------: |
+| [Enzyme](http://airbnb.io/enzyme/) | JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output. | [enzyme](https://www.npmjs.com/package/enzyme) | [enzyme](https://github.com/airbnb/enzyme) |
+
 
 ### Version Control
 | Name				  | Description		 |    NPM     |  Github  |
