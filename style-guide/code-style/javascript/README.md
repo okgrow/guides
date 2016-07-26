@@ -1,6 +1,7 @@
 # Javascript Code Style
 
-We practice and preach the usage of ECMAScript 2015 (ES6) here at OK GROW!
+We practice and preach the usage of [ECMAScript 2015 (ES6)](http://www.ecma-international.org/ecma-262/6.0/) here at OK GROW!
+Checkout the differences between ES6 & ES5 [here](http://es6-features.org/).
 
 ## Linting
 
