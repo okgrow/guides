@@ -1,12 +1,16 @@
 Useful Guides, Tools and Links
 ==========
+A collection of useful guides, tools and links that we use at OK GROW!
 
+---
 ## Guides
 | Name				  | Description		 | Extra Links |
 | -----------   | :------------: | :------------: |
 | [HEAD](http://gethead.info/) | A list of everything that could go in the `<head>` of your document. | [Github](https://github.com/joshbuchea/HEAD)|
 | [es6-features](http://es6-features.org/) | ECMAScript 6: Feature Overview & Comparison | [Github](https://github.com/rse/es6-features)|
 | Airbnb CSS | Airbnb CSS / Sass Styleguide | [Github](https://github.com/airbnb/css)|
+
+---
 
 ## Tools
 
@@ -15,6 +19,7 @@ Useful Guides, Tools and Links
 | Name				  | Description		 |    NPM     |  Github  |
 | -----------   | :------------: | :--------: | :------: |
 | [Regex101](https://regex101.com/) | Handy regex helper.  | N/A | N/A |
+
 
 
 
@@ -29,6 +34,8 @@ Useful Guides, Tools and Links
 | Name				  | Description		 |    NPM     |  Github  |
 | -----------   | :------------: | :--------: | :------: |
 |[GitX-dev] (https://rowanj.github.io/gitx/)|GUI for the git version-control system| N/A |[GitX-dev] (https://github.com/rowanj/gitx)|
+
+---
 
 ## Links
 
@@ -46,6 +53,6 @@ Useful Guides, Tools and Links
 
 * [React.js best practices](https://blog.risingstack.com/react-js-best-practices-for-2016/) - Blog post on React.js best practices in 2016. 
 
-
+---
 
 
