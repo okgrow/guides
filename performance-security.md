@@ -10,8 +10,8 @@ This document was created to help ensure that we do not fall victim to common mi
 - [ ] Subscriptions - Cache subscriptions where necessary ([e.g. subs-manager](https://github.com/kadirahq/subs-manager))
 
 #### Server
-- [ ] Publications - ensure that the minmum number of documents is published.
-- [ ] Publications - ensure that unused/unecessary fields in a document are not published.
+- [ ] Publications - ensure that the minimum number of documents is published.
+- [ ] Publications - ensure that unused/unnecessary fields in a document are not published.
 
 #### Mongo
 - [ ] Queries - All queries should only return the fields that are used/needed.
@@ -35,9 +35,3 @@ This document was created to help ensure that we do not fall victim to common mi
 ## TODO:
 
 Add best practices for Methods.
-
-
-
-
-
-
