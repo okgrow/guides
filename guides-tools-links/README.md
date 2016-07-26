@@ -14,6 +14,14 @@ A collection of useful guides, tools and links that we love at OK GROW!
 
 ## Tools
 
+### Chrome Extensions
+| Name				  | Description		 |    Chrome Store     |  Github  |
+| -----------   | :------------: | :--------: | :------: |
+| [ChromeLens](http://chromelens.xyz/) | ChromeLens is a set of developer tools that allow developers to code websites better suited for the visually impaired. | [ChromeLens](https://chrome.google.com/webstore/detail/chromelens/idikgljglpfilbhaboonnpnnincjhjkd) | [chromelens](https://github.com/chromelens/chromelens)|
+| Meteor DevTools | Chrome Dev tools extension for Meteorjs apps. | [Meteor DevTools](https://chrome.google.com/webstore/detail/meteor-devtools/ippapidnnboiophakmmhkdlchoccbgje) | [meteor-devtools](https://github.com/thebakeryio/meteor-devtools) |
+| Accessibility Developer Tools | This is a library of accessibility-related testing and utility code. | [Accessibility Developer Tools](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb) | [accessibility-developer-tools](https://github.com/GoogleChrome/accessibility-developer-tools)|
+| [Tag Assistant](https://support.google.com/tagassistant) | Great tool that helps you validate the tracking code on your website and troubleshoot common problems. See [here](https://ga-dev-tools.appspot.com/tag-assistant/) for more. | [Tag Assistant](https://chrome.google.com/webstore/detail/tag-assistant-by-google/kejbdjndbnbjgmefkgdddjlbokphdefk) | N/A |
+
 
 
 ### Javascript
