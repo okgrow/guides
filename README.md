@@ -1,6 +1,6 @@
 # How we do things at OK GROW!
 
-Directory:
+Table of Contents:
 =======
 
 * [Style Guide](https://github.com/okgrow/guides/tree/master/style-guide)
