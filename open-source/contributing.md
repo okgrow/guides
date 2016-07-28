@@ -16,9 +16,9 @@ All issues are to have a primary label applied.
 
 * **bug**
   * An issue that causes a problem in the app.
-* **question** 
-  * Asking for clarification or guidance regarding to the specific package.
-* **enhancement** 
+* **question**
+  * Asking for help (clarification or guidance) related to the specific package.
+* **enhancement**
   * Feature request for the specific package.
 
 ####Secondary label:
@@ -47,7 +47,7 @@ Issues labeled with `bug` or `enhancement` can have one of the following labels 
 * **will-add**
   * Enhancement (feature request) will be added to the package's current roadmap.
 * **wont-add**
-  * Enhancement (feature request) will not be added to the package's current roadmap. 
+  * Enhancement (feature request) will not be added to the package's current roadmap.
 * **confirmed**
   * Bug has been confirmed via a reproduction or a member of OK GROW!.
 * **unconfirmed**
