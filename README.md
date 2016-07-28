@@ -10,8 +10,8 @@ Table of Contents:
     * [HTML/CSS](https://github.com/okgrow/guides/tree/master/style-guide/code-style/html-css)
 * Open Source Work
     * [Contributing](https://github.com/okgrow/guides/tree/master/open-source/contributing.md)
-* Performance
+* [Performance](https://github.com/okgrow/guides/tree/master/performance)
   * [Meteor](https://github.com/okgrow/guides/tree/master/performance/meteor)
-* Security
+* [Security](https://github.com/okgrow/guides/tree/master/security)
   * [Meteor](https://github.com/okgrow/guides/tree/master/security/meteor)
 * [Useful Guides, Tools & Links](https://github.com/okgrow/guides/tree/master/guides-tools-links)
