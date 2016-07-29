@@ -9,11 +9,11 @@ Checkout the differences between ES6 & ES5 [here](http://es6-features.org/).
 
 As technologies and coding styles advance with time, each individual project can be updated with a simple refresh of the `.eslintrc` if appropriate.  This will stop old projects lighting up like a christmas tree, and still enforce good coding style.
 
-We will stay as close to the [AirBnb style guide](https://github.com/airbnb/javascript) as possible as it has quickly become an industry standard with ~36k stars on GitHub (more than Meteor!).
+We will stay as close to the [Airbnb style guide](https://github.com/airbnb/javascript) as possible as it has quickly become an industry standard with ~36k stars on GitHub (more than Meteor!).
 
 ## Installation & Setup
 
-We will use the official [AirBnb eslint config](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).
+We will use the official [Airbnb eslint config](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).
 
 Install the eslint, airbnb and meteor specific modules to the project itself (not global):
 
