@@ -1,7 +1,10 @@
 #  Code Style - Javascript at OK GROW!
 
 We practice and preach the usage of [ECMAScript 2015 (ES6)](http://www.ecma-international.org/ecma-262/6.0/) here at OK GROW!
+
 Checkout the differences between ES6 & ES5 [here](http://es6-features.org/).
+
+Need help with transitioning to es6, [check out](https://github.com/okgrow/guides/blob/master/style-guide/code-style/javascript/transitioning-to-es6) our helpful guide to transitioning your Meteor codebase to es6 standards. 
 
 ## Linting
 
