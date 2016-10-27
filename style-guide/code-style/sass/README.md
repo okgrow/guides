@@ -8,7 +8,6 @@
 * Use hex values for colors when possible.
 * Don't specify a unit after using a 0 value.
 * Avoid nesting more than 2 levels, unless pseudo classes.
-* Use 
 
 ## Naming Convention
 * Employ the use of BEM when possible.
