@@ -17,9 +17,8 @@ For the second type the main work should be getting the existing app running and
 
 - Clients should have already received the [Discovery Phase Guidebook](https://docs.google.com/document/d/14QbXCpRvtPcEJ-TbYPSbJXEJ5xFbS_vOIckGJAUTAV0/edit#).
 - Ensure that we have everything from the client that was listed in the [“Prerequisites” section of the Discovery Phase Guidebook](https://docs.google.com/document/d/14QbXCpRvtPcEJ-TbYPSbJXEJ5xFbS_vOIckGJAUTAV0/edit#heading=h.2jz1on9cuw4)
-- Share the Google Drive folders with everyone on the team 
-Q: Clarification; everyone on the OK Grow! team?
-  - _Schedule a kick-off call for the week before (Wednesday or earlier) with the whole team invited to make sure everyone will be prepared_
+- Share the Google Drive folders with everyone on the team _Question/Clarification: everyone on the OK Grow! team?_
+- Schedule a kick-off call for the week before (Wednesday or earlier) with the whole team invited to make sure everyone will be prepared
 - Schedule a Monday morning meeting to go into more details
 - Schedule a final meeting for Friday as early as possible.
 - Schedule a daily status meeting, 15 minutes
@@ -30,8 +29,7 @@ Q: Clarification; everyone on the OK Grow! team?
 - Create Trello board
   - For consulting projects use: [https://trello.com/b/aih9u2u6](https://trello.com/b/aih9u2u6)
   - For feature/app development projects use: [https://trello.com/b/lPS0CYbG](https://trello.com/b/lPS0CYbG)
-- Share the project folder with the team
-  _Question: Google drive folder was already shared in 'Before the week'_
+- Share the project folder with the team _Question: Google drive folder was already shared in 'Before the week'_
 - Create Slack channel for ourselves
 - Set [project roles](https://docs.google.com/spreadsheets/d/1y0o2OXdrx2arENp4BoRtJQojqGGhbRky7CBDIdeggJY/edit#gid=0)
   - Project lead (developer or designer, team lead)
@@ -40,8 +38,7 @@ Q: Clarification; everyone on the OK Grow! team?
   _Question: Who sets these roles? Should this not be done in the 'Before the week' step?_
 - Create project email alias: &lt;project&gt;@okgrow.com (a list that includes all developers on the project)
   - Edit “Post” setting in “Posting permissions” and allow public to post.
-- Create and share project info doc, copy from [template](https://docs.google.com/a/okgrow.com/document/d/1KUVInohhNZxmrlsJw7Ax5MMQraawglGpTo1O-eXJ030/edit) into project folder.
-  _Question: template is based on a full, running project. Trello board specifically references the working board, not Discovery board.  Should this be changed?
+- Create and share project info doc, copy from [template](https://docs.google.com/a/okgrow.com/document/d/1KUVInohhNZxmrlsJw7Ax5MMQraawglGpTo1O-eXJ030/edit) into project folder. _Question: template is based on a full, running project. Trello board specifically references the working board, not Discovery board.  Should this be changed?_
 - Send [client onboarding email](https://docs.google.com/a/okgrow.com/document/d/1T0jFzBXO7kRyBQxnaI3yuQi9Op1LdqI_yb_LPqXsNY4/edit)
 - Construct a final doc at end of week as the main deliverable to the client.
 
