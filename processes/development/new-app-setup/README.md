@@ -10,17 +10,20 @@ This assumes the discovery week has already happened.
 1. Copy all relevent configuration and code from private guides repo, including `settings.example.json` file to project
 1. Create staging Heroku app using the [create-heroku-app](scripts/create-heroku-app) script.
     1. Configure Logentries
-        1. change email address for all notifications to &lt;project&gt;@okgrow.com
-        1. disable some notifications which get triggered by every websocket connection:
+        1. Change email address for all notifications to &lt;project&gt;@okgrow.com
+        1. Disable some notifications which get triggered by every websocket connection:
             1. High response time
             1. Connection closed w/o response
             1. Idle connection
     1. Configure Kadira
+        1. Add kadira to your meteor project, `meteor add meteorhacks:kadira`
+        1. Add a staging and production app in the Kadira UI and add the environment variables to the appropriate heroku app
         1. Set up Slack and email alerts for errors > 0 at least once (specific errors can be ignored in the app’s config) (staging and production can share the same Slack webhook URL).
 1. Create production Heroku app (same steps as staging)
     1. Configure Mailgun add-on
       2. Add DNS records
       3. Edit `MAILGUN_*` env vars to contain the info for the verified domain (instead of the sandbox domain).
+    1. If you are configuring dynos Heroku requires a `Procfile` where you specify the startup process commands. Here is a basic meteor example [Procfile](procfile-example)
 1. Set up AWS account
     1. Client creates root account and gives us temporary password
     1. Set custom IAM login domain
@@ -56,7 +59,7 @@ AWS config:
     1. [Add policy](https://drive.google.com/open?id=0B4JoTt-NyIq5Y2RuYjZPTFAwd0U)
     2. Ensure the user has API credentials, no password
 
-MongoLab create users:
+MongoDB create users:
 
 1. Create read-only user for production DB
 2. Create user on staging DB (not read-only)
@@ -67,25 +70,27 @@ Semaphore config:
     1. NOTE: Paul needs to do this step currently. Will fix...
 1. Edit build settings:
     1. Go to [https://semaphoreci.com/okgrow/](https://semaphoreci.com/okgrow/)&lt;PROJECT_NAME&gt;/settings
-    1. Set the Node version to node.js 0.12
-    1. add each of these lines under setup
+    1. Set the Node version to node.js 6.3.1
+    1. Add each of these lines under setup
         1. `curl https://install.meteor.com/ | sh`
         1. `meteor --version`
         1. `npm install`
         1. `cp settings.json.example settings.json`
-   1.  add the test runner under "Job #1": `npm test`
-1. In Heroku: Under ‘Access’, add [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) as a collaborator the staging Heroku app
-1. Semaphore project settings → Deployment → Set up your first server → To Heroku → Automatic
-1. Select master as the branch you want to build from
-1. Enter the API key for the [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) Heroku user, it’s in the [Accounts spreadsheet](https://docs.google.com/a/okgrow.com/spreadsheet/ccc?key=0AoJoTt-NyIq5dHBiZ29xdFhjTE9sendyRnR1SHdtanc&usp=sharing)
-1. Select the staging Heroku app for this project from the list, and name it “Project Name Staging”
-1. Set up deployment:
-    1. Click the “Set Up Deployment” button on the main page for the project
-    1. Select Heroku, then Automatic
-    1. Select master as the branch to deploy
-    1. Enter the API key for the  accounts+semaphoredeploy@okgrow.com account
-    1. Select the staging heroku app
+    1. Note: You may also need to add more project specific steps.
+    1. Add the test runner under "Job #1": `npm test`
+1. In Heroku: Under ‘Access’, add [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) as a collaborator in the staging and production Heroku app
+1. On the sempahore project homepage click “Set Up Deployment” (staging)
+    1. Choose Heroku, then automatic, and then master.
+    1. Enter the API key for the [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) Heroku user, it’s in the [Accounts spreadsheet](https://docs.google.com/a/okgrow.com/spreadsheet/ccc?key=0AoJoTt-NyIq5dHBiZ29xdFhjTE9sendyRnR1SHdtanc&usp=sharing)
+    1. Select the Staging Heroku app for this project from the list, and name it “Staging”
     1. Add the [staging app deploy config](semaphore-staging-deploy-config)
+1. Add a new server by clicking the + button beside 'Servers' (production)
+    1. Choose Heroku, then manual, and then master.
+    1. Enter the API key for the [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) Heroku user, it’s in the [Accounts spreadsheet](https://docs.google.com/a/okgrow.com/spreadsheet/ccc?key=0AoJoTt-NyIq5dHBiZ29xdFhjTE9sendyRnR1SHdtanc&usp=sharing)
+    1. Select the Production Heroku app for this project from the list, and name it “Production”
+    1. Add the [production app deploy config](semaphore-production-deploy-config)
 1. Add Slack notifications (no email)
-    1. All deploys
-    1. When builds change status
+    1. Go to the project's slack channel and add an integration
+    1. Add sempahore as an integration and make note of the webhook URL, then save the integration
+    1. Go to Project Settings / Notifications / Webhooks in Semaphore
+    1. Add the webhook URl and select 'Build and Deploy' from the 'Recieve After' dropdown
