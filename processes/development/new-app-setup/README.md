@@ -9,6 +9,7 @@ This assumes the discovery week has already happened.
 1. Create new app
 1. Copy all relevent configuration and code from private guides repo, including `settings.example.json` file to project
 1. Create staging Heroku app using the [create-heroku-app](scripts/create-heroku-app) script.
+    1. For meteor projects use the [OK GROW! buildpack](https://github.com/okgrow/meteor-buildpack-horse.git)
     1. Configure Logentries
         1. Change email address for all notifications to &lt;project&gt;@okgrow.com
         1. Disable some notifications which get triggered by every websocket connection:
