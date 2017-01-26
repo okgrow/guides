@@ -9,10 +9,11 @@ This assumes the discovery week has already happened.
 1. Create new app
 1. Copy all relevent configuration and code from private guides repo, including `settings.example.json` file to project
 1. Create staging Heroku app using the [create-heroku-app](scripts/create-heroku-app) script.
-    1. For meteor projects use the [OK GROW! buildpack](https://github.com/okgrow/meteor-buildpack-horse.git)
+    1. For meteor projects use [our fork of the "horse" buildpack](https://github.com/okgrow/meteor-buildpack-horse.git)
     1. Configure Logentries
-        1. Change email address for all notifications to &lt;project&gt;@okgrow.com
-        1. Disable some notifications which get triggered by every websocket connection:
+        1. Add the Logentries Slack integration to the project channel
+        1. Disable email for all notifications and add the Slack webhook URL
+        1. disable some notifications which get triggered by every websocket connection:
             1. High response time
             1. Connection closed w/o response
             1. Idle connection
@@ -34,7 +35,7 @@ This assumes the discovery week has already happened.
     1. Ask client to change root account password and add MFA
 1. Create AWS Route 53 Health Check with alert for the production hostname (not the *.herokuapp.com hostname)
     1. Add ?ping=aws to monitoring URL
-    1. Set up string matching for something that appears in the beginning of the page, e.g. the title.
+    1. Set up string matching for something that appears in the beginning of the page, e.g. the title. (NOTE: it needs to be in the first few hundred bytes).
     1. Set up alert notification to &lt;project&gt;@okgrow.com
 1. Create S3 buckets
     1. Production
@@ -82,8 +83,8 @@ Semaphore config:
 1. In Heroku: Under ‘Access’, add [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) as a collaborator in the staging and production Heroku app
 1. On the sempahore project homepage click “Set Up Deployment” (staging)
     1. Choose Heroku, then automatic, and then master.
-    1. Enter the API key for the [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) Heroku user, it’s in the [Accounts spreadsheet](https://docs.google.com/a/okgrow.com/spreadsheet/ccc?key=0AoJoTt-NyIq5dHBiZ29xdFhjTE9sendyRnR1SHdtanc&usp=sharing)
-    1. Select the Staging Heroku app for this project from the list, and name it “Staging”
+    1. Enter the API key for the [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) Heroku user.
+    1. Select the Staging Heroku app for this project from the list, and name it “Staging”.
     1. Add the [staging app deploy config](semaphore-staging-deploy-config)
 1. Add a new server by clicking the + button beside 'Servers' (production)
     1. Choose Heroku, then manual, and then master.

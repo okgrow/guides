@@ -22,22 +22,20 @@ For the second type the main work should be getting the existing app running and
   - Team members (developers & designers)
   - Advisor (someone not on the team)
 - Share the Google Drive folder with everyone on our team
-- Schedule a kick-off call for the week before (Wednesday or earlier) with the whole team invited to make sure everyone will be prepared
-- Schedule a Monday morning meeting to go into more details
-- Schedule a final meeting for Friday as early as possible.
-- Schedule a daily status meeting, 15 minutes
-- Client should have given us access to a repo, and that repo should have a readme that details how to setup a dev environment
-
-#### At the beginning of the week
-
+- Schedule meetings
+  - Kick-off call the week before (Wednesday or earlier) with the whole team invited to make sure everyone will be prepared
+  - Monday morning meeting to go into more details
+  - Final meeting for Friday as early as possible.
+  - Daily status meeting, 15 minutes
+- Client should have given us access to a repo and instructions to set up a dev environment
 - Create Trello board
   - For consulting projects use: [https://trello.com/b/aih9u2u6](https://trello.com/b/aih9u2u6)
   - For feature/app development projects use: [https://trello.com/b/lPS0CYbG](https://trello.com/b/lPS0CYbG)
 - Create Slack channel for ourselves
-- Create project email alias: &lt;project&gt;@okgrow.com (a list that includes all developers on the project)
+- Create project email alias (Google Group): &lt;project&gt;@okgrow.com
   - Edit “Post” setting in “Posting permissions” and allow public to post.
-- Create and share project info doc, copy from [template](https://docs.google.com/a/okgrow.com/document/d/1KUVInohhNZxmrlsJw7Ax5MMQraawglGpTo1O-eXJ030/edit) into project folder.
-- Construct a final doc at end of week as the main deliverable to the client.
+  - Add Slack email integration and add the email address to the Google group
+- Create project info doc, copy from [template](https://docs.google.com/a/okgrow.com/document/d/1KUVInohhNZxmrlsJw7Ax5MMQraawglGpTo1O-eXJ030/edit) into project folder.
 
 #### The deliverables
 

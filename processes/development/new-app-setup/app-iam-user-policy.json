@@ -4,10 +4,18 @@
     {
       "Effect": "Allow",
       "Action": [
-        "s3:ListAllMyBuckets",
-        "s3:ListBucket"
+        "s3:ListAllMyBuckets"
       ],
       "Resource": "arn:aws:s3:::*"
+    },
+    {
+      "Action": [
+        "s3:ListBucket"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "arn:aws:s3:::APPNAME-app-STAGING_OR_PRODUCTION"
+      ]
     },
     {
       "Action": [
