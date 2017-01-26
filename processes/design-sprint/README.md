@@ -1,3 +1,5 @@
+# Design Sprint Guide
+
 ### Prepare for the Sprint (Package we send out)
 ---
 Congratulations! You are on your way to running a successful Sprint!
