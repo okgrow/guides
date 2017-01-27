@@ -88,7 +88,7 @@ Semaphore config:
     1. Add the [staging app deploy config](semaphore-staging-deploy-config)
 1. Add a new server by clicking the + button beside 'Servers' (production)
     1. Choose Heroku, then manual, and then master.
-    1. Enter the API key for the [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) Heroku user, it’s in the [Accounts spreadsheet](https://docs.google.com/a/okgrow.com/spreadsheet/ccc?key=0AoJoTt-NyIq5dHBiZ29xdFhjTE9sendyRnR1SHdtanc&usp=sharing)
+    1. Enter the API key for the [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) Heroku user, check our Accounts.
     1. Select the Production Heroku app for this project from the list, and name it “Production”
     1. Add the [production app deploy config](semaphore-production-deploy-config)
 1. Add Slack notifications (no email)
