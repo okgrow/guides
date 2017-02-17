@@ -111,6 +111,11 @@ We currently use Heroku or Galaxy for hosting new Meteor apps. Depending on the 
 1. TODO: This will need to be updated once we have a build script completed.
 2. Currently you can follow the steps taken for the Rapunzl project.
 
+# MongoDB Atlas
+
+If the project is using Galaxy to host the app the MongoDB Atlas is the recommended hosting provider. If you already have an account it will take you about 5 mins to setup. You can find detailed step-by-step instructions to getting setup and started in our blog post [here](https://www.okgrow.com/posts/mongodb-atlas-setup).
+
+Atlas is the best option if wishing to scale CPU & Memory independently to it's storage & disk I/O, cheapest for using the WiredTiger Storage engine, encrypting data at rest, have 3 to 7 data bearing nodes, continuous backups & snapshots. 
 
 # CI
 
