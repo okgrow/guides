@@ -6,6 +6,10 @@ This assumes the discovery week has already happened.
 
 # Production and staging apps
 
+We currently use Heroku or Galaxy for hosting new Meteor apps. Depending on the projects requirements we will select one or the other.
+
+## Heroku setup
+
 1. Create new app
 1. Copy all relevent configuration and code from private guides repo, including `settings.example.json` file to project
 1. Create staging Heroku app using the [create-heroku-app](scripts/create-heroku-app) script.
@@ -26,12 +30,19 @@ This assumes the discovery week has already happened.
       2. Add DNS records
       3. Edit `MAILGUN_*` env vars to contain the info for the verified domain (instead of the sandbox domain).
     1. If you are configuring dynos Heroku requires a `Procfile` where you specify the startup process commands. Here is a basic meteor example [Procfile](procfile-example)
+
+## Galaxy setup
+
+ TODO....
+
+# AWS setup
+
 1. Set up AWS account
-    1. Client creates root account and gives us temporary password
-    1. Set custom IAM login domain
-    1. Create IAM user for each developer
-        1. Add 2-factor auth (MFA)
-        1. Attach AdministratorAccess policy
+  1. Client creates root account and gives us temporary password
+  1. Set custom IAM login domain
+  1. Create IAM user for each developer
+    1. Add 2-factor auth (MFA)
+    1. Attach AdministratorAccess policy
     1. Ask client to change root account password and add MFA
 1. Create AWS Route 53 Health Check with alert for the production hostname (not the *.herokuapp.com hostname)
     1. Add ?ping=aws to monitoring URL
