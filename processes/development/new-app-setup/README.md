@@ -21,10 +21,6 @@ We currently use Heroku or Galaxy for hosting new Meteor apps. Depending on the 
             1. High response time
             1. Connection closed w/o response
             1. Idle connection
-    1. Configure Kadira
-        1. Add kadira to your meteor project, `meteor add meteorhacks:kadira`
-        1. Add a staging and production app in the Kadira UI and add the environment variables to the appropriate heroku app
-        1. Set up Slack and email alerts for errors > 0 at least once (specific errors can be ignored in the app’s config) (staging and production can share the same Slack webhook URL).
 1. Create production Heroku app (same steps as staging)
     1. Configure Mailgun add-on
       2. Add DNS records
