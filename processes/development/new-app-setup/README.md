@@ -91,7 +91,7 @@ We currently use Heroku or Galaxy for hosting new Meteor apps. Depending on the 
     1. Trello - Recommended
   6. Once these integrations have been added you will need to set them up.
     1. Github - (Optional) Follow instructions to setup.
-    1. Slack - You will need to go to [here](https://okgrow.slack.com/apps/A0F814BEV-sentry) and select "Add Configuration", and follow the prompts. Add a descripitive label to state what project the error logging is for. Save the settings and copy the Webhook URL and add it to the sentry website.
+    1. Slack - You will need to go to [here](https://okgrow.slack.com/apps/A0F814BEV-sentry) and select "Add Configuration", and follow the prompts. Add a descripitive label to state what project the error logging is for. Save the settings and copy the Webhook URL and add it to the sentry website. You can use the same URL for both staging & production.
     1. Trello - Follow these [instructions](https://github.com/damianzaremba/sentry-trello/blob/master/HOW_TO_SETUP.md) to get the API key & token. Once the keys have been saved you will need to add the Trello Organization where the Trello Board exists. Note these keys are associated with your trello user account.
   7. Next navigate to "Alerts" and select "Rules".
     1. Now you will need to select "Edit Rule"
@@ -101,11 +101,15 @@ We currently use Heroku or Galaxy for hosting new Meteor apps. Depending on the 
     1. You should have this Alert Rule "An event is seen" & "Send a notification via Slack".
     1. Now save this rule :)
 
+#### Meteor apps setup
+
+  1. All you have to do is have used our base meteor app to get started.
+  2. You will need to add the DSN and Public DSN from your sentry.io projects to your meteor settings for staging & production.
 
 
-
-
-
+#### Exponent - React-Native setup
+1. TODO: This will need to be updated once we have a build script completed.
+2. Currently you can follow the steps taken for the Rapunzl project.
 
 
 # CI
