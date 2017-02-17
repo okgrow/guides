@@ -60,7 +60,55 @@ We currently use Heroku or Galaxy for hosting new Meteor apps. Depending on the 
             1. Ensure the user has API credentials, no password
         1. Set AWS config env vars on staging app
 
-## CI
+# Error Logging
+
+  Since the shutdown of Kadira we have started to use [sentry.io](https://sentry.io) for error tracking and reporting. You can sign into sentry using single sign on with your work gmail account.
+
+  Depending on the project you may create a new organaisation for the project or create a new project under the existing OK GROW! organaisation. The reason for creating a new org is mainly for billing purposes and managing users outside of OK GROW!.
+
+
+  #### Steps to create a new organaisation:
+  1. Once logged in. Click the icon in the top left hand corner.
+  2. Select "New Organization" and follow the prompts.
+  3. You should now have an organisation and one project, you will now need to add anyone one the project to the organisation.
+  4. Navigate to the organisation's settings page and select "Members". Click "Invite Member" in the top right hand corner.
+  5. Setup billing & usage, this will be with OK GROWS! credit card or the Clients.
+
+
+  #### Create Projects:
+
+  1. Every app we build will need to have at least two projects to track errors. e.g - a staging and production project. The recommended syntax for a projects name is `myproject-staging` and `myproject-production`.
+  2. Navigate to the organisations dashboard, in the top right select "New Project".
+  3. Follow the prompts and setup the project.
+  4. Navigate to the "Project Settings" and set the following fields:
+    1. Email: Subject Prefix to the projects name.
+    1. Event Settings: Default environment to staging or production.
+    1. The Project Name & Short Name should be the same.
+    1. The Team should be the Team for the organisation the project belongs to. If the project is under OK GROW! then set it to OK GROW!
+  5. Next navigate to All Integrations and add the following:
+    1. Github - Optional
+    1. Slack - Mandatory
+    1. Trello - Recommended
+  6. Once these integrations have been added you will need to set them up.
+    1. Github - (Optional) Follow instructions to setup.
+    1. Slack - You will need to go to [here](https://okgrow.slack.com/apps/A0F814BEV-sentry) and select "Add Configuration", and follow the prompts. Add a descripitive label to state what project the error logging is for. Save the settings and copy the Webhook URL and add it to the sentry website.
+    1. Trello - Follow these [instructions](https://github.com/damianzaremba/sentry-trello/blob/master/HOW_TO_SETUP.md) to get the API key & token. Once the keys have been saved you will need to add the Trello Organization where the Trello Board exists. Note these keys are associated with your trello user account.
+  7. Next navigate to "Alerts" and select "Rules".
+    1. Now you will need to select "Edit Rule"
+    1. Delete the two default rule & action.
+    1. Now add the rule "An event is seen".
+    1. Next add the "Send a notification via [service]", once added you can select to add Slack.
+    1. You should have this Alert Rule "An event is seen" & "Send a notification via Slack".
+    1. Now save this rule :)
+
+
+
+
+
+
+
+
+# CI
 
 AWS config:
 
