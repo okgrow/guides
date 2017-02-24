@@ -5,9 +5,9 @@ Our project management process is a form of Agile that has been adapted (and con
 ## Project roles
 
 Each project has the following roles:
-  - Project lead: responsible for all things. We take turns being project lead.
+  - Project lead: responsible for all things. We take turns being project lead. The project lead runs the [project meetings](#meetings)
   - Developer or designer: anyone else who’s working on the project.
-  - Project advisor: someone who’s not actively working on the project but keeps an eye on things and helps out where needed. The advisor runs the [project meetings](#meetings).
+  - Project advisor: someone who’s not actively working on the project but keeps an eye on things and helps out where needed.
 
 ## Weekly cadence
 
@@ -16,7 +16,7 @@ Each project has the following roles:
 
 ## Meetings
 
-The project advisor runs the meetings. Each project has the following meetings:
+The project lead runs the meetings. Each project has the following meetings:
 
 1. A weekly one hour [retrospective and planning meeting](retrospective-and-planning-meeting.md) as early as possible on Monday morning.
 1. A weekly one-hour review meeting with the client whenever is convenient for everyone.
