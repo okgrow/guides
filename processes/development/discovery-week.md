@@ -34,7 +34,7 @@ For the second type the main work should be getting the existing app running and
 - Create Slack channel for ourselves
 - Create project email alias (Google Group): &lt;project&gt;@okgrow.com
   - Edit “Post” setting in “Posting permissions” and allow public to post.
-  - Add Slack email integration and add the email address to the Google group
+  - Add Slack email integration and add the email address to the Google Group (this needs to be done by someone with Google Apps admin access).
 - Create project info doc, copy from [template](https://docs.google.com/a/okgrow.com/document/d/1KUVInohhNZxmrlsJw7Ax5MMQraawglGpTo1O-eXJ030/edit) into project folder.
 
 #### The deliverables
