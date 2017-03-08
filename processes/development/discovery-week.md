@@ -33,8 +33,11 @@ For the second type the main work should be getting the existing app running and
   - For feature/app development projects use: [https://trello.com/b/lPS0CYbG](https://trello.com/b/lPS0CYbG)
 - Create Slack channel for ourselves
 - Create project email alias (Google Group): &lt;project&gt;@okgrow.com
-  - Edit “Post” setting in “Posting permissions” and allow public to post.
-  - Add Slack email integration and add the email address to the Google Group (this needs to be done by someone with Google Apps admin access).
+- Send the project email to the Slack channel:
+  - In “Posting permissions” edit the “Post” setting  and allow public to post.
+  - In "Basic permissions" check the checkbox for "Allow members external to this organization" then under "Join the group" select "Anyone can ask"
+  - Add Slack email integration and add the email address to the Google Group (this needs to be done by someone with Google Apps admin access).
+  - You may now go back to "Basic permissions" and uncheck the checkbox for "Allow members external to this organization" then under "Join the group" change it back to just "Anyone in the organization can ask"
 - Create project info doc, copy from [template](https://docs.google.com/a/okgrow.com/document/d/1KUVInohhNZxmrlsJw7Ax5MMQraawglGpTo1O-eXJ030/edit) into project folder.
 
 #### The deliverables
