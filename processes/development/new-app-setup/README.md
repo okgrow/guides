@@ -40,7 +40,7 @@ We currently use Heroku or Galaxy for hosting new Meteor apps. Depending on the 
     1. Add 2-factor auth (MFA)
     1. Attach AdministratorAccess policy
     1. Ask client to change root account password and add MFA
-1. Create AWS Route 53 Health Check with alert for the production hostname (not the *.herokuapp.com hostname)
+1. Create AWS Route 53 Health Check with alert for the production hostname (not the \*.herokuapp.com hostname)
     1. Add ?ping=aws to monitoring URL
     1. Set up string matching for something that appears in the beginning of the page, e.g. the title. (NOTE: it needs to be in the first few hundred bytes).
     1. Set up alert notification to &lt;project&gt;@okgrow.com
@@ -119,32 +119,35 @@ Atlas is the best option if wishing to scale CPU & Memory independently to it's 
 
 # CI
 
-AWS config:
+#### AWS config:
 
 1. Create IAM user with read-only access to production S3 bucket and read/write access  to staging S3 bucket
     1. [Add policy](https://drive.google.com/open?id=0B4JoTt-NyIq5Y2RuYjZPTFAwd0U)
     2. Ensure the user has API credentials, no password
 
-MongoDB create users:
+#### MongoDB create users:
 
 1. Create read-only user for production DB
 2. Create user on staging DB (not read-only)
 
-Semaphore config:
+#### Semaphore config:
 
 1. Create new project
     1. NOTE: Paul needs to do this step currently. Will fix...
-1. Edit build settings:
+1. Edit Build Settings:
     1. Go to [https://semaphoreci.com/okgrow/](https://semaphoreci.com/okgrow/)&lt;PROJECT_NAME&gt;/settings
     1. Set the Node version to node.js 4.8.0
     1. Add each of these lines under setup
         1. `curl https://install.meteor.com/ | sh`
         1. `meteor --version`
-        1. `npm install`
-        1. `cp settings.json.example settings.json`
+        1. `meteor npm install`
+        1. `meteor npm start` _wip: find and add instructions to listen for success and exit process_
     1. Note: You may also need to add more project specific steps.
-    1. Add the test runner under "Job #1": `npm test`
-1. In Heroku: Under ‘Access’, add [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) as a collaborator in the staging and production Heroku app
+    1. Add the test runner under "Job #1": `meteor npm run test`
+        - **note**: in your project package.json file, create a `test` script that runs all `unit` and `integration` tests
+1. Edit Project Settings:
+    1. select `Configuration Files`
+    1. add the project's `settings.json` file
 1. On the sempahore project homepage click “Set Up Deployment” (staging)
     1. Choose Heroku, then automatic, and then master.
     1. Enter the API key for the [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) Heroku user.
@@ -160,3 +163,7 @@ Semaphore config:
     1. Add sempahore as an integration and make note of the webhook URL, then save the integration
     1. Go to Project Settings / Notifications / Webhooks in Semaphore
     1. Add the webhook URl and select 'Build and Deploy' from the 'Recieve After' dropdown
+
+#### Heroku config
+
+1. In Heroku: Under ‘Access’, add [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) as a collaborator in the staging and production Heroku app
