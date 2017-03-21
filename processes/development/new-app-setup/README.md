@@ -136,7 +136,7 @@ Semaphore config:
     1. NOTE: Paul needs to do this step currently. Will fix...
 1. Edit build settings:
     1. Go to [https://semaphoreci.com/okgrow/](https://semaphoreci.com/okgrow/)&lt;PROJECT_NAME&gt;/settings
-    1. Set the Node version to node.js 4.7.3
+    1. Set the Node version to node.js 4.8.0
     1. Add each of these lines under setup
         1. `curl https://install.meteor.com/ | sh`
         1. `meteor --version`
