@@ -6,6 +6,10 @@ This assumes the discovery week has already happened.
 
 # Production and staging apps
 
+We currently use Heroku or Galaxy for hosting new Meteor apps. Depending on the projects requirements we will select one or the other.
+
+## Heroku setup
+
 1. Create new app
 1. Copy all relevent configuration and code from private guides repo, including `settings.example.json` file to project
 1. Create staging Heroku app using the [create-heroku-app](scripts/create-heroku-app) script.
@@ -17,21 +21,24 @@ This assumes the discovery week has already happened.
             1. High response time
             1. Connection closed w/o response
             1. Idle connection
-    1. Configure Kadira
-        1. Add kadira to your meteor project, `meteor add meteorhacks:kadira`
-        1. Add a staging and production app in the Kadira UI and add the environment variables to the appropriate heroku app
-        1. Set up Slack and email alerts for errors > 0 at least once (specific errors can be ignored in the app’s config) (staging and production can share the same Slack webhook URL).
 1. Create production Heroku app (same steps as staging)
     1. Configure Mailgun add-on
       2. Add DNS records
       3. Edit `MAILGUN_*` env vars to contain the info for the verified domain (instead of the sandbox domain).
     1. If you are configuring dynos Heroku requires a `Procfile` where you specify the startup process commands. Here is a basic meteor example [Procfile](procfile-example)
+
+## Galaxy setup
+
+ TODO....
+
+# AWS setup
+
 1. Set up AWS account
-    1. Client creates root account and gives us temporary password
-    1. Set custom IAM login domain
-    1. Create IAM user for each developer
-        1. Add 2-factor auth (MFA)
-        1. Attach AdministratorAccess policy
+  1. Client creates root account and gives us temporary password
+  1. Set custom IAM login domain
+  1. Create IAM user for each developer
+    1. Add 2-factor auth (MFA)
+    1. Attach AdministratorAccess policy
     1. Ask client to change root account password and add MFA
 1. Create AWS Route 53 Health Check with alert for the production hostname (not the \*.herokuapp.com hostname)
     1. Add ?ping=aws to monitoring URL
@@ -53,7 +60,64 @@ This assumes the discovery week has already happened.
             1. Ensure the user has API credentials, no password
         1. Set AWS config env vars on staging app
 
-## CI
+# Error Logging
+
+  Since the shutdown of Kadira we have started to use [sentry.io](https://sentry.io) for error tracking and reporting. You can sign into sentry using single sign on with your work gmail account.
+
+  Depending on the project you may create a new organaisation for the project or create a new project under the existing OK GROW! organaisation. The reason for creating a new org is mainly for billing purposes and managing users outside of OK GROW!.
+
+
+  #### Steps to create a new organaisation:
+  1. Once logged in. Click the icon in the top left hand corner.
+  2. Select "New Organization" and follow the prompts.
+  3. You should now have an organisation and one project, you will now need to add anyone one the project to the organisation.
+  4. Navigate to the organisation's settings page and select "Members". Click "Invite Member" in the top right hand corner.
+  5. Setup billing & usage, this will be with OK GROWS! credit card or the Clients.
+
+
+  #### Create Projects:
+
+  1. Every app we build will need to have at least two projects to track errors. e.g - a staging and production project. The recommended syntax for a projects name is `myproject-staging` and `myproject-production`.
+  2. Navigate to the organisations dashboard, in the top right select "New Project".
+  3. Follow the prompts and setup the project.
+  4. Navigate to the "Project Settings" and set the following fields:
+    1. Email: Subject Prefix to the projects name.
+    1. Event Settings: Default environment to staging or production.
+    1. The Project Name & Short Name should be the same.
+    1. The Team should be the Team for the organisation the project belongs to. If the project is under OK GROW! then set it to OK GROW!
+  5. Next navigate to All Integrations and add the following:
+    1. Github - Optional
+    1. Slack - Mandatory
+    1. Trello - Recommended
+  6. Once these integrations have been added you will need to set them up.
+    1. Github - (Optional) Follow instructions to setup.
+    1. Slack - You will need to go to [here](https://okgrow.slack.com/apps/A0F814BEV-sentry) and select "Add Configuration", and follow the prompts. Add a descripitive label to state what project the error logging is for. Save the settings and copy the Webhook URL and add it to the sentry website. You can use the same URL for both staging & production.
+    1. Trello - Follow these [instructions](https://github.com/damianzaremba/sentry-trello/blob/master/HOW_TO_SETUP.md) to get the API key & token. Once the keys have been saved you will need to add the Trello Organization where the Trello Board exists. Note these keys are associated with your trello user account.
+  7. Next navigate to "Alerts" and select "Rules".
+    1. Now you will need to select "Edit Rule"
+    1. Delete the two default rule & action.
+    1. Now add the rule "An event is seen".
+    1. Next add the "Send a notification via [service]", once added you can select to add Slack.
+    1. You should have this Alert Rule "An event is seen" & "Send a notification via Slack".
+    1. Now save this rule :)
+
+#### Meteor apps setup
+
+  1. All you have to do is have used our base meteor app to get started.
+  2. You will need to add the DSN and Public DSN from your sentry.io projects to your meteor settings for staging & production.
+
+
+#### Exponent - React-Native setup
+1. TODO: This will need to be updated once we have a build script completed.
+2. Currently you can follow the steps taken for the Rapunzl project.
+
+# MongoDB Atlas
+
+If the project is using Galaxy to host the app the MongoDB Atlas is the recommended hosting provider. If you already have an account it will take you about 5 mins to setup. You can find detailed step-by-step instructions to getting setup and started in our blog post [here](https://www.okgrow.com/posts/mongodb-atlas-setup).
+
+Atlas is the best option if wishing to scale CPU & Memory independently to it's storage & disk I/O, cheapest for using the WiredTiger Storage engine, encrypting data at rest, have 3 to 7 data bearing nodes, continuous backups & snapshots. 
+
+# CI
 
 #### AWS config:
 
@@ -72,7 +136,7 @@ This assumes the discovery week has already happened.
     1. NOTE: Paul needs to do this step currently. Will fix...
 1. Edit Build Settings:
     1. Go to [https://semaphoreci.com/okgrow/](https://semaphoreci.com/okgrow/)&lt;PROJECT_NAME&gt;/settings
-    1. Set the Node version to node.js 6.3.1
+    1. Set the Node version to node.js 4.8.0
     1. Add each of these lines under setup
         1. `curl https://install.meteor.com/ | sh`
         1. `meteor --version`
