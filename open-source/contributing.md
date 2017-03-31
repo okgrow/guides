@@ -1,16 +1,16 @@
 
-#Contributing#
+# Contributing
 
-##Issues:##
+## Issues:
 
  * If possible link to an example app which replicates the problem.
  * If it's a security issue, please email us rather than filing an issue.
 
-###Labeling system:
+### Labeling system:
 
 OK GROW! follows an issue labeling system which is described below.
 
-####Primary label:
+#### Primary label:
 
 All issues are to have a primary label applied.
 
@@ -21,7 +21,7 @@ All issues are to have a primary label applied.
 * **enhancement**
   * Feature request for the specific package.
 
-####Secondary label:
+#### Secondary label:
 
 A secondary label will be applied once a member of OK GROW! has reviewed the issue.
 
@@ -41,7 +41,7 @@ A secondary label will be applied once a member of OK GROW! has reviewed the iss
 * **pull-requests-encouraged**
   * Community solution is encouraged and more likely to be accepted into the package.
 
-####Additional label:
+#### Additional label:
 Issues labeled with `bug` or `enhancement` can have one of the following labels applied.
 
 * **will-add**
@@ -57,7 +57,7 @@ Issues labeled with `bug` or `enhancement` can have one of the following labels 
 
 
 
-#Pull Requests:
+# Pull Requests:
 
  * Pull requests are always welcome.
  * We prioritize PRs over issues.
