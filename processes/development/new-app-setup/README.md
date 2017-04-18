@@ -1,18 +1,19 @@
 # New app setup
 
-It's very important that we hit the ground running when we start a new project. In order to do that we need to follow a checklist and make as few decisions as possible. We love to try new things but the first week of a new project is not the time to do it.
+It's important to hit the ground running when starting a new project. To do that we use a checklist and make as few decisions as possible. We love trying new things but the first week of a new project is not the time for that.
 
 This assumes the discovery week has already happened.
 
 # Production and staging apps
 
-We currently use Heroku or Galaxy for hosting new Meteor apps. Depending on the projects requirements we will select one or the other.
+Depending on projects requirements we'll use Heroku or Galaxy for hosting new Meteor apps.
 
 ## Heroku setup
 
-1. Create new app
-1. Copy all relevent configuration and code from private guides repo, including `settings.example.json` file to project
-1. Create staging Heroku app using the [create-heroku-app](scripts/create-heroku-app) script.
+1. Create a new app [TODO: More details].
+1. Copy relevant configuration and code from the [`private-guides` repository](https://github.com/okgrow/private-guides) to the project.
+1. Create staging Heroku app using the [create-heroku-app](../../scripts/create-heroku-app) script.
+1. Add other team members as collaborators on the app under the "Access" section.
 1. For meteor projects use [our fork of the "horse" buildpack](https://github.com/okgrow/meteor-buildpack-horse.git)
     1. Configure Logentries
         1. Add the Logentries Slack integration to the project channel
@@ -29,7 +30,7 @@ We currently use Heroku or Galaxy for hosting new Meteor apps. Depending on the 
 
 ## Galaxy setup
 
- TODO....
+TODO
 
 # AWS setup
 
@@ -115,7 +116,7 @@ Depending on the project you may create a new organaisation for the project or c
 
 If the project is using Galaxy to host the app the MongoDB Atlas is the recommended hosting provider. If you already have an account it will take you about 5 mins to setup. You can find detailed step-by-step instructions to getting setup and started in our blog post [here](https://www.okgrow.com/posts/mongodb-atlas-setup).
 
-Atlas is the best option if wishing to scale CPU & Memory independently to it's storage & disk I/O, cheapest for using the WiredTiger Storage engine, encrypting data at rest, have 3 to 7 data bearing nodes, continuous backups & snapshots. 
+Atlas is the best option if wishing to scale CPU & Memory independently to it's storage & disk I/O, cheapest for using the WiredTiger Storage engine, encrypting data at rest, have 3 to 7 data bearing nodes, continuous backups & snapshots.
 
 # CI
 
