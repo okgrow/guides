@@ -12,10 +12,11 @@ Depending on projects requirements we'll use Heroku or Galaxy for hosting new Me
 
 1. Create a new app [TODO: More details].
 1. Copy relevant configuration and code from the [`private-guides` repository](https://github.com/okgrow/private-guides) to the project.
-1. Create staging Heroku app using the [create-heroku-app](../../scripts/create-heroku-app) script.
+1. Create staging Heroku app using the [create-heroku-app](../../scripts/create-heroku-app) script. NOTE: You'll want to specify "-staging" or "-production" in the name.
 1. Add other team members as collaborators on the app under the "Access" section.
+    1. Add accounts+semaphoredeploy@okgrow.com as a collaborator.
 1. For meteor projects use [our fork of the "horse" buildpack](https://github.com/okgrow/meteor-buildpack-horse.git)
-    1. Configure Logentries
+    1. Configure the Logentries add-on in Heroku
         1. Add the Logentries Slack integration to the project channel
         1. Disable email for all notifications and add the Slack webhook URL
         1. disable some notifications which get triggered by every websocket connection:
@@ -65,10 +66,10 @@ TODO
 
 Since the shutdown of Kadira we have started to use [sentry.io](https://sentry.io) for error tracking and reporting. You can sign into sentry using single sign on with your work gmail account.
 
-Depending on the project you may create a new organaisation for the project or create a new project under the existing OK GROW! organaisation. The reason for creating a new org is mainly for billing purposes and managing users outside of OK GROW!.
+Depending on the project you may create a new organisation for the project or create a new project under the existing OK GROW! organisation. The reason for creating a new org is mainly for billing purposes and managing users outside of OK GROW!.
 
 
-#### Steps to create a new organaisation:
+#### Steps to create a new organisation:
 1. Once logged in. Click the icon in the top left hand corner.
 2. Select "New Organization" and follow the prompts.
 3. You should now have an organisation and one project, you will now need to add anyone one the project to the organisation.
@@ -118,7 +119,7 @@ If the project is using Galaxy to host the app the MongoDB Atlas is the recommen
 
 Atlas is the best option if wishing to scale CPU & Memory independently to it's storage & disk I/O, cheapest for using the WiredTiger Storage engine, encrypting data at rest, have 3 to 7 data bearing nodes, continuous backups & snapshots.
 
-# CI
+# Continuous Integration
 
 #### AWS config:
 
@@ -131,40 +132,44 @@ Atlas is the best option if wishing to scale CPU & Memory independently to it's 
 1. Create read-only user for production DB
 2. Create user on staging DB (not read-only)
 
-#### Semaphore config:
+#### Semaphore:
 
 1. Create new project
     1. NOTE: Paul needs to do this step currently. Will fix...
 1. Edit Build Settings:
     1. Go to [https://semaphoreci.com/okgrow/](https://semaphoreci.com/okgrow/)&lt;PROJECT_NAME&gt;/settings
-    1. Set the Node version to node.js 4.8.0
+    1. Set the Node version to node.js 4.8.0 (QUESTION: Newer version?)
     1. Add each of these lines under setup
+        1. `cd web`
         1. `curl https://install.meteor.com/ | sh`
         1. `meteor --version`
         1. `meteor npm install`
+        1. `cp /home/runner/seam/settings.json settings.json` (QUESTION: How do we handle env differences here?)
         1. `meteor npm start` _wip: find and add instructions to listen for success and exit process_
     1. Note: You may also need to add more project specific steps.
     1. Add the test runner under "Job #1": `meteor npm run test`
         - **note**: in your project package.json file, create a `test` script that runs all `unit` and `integration` tests
 1. Edit Project Settings:
-    1. select `Configuration Files`
-    1. add the project's `settings.json` file
-1. On the sempahore project homepage click “Set Up Deployment” (staging)
-    1. Choose Heroku, then automatic, and then master.
-    1. Enter the API key for the [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) Heroku user.
+    1. Select `Configuration Files`
+    1. Add the project's `settings.json` file
+1. On the Semaphore project homepage click “Set Up Deployment” (staging)
+    1. Choose Heroku:
+        1. Select "Automatic"
+        1. Select the "master" branch
+    1. Enter the API key for the [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) Heroku user which is found here: https://docs.google.com/spreadsheets/d/1Uu0dUzbRKGMqAkbelLbpGpIHx3yjTeHwB1dgf7dZqyk/edit#gid=0.
     1. Select the Staging Heroku app for this project from the list, and name it “Staging”.
-    1. Add the [staging app deploy config](semaphore-staging-deploy-config)
+    1. On the Semaphore  project screen, under servers, click the server name (e.g., Staging).
+    1. On the servers screen, click the "Edit Server" button.
+    1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [staging app deploy config](semaphore-staging-deploy-config)
 1. Add a new server by clicking the + button beside 'Servers' (production)
     1. Choose Heroku, then manual, and then master.
     1. Enter the API key for the [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) Heroku user, check our Accounts.
     1. Select the Production Heroku app for this project from the list, and name it “Production”
-    1. Add the [production app deploy config](semaphore-production-deploy-config)
+    1. On the Semaphore  project screen, under servers, click the server name (e.g., Staging).
+    1. On the servers screen, click the "Edit Server" button.
+    1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [staging app deploy config](semaphore-staging-deploy-config)
 1. Add Slack notifications (no email)
     1. Go to the project's slack channel and add an integration
-    1. Add sempahore as an integration and make note of the webhook URL, then save the integration
+    1. Add Semaphore as an integration and make note of the webhook URL, then save the integration
     1. Go to Project Settings / Notifications / Webhooks in Semaphore
-    1. Add the webhook URl and select 'Build and Deploy' from the 'Recieve After' dropdown
-
-#### Heroku config
-
-1. In Heroku: Under ‘Access’, add [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) as a collaborator in the staging and production Heroku app
+    1. Add the webhook URL and select 'Build and Deploy' from the 'Receive After' dropdown
