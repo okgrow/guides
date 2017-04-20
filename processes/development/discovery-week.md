@@ -23,10 +23,12 @@ For the second type the main work should be getting the existing app running and
   - Advisor (someone not on the team)
 - Share the Google Drive folder with everyone on our team
 - Schedule meetings
-  - Kick-off call the week before (Wednesday or earlier) with the whole team invited to make sure everyone will be prepared
-  - Monday morning meeting to go into more details
-  - Final meeting for Friday as early as possible.
-  - Daily status meeting, 15 minutes
+  - Discovery-week-only meetings:
+    - Kick-off call the week before (Wednesday or earlier) with the client to make sure everyone will be prepared
+    - Monday morning meeting with the client to go into more details
+    - Final meeting with client for Friday as early as possible.
+    - Daily status meeting (15 minutes), development team only (including client only if they're technical)
+  - [Recurring meetings for the rest of the project](https://github.com/okgrow/guides/tree/master/processes/development/project-management#meetings) (it's easier to do no end date in case the project is extended).
 - Client should have given us access to a repo and instructions to set up a dev environment
 - Create Trello board
   - For consulting projects use: [https://trello.com/b/aih9u2u6](https://trello.com/b/aih9u2u6)
