@@ -17,12 +17,12 @@ Depending on projects requirements we'll use Heroku or Galaxy for hosting new Me
     1. Add accounts+semaphoredeploy@okgrow.com as a collaborator.
 1. For meteor projects use [our fork of the "horse" buildpack](https://github.com/okgrow/meteor-buildpack-horse.git)
     1. Configure the Logentries add-on in Heroku
-        1. Add the Logentries Slack integration to the project channel
         1. Disable email for all notifications and add the Slack webhook URL
-        1. disable some notifications which get triggered by every websocket connection:
+        1. Disable some notifications which get triggered by every websocket connection:
             1. High response time
             1. Connection closed w/o response
             1. Idle connection
+    1. Add the Logentries Slack integration to the project channel
 1. Create production Heroku app (same steps as staging)
     1. Configure Mailgun add-on
       2. Add DNS records
@@ -152,22 +152,24 @@ Atlas is the best option if wishing to scale CPU & Memory independently to it's 
 1. Edit Project Settings:
     1. Select `Configuration Files`
     1. Add the project's `settings.json` file
-1. On the Semaphore project homepage click “Set Up Deployment” (staging)
+1. STAGING: On the Semaphore project homepage click “Set Up Deployment”
     1. Choose Heroku:
         1. Select "Automatic"
         1. Select the "master" branch
-    1. Enter the API key for the [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) Heroku user which is found here: https://docs.google.com/spreadsheets/d/1Uu0dUzbRKGMqAkbelLbpGpIHx3yjTeHwB1dgf7dZqyk/edit#gid=0.
-    1. Select the Staging Heroku app for this project from the list, and name it “Staging”.
-    1. On the Semaphore  project screen, under servers, click the server name (e.g., Staging).
+    1. Enter the API key for the `accounts+semaphoredeploy@okgrow.com` Heroku user which is found here: https://docs.google.com/spreadsheets/d/1Uu0dUzbRKGMqAkbelLbpGpIHx3yjTeHwB1dgf7dZqyk/edit#gid=0.
+    1. Select the Staging Heroku app for this project from the list, and name the server “Staging”.
+    1. On the Semaphore  project screen, under servers, click the server name (e.g., "Staging").
     1. On the servers screen, click the "Edit Server" button.
-    1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [staging app deploy config](semaphore-staging-deploy-config)
-1. Add a new server by clicking the + button beside 'Servers' (production)
-    1. Choose Heroku, then manual, and then master.
-    1. Enter the API key for the [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) Heroku user, check our Accounts.
-    1. Select the Production Heroku app for this project from the list, and name it “Production”
-    1. On the Semaphore  project screen, under servers, click the server name (e.g., Staging).
+    1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [staging app deploy config](semaphore-staging-deploy-config). NOTE: These commands will need some customization for your app.
+1. PRODUCTION: Add a new server by clicking the + button beside 'Servers'
+    1. Choose Heroku:
+        1. Select "Automatic"
+        1. Select the "master" branch
+    1. Enter the API key for the `accounts+semaphoredeploy@okgrow.com` Heroku user which is found here: https://docs.google.com/spreadsheets/d/1Uu0dUzbRKGMqAkbelLbpGpIHx3yjTeHwB1dgf7dZqyk/edit#gid=0.
+    1. Select the Production Heroku app for this project from the list, and name the server “Production”.
+    1. On the Semaphore  project screen, under servers, click the server name (e.g., "Production").
     1. On the servers screen, click the "Edit Server" button.
-    1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [staging app deploy config](semaphore-staging-deploy-config)
+    1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [staging app deploy config](semaphore-staging-deploy-config). NOTE: These commands will need some customization for your app.
 1. Add Slack notifications (no email)
     1. Go to the project's slack channel and add an integration
     1. Add Semaphore as an integration and make note of the webhook URL, then save the integration
