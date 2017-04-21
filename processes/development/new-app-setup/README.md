@@ -149,9 +149,22 @@ Atlas is the best option if wishing to scale CPU & Memory independently to it's 
     1. Note: You may also need to add more project specific steps.
     1. Add the test runner under "Job #1": `meteor npm run test`
         - **note**: in your project package.json file, create a `test` script that runs all `unit` and `integration` tests
-1. Edit Project Settings:
-    1. Select `Configuration Files`
-    1. Add the project's `settings.json` file
+1. Clieck "Edit Project Settings":
+    1. Under "Environment Variables" add the following variables (you'll get these variables from the Herkou database settings for each environment and from the AWS setup process):
+        1. `PRODUCTION_DB_HOST`
+        1. `PRODUCTION_DB_PORT`
+        1. `PRODUCTION_DB_NAME`
+        1. `PRODUCTION_DB_USERNAME`
+        1. `PRODUCTION_DB_PASSWORD`
+        1. `STAGING_DB_HOST`
+        1. `STAGING_DB_PORT`
+        1. `STAGING_DB_NAME`
+        1. `STAGING_DB_USERNAME`
+        1. `STAGING_DB_PASSWORD`
+        1. `AWS_ACCESS_KEY_ID`
+        1. `AWS_SECRET_ACCESS_KEY`
+        1. `APPNAME` (used on AWS setup)
+    1. Under "Configuration Files" add the application's `settings.json` file.
 1. STAGING: On the Semaphore project homepage click “Set Up Deployment”
     1. Choose Heroku:
         1. Select "Automatic"
@@ -169,7 +182,7 @@ Atlas is the best option if wishing to scale CPU & Memory independently to it's 
     1. Select the Production Heroku app for this project from the list, and name the server “Production”.
     1. On the Semaphore  project screen, under servers, click the server name (e.g., "Production").
     1. On the servers screen, click the "Edit Server" button.
-    1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [staging app deploy config](semaphore-staging-deploy-config). NOTE: These commands will need some customization for your app.
+    1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [production app deploy config](semaphore-production-deploy-config).
 1. Add Slack notifications (no email)
     1. Go to the project's slack channel and add an integration
     1. Add Semaphore as an integration and make note of the webhook URL, then save the integration
