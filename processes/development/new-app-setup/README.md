@@ -147,9 +147,9 @@ Atlas is the best option if wishing to scale CPU & Memory independently to it's 
     1. Add the test runner under "Job #1": `meteor npm run test`
         - **note**: in your project package.json file, create a `test` script that runs all `unit` and `integration` tests
 1. Edit Project Settings:
-    1. select `Configuration Files`
-    1. add the project's `settings.json` file
-1. On the sempahore project homepage click “Set Up Deployment” (staging)
+    1. Under "Configuration Files" add the project's `settings.json` file.
+    1. Under "Branches" change the cancellation strategy to "queued and started builds".
+1. On the Sempahore project homepage click “Set Up Deployment” (staging)
     1. Choose Heroku, then automatic, and then master.
     1. Enter the API key for the [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) Heroku user.
     1. Select the Staging Heroku app for this project from the list, and name it “Staging”.
@@ -163,7 +163,7 @@ Atlas is the best option if wishing to scale CPU & Memory independently to it's 
     1. Go to the project's slack channel and add an integration
     1. Add sempahore as an integration and make note of the webhook URL, then save the integration
     1. Go to Project Settings / Notifications / Webhooks in Semaphore
-    1. Add the webhook URl and select 'Build and Deploy' from the 'Recieve After' dropdown
+    1. Add the webhook URl and select 'Build and Deploy' from the 'Receive After' dropdown
 
 #### Heroku config
 
