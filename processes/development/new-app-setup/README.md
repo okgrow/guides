@@ -32,7 +32,11 @@ Begin you new application by following the steps with the OKGROW! [`starter-kit`
         1. Connection closed w/o response
         1. Idle connection
     1. Disable email for all notifications and add the Slack web hook URL
+<<<<<<< HEAD
         * **NOTE** This is a process that involves editing each notification. (TODO: details)
+=======
+      * **NOTE** This is a process that involves editing each notification. (TODO: details)
+>>>>>>> a9a3d1f44375dc65596772bb8231456ade9c5c3d
 1. Add the mLab MongoDB add on.
     1. TODO: details
 
@@ -47,7 +51,11 @@ Begin you new application by following the steps with the OKGROW! [`starter-kit`
             1. Connection closed w/o response
             1. Idle connection
         1. Disable email for all notifications and add the Slack web hook URL
+<<<<<<< HEAD
             * **NOTE** This is a process that involves editing each notification. (TODO: details)
+=======
+          * **NOTE** This is a process that involves editing each notification. (TODO: details)
+>>>>>>> a9a3d1f44375dc65596772bb8231456ade9c5c3d
     1. Configure Mailgun add-on
         1. Add DNS records (TODO: more details)
         1. Edit `MAILGUN_*` env vars to contain the info for the verified domain (instead of the sandbox domain).
@@ -162,7 +170,11 @@ Depending on the project, you may create a new organisation for the project or c
 
 ##### Project
 1. Create a new project in Semaphore
+<<<<<<< HEAD
     * **NOTE** Currently, Paul needs to do this step. Will fix.
+=======
+    1. **NOTE** Currently, Paul needs to do this step. Will fix.
+>>>>>>> a9a3d1f44375dc65596772bb8231456ade9c5c3d
 1. Login to your Semaphore account (if you haven't been added to OK GROW!'s account, ask to be added.)
 1. Select your project (listed as **okgrow / [project-name]**)
 1. Edit project Settings by clicking "Project settings":
@@ -175,7 +187,11 @@ Depending on the project, you may create a new organisation for the project or c
             1. `meteor npm install`
             1. `cp /home/runner/seam/settings.json settings.json`
             1. **FUTURE** `meteor npm start`
+<<<<<<< HEAD
                 * **NOTE** add instructions to listen for success and exit process
+=======
+              * **NOTE** add instructions to listen for success and exit process
+>>>>>>> a9a3d1f44375dc65596772bb8231456ade9c5c3d
         1. Rename "Job #1" to "Tests"
         1. Add: `meteor npm run test`
             * **NOTE** We need to add this to `starter-kit`
