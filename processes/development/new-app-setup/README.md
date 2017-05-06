@@ -48,12 +48,12 @@ Begin you new application by following the steps with the OKGROW! [`starter-kit`
             1. Idle connection
         1. Disable email for all notifications and add the Slack web hook URL
             * **NOTE** This is a process that involves editing each notification. (TODO: details)
-1. Add the Compose MongoDB add on.
-    1. TODO: details
-    1. Create read-only user for production DB
 1. Configure Mailgun add-on
     1. Add DNS records (TODO: more details)
     1. Edit `MAILGUN_*` env vars to contain the info for the verified domain (instead of the sandbox domain).
+1. Add the Compose MongoDB add on.
+    1. TODO: details
+    1. Create read-only user for production DB
 
 #### Database Information Document
 Create a new spreadsheet in the project's "Development" folder on the Google Drive and record the database information from both staging and production databases.
