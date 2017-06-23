@@ -143,9 +143,28 @@ Depending on the project, you may create a new organisation for the project or c
 1. All you have to do is have used our base meteor app to get started.
 1. You will need to add the DSN and Public DSN from your sentry.io projects to your meteor settings for staging and production.
 
-#### Exponent - React-Native setup
-1. TODO: This will need to be updated once we have a build script completed.
-1. Currently you can follow the steps taken for the Rapunzl project. (TODO: details)
+#### Expo - React Native Setup
+1. Ensure that you're using a version of Node that supports `async/await`(Node 7.6+).
+1. `npm install sentry-cli-binary -g`
+1. `npm install sentry-expo --save`
+1. For the next steps please follow these [instructions](https://docs.sentry.io/clients/react-native/expo/) from sentry.
+1. You must complete the above instructions for adding `sentry.config().install()` to your `main.js` or `app.js` and uploading source maps.
+
+For more details take a look at expo's docs [here](https://docs.expo.io/versions/latest/guides/using-sentry.html#content).
+
+*Note:* At the time of writing Expo isn't using the native integration yet, hopefully this will change in a future release. Please check the status and update the guide when this changes.
+
+#### React Native Setup
+Follow the below steps if you are not using Expo for your React Native app.
+1. `npm install react-native-sentry --save`
+1. `react-native link react-native-sentry`
+1. When linking you will be asked to provide the following(details are in your sentry project):
+    1. `DSN`
+    1. `organization slug`
+    1. `project slug`
+    1. `Auth token`
+  
+*Note:* currently sentry only supports `react-native >= 0.38`. To learn more read the sentry docs [here](https://docs.sentry.io/clients/react-native/).
 
 
 
