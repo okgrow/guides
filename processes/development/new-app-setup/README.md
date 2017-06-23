@@ -157,10 +157,10 @@ Follow the below steps if you are not using Expo for your React Native app.
 1. `npm install react-native-sentry --save`
 1. `react-native link react-native-sentry`
 1. When linking you will be asked to provide the following(details are in your sentry project):
-  1. `DSN`
-  1. `organization slug`
-  1. `project slug`
-  1. `Auth token`
+    1. `DSN`
+    1. `organization slug`
+    1. `project slug`
+    1. `Auth token`
   
 *Note:* currently sentry only supports `react-native >= 0.38`. To learn more read the sentry docs [here](https://docs.sentry.io/clients/react-native/).
 
