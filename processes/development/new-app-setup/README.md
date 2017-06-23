@@ -144,7 +144,7 @@ Depending on the project, you may create a new organisation for the project or c
 1. You will need to add the DSN and Public DSN from your sentry.io projects to your meteor settings for staging and production.
 
 #### Expo - React Native Setup
-1. Ensure that your using a version of Node that supports `async/await`(Node 7.6+).
+1. Ensure that you're using a version of Node that supports `async/await`(Node 7.6+).
 1. `npm install sentry-cli-binary -g`
 1. `npm install sentry-expo --save`
 1. For the next steps please follow these [instructions](https://docs.sentry.io/clients/react-native/expo/) from sentry.
