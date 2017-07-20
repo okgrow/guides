@@ -23,7 +23,7 @@ mongorestore -h $STAGING_DB_HOST:$STAGING_DB_PORT -d $STAGING_DB_NAME -u $STAGIN
 
 export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
 export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
-~/bin/aws s3 sync --size-only s3://$APPNAME-app-production s3://$APPNAME-app-staging
+~/bin/aws s3 sync --delete --size-only s3://$APPNAME-app-production s3://$APPNAME-app-staging
 
 heroku maintenance:off
 
