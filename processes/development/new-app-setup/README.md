@@ -172,7 +172,7 @@ Follow the below steps if you are not using Expo for your React Native app.
 
 #### AWS Configuration (optional):
 1. Create IAM user with read-only access to the production S3 bucket and read/write access to the staging S3 bucket:
-    1. [Add Policy](https://drive.google.com/open?id=0B4JoTt-NyIq5Y2RuYjZPTFAwd0U)
+    1. [Add Policy](semaphore-iam-user-policy.json)
     1. Ensure the user has API credentials and no password
 
 
