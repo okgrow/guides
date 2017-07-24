@@ -1,0 +1,22 @@
+[
+  {
+    "name": "bug",
+    "color": "ee0701",
+  },
+  {
+    "name": "duplicate",
+    "color": "cccccc",
+  },
+  {
+    "name": "enhancement",
+    "color": "84b6eb",
+  },
+  {
+    "name": "good for beginners",
+    "color": "fbca04",
+  },
+  {
+    "name": "question",
+    "color": "cc317c",
+  }
+]
