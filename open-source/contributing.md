@@ -1,11 +1,11 @@
 # Contributing
 
-👋 Welcome to the OK Grow organization. Here are some things to keep in mind if you're contributing.
+👋 Welcome to the OK GROW! organization. Here are some things to keep in mind if you're contributing.
 
 ## Issues:
 
  * If possible, link to an example app which replicates the problem.
- * If it's a security issue, please email us rather than filing an issue. You can email us at security@okgrow.com.
+ * If it's a security issue, please email us rather than filing an issue. You can email us at hello@okgrow.com.
 
 ### Labeling system:
 
