@@ -1,31 +1,44 @@
+#########################
+# Deploy HEROKU Backend #
+#########################
 # install stuff
-
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip
 ./awscli-bundle/install -b ~/bin/aws
 wget -qO- https://toolbelt.heroku.com/install.sh | sh
-
 # Copy production mongo data to staging
-
 heroku maintenance:on
-
 ## install mongo 3.2 client so that we can connect to mongo 3.2 server
 wget http://repo.mongodb.org/apt/ubuntu/dists/trusty/mongodb-org/3.2/multiverse/binary-amd64/mongodb-org-tools_3.2.6_amd64.deb
 wget http://repo.mongodb.org/apt/ubuntu/dists/trusty/mongodb-org/3.2/multiverse/binary-amd64/mongodb-org-shell_3.2.6_amd64.deb
 sudo dpkg -i ./mongodb-org-tools_3.2.6_amd64.deb
 sudo dpkg -i ./mongodb-org-shell_3.2.6_amd64.deb
-
 mongodump --host $PRODUCTION_DB_HOST --port $PRODUCTION_DB_PORT --db $PRODUCTION_DB_NAME -u $PRODUCTION_DB_USERNAME -p $PRODUCTION_DB_PASSWORD -o mongodump
 echo 'db.getCollectionNames().forEach(function(c) {if (c.indexOf("system.") == -1) {db.getCollection(c).drop();}})' | mongo $STAGING_DB_HOST:$STAGING_DB_PORT/$STAGING_DB_NAME -u $STAGING_DB_USERNAME -p $STAGING_DB_PASSWORD
 mongorestore -h $STAGING_DB_HOST:$STAGING_DB_PORT -d $STAGING_DB_NAME -u $STAGING_DB_USERNAME -p $STAGING_DB_PASSWORD mongodump/*
-
 # Copy production S3 data to staging
-
-export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
-export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 ~/bin/aws s3 sync --delete --size-only s3://$APPNAME-app-production s3://$APPNAME-app-staging
-
 heroku maintenance:off
-
 # Deploy
 git push --force heroku $BRANCH_NAME:master
+################
+# EXPO Publish #
+################
+# configure watched file limit
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+# install required toolset
+npm install -g exp
+# login to expo with correct credentials
+exp logout
+exp login -u $EXPO_STAGING_USERNAME -p $EXPO_STAGING_PASSWORD
+exp whoami
+cd mobile
+mv app-staging.json app.json
+cat app.json
+npm install --global sentry-cli-binary
+npm install
+npm --version
+node --version
+exp --version
+exp publish -s $EXPO_STAGING_EMAIL
+# df -h

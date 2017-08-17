@@ -163,7 +163,7 @@ Follow the below steps if you are not using Expo for your React Native app.
     1. `organization slug`
     1. `project slug`
     1. `Auth token`
-  
+
 *Note:* currently sentry only supports `react-native >= 0.38`. To learn more read the sentry docs [here](https://docs.sentry.io/clients/react-native/).
 
 
@@ -185,18 +185,8 @@ Follow the below steps if you are not using Expo for your React Native app.
 1. Select your project (listed as **okgrow / [project-name]**)
 1. Edit project Settings by clicking "Project settings":
     1. **Build Settings**
-        1. Set the "Node.js version" to "node.js 4.8.0" (TODO: Newer version?)
-        1. Add these lines under setup:
-            1. `cd web`
-            1. `curl https://install.meteor.com/ | sh`
-            1. `meteor --version`
-            1. `meteor npm install`
-            1. `cp /home/runner/seam/settings.json settings.json`
-            1. **FUTURE** `meteor npm start`
-                * **NOTE** add instructions to listen for success and exit process
-        1. Rename "Job #1" to "Tests"
-        1. Add: `meteor npm run test`
-            * **NOTE** We need to add this to `starter-kit`
+        1. Set the "Node.js version" to "node.js 7.10.1" (or later)
+        1. Add these lines under setup: [Semaphore build settings](semaphore-build-settings)
     1. **Environment Variables**
         1. Add these variables (you'll get the values for these from the "Database Information" document created above):
             * `PRODUCTION_DB_HOST`
@@ -275,17 +265,13 @@ Atlas is the best option if wishing to scale CPU & Memory independently to it's 
     1. NOTE: Paul needs to do this step currently. Will fix...
 1. Edit Build Settings:
     1. Go to [https://semaphoreci.com/okgrow/](https://semaphoreci.com/okgrow/)&lt;PROJECT_NAME&gt;/settings
-    1. Set the Node version to node.js 4.8.0
-    1. Add each of these lines under setup
-        1. `curl https://install.meteor.com/ | sh`
-        1. `meteor --version`
-        1. `meteor npm install`
-        1. `meteor npm start` _wip: find and add instructions to listen for success and exit process_
+    1. Set the Node version to node.js 7.10.1 (or later)
+    1. Add these lines under setup: [Semaphore build settings](semaphore-build-settings)
     1. Note: You may also need to add more project specific steps.
-    1. Add the test runner under "Job #1": `meteor npm run test`
-        - **note**: in your project package.json file, create a `test` script that runs all `unit` and `integration` tests
 1. Edit Project Settings:
     1. Under "Configuration Files" add the project's `settings.json` file.
+    1. Under "Configuration Files" add the project's `app-production.json` file.
+    1. Under "Configuration Files" add the project's `app-staging.json` file.
     1. Under "Branches" change the cancellation strategy to "queued and started builds".
 1. On the Sempahore project homepage click “Set Up Deployment” (staging)
     1. Choose Heroku, then automatic, and then master.
