@@ -1,0 +1,17 @@
+cd web/
+curl https://install.meteor.com/ | sh
+meteor --version
+meteor npm install
+cp /home/runner/settings.json settings.json
+meteor npm run lint
+meteor npm run unit-test
+npm install -g exp
+cd ../mobile
+mv app-staging.json app.json
+cat app.json
+npm install
+npm run lint
+npm test
+npm --version
+node --version
+exp --version

@@ -14,5 +14,8 @@ cd mobile
 mv app-production.json app.json
 cat app.json
 npm install
+npm --version
+node --version
+exp --version
 exp publish -s $EXPO_PRODUCTION_EMAIL
 # df -h
