@@ -20,6 +20,10 @@ if [ "$CONTINUE" != "y" ] ; then
   exit 1
 fi
 
+# Ensure we do not publish the package with any local node_modules as it can lead
+# to some nasty bugs with meteor's build process.
+rm -rf ./node_modules
+
 git tag -a "v$VERSION" -m "Version $VERSION"
 meteor publish || exit 1
 git push --tags
