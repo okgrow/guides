@@ -16,6 +16,10 @@
     "color": "fbca04",
   },
   {
+    "name": "help wanted",
+    "color": "159818"
+  },
+  {
     "name": "question",
     "color": "cc317c",
   }
