@@ -1,7 +1,7 @@
 For each project the project advisor runs a weekly retrospective and planning meeting as early as possible on Monday. This is usually for the develoment team only, we have a separate client meeting any time in the week.
 
 1. Retrospective
-    1. In the "retrospective notes" docment for the project list what we’re happy/sad/neutral about with a to-do item to fix each “sad” item if possible
+    1. In the "retrospective notes" document for the project list what we’re happy/sad/neutral about with a to-do item to fix each “sad” item if possible
     1. Update iteration tracking spreadsheet (“burn-up chart”)
 1. Planning
     1. Create a new list named “Done YYYY-MM-DD” for the current iteration using today's date (which should be Monday).
