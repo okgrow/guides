@@ -17,10 +17,6 @@ For the second type the main work should be getting the existing app running and
 
 - Clients should have already received the [Discovery Phase Guidebook](https://docs.google.com/document/d/14QbXCpRvtPcEJ-TbYPSbJXEJ5xFbS_vOIckGJAUTAV0/edit#).
 - Ensure that we have everything from the client that was listed in the [“Prerequisites” section of the Discovery Phase Guidebook](https://docs.google.com/document/d/14QbXCpRvtPcEJ-TbYPSbJXEJ5xFbS_vOIckGJAUTAV0/edit#heading=h.2jz1on9cuw4)
-- Set [project roles](https://docs.google.com/spreadsheets/d/1y0o2OXdrx2arENp4BoRtJQojqGGhbRky7CBDIdeggJY/edit#gid=0)
-  - Project lead (developer or designer, team lead)
-  - Team members (developers & designers)
-  - Advisor (someone not on the team)
 - Share the Google Drive folder with everyone on our team
 - Schedule meetings
   - Discovery-week-only meetings:
@@ -33,7 +29,8 @@ For the second type the main work should be getting the existing app running and
 - Create Trello board
   - For consulting projects use: [https://trello.com/b/aih9u2u6](https://trello.com/b/aih9u2u6)
   - For feature/app development projects use: [https://trello.com/b/lPS0CYbG](https://trello.com/b/lPS0CYbG)
-- Create Slack channel for ourselves
+- Create Slack channel for ourselves named #projectname
+- Create Slack channel for communication with the client named #projectname-client
 - Create project email alias (Google Group): &lt;project&gt;@okgrow.com
 - Send the project email to the Slack channel:
   - In “Posting permissions” edit the “Post” setting  and allow public to post.
