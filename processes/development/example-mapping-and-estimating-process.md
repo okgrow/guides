@@ -44,20 +44,17 @@ Become familar with the *Example Mapping* process.  These are links to documents
 - ##### Scheduled Example Mapping Workshops
 
   - How long?
-
-    Full day
-
-    Break up the day into 2 sections: 3hrs each broken by lunch break
-
+    - Full day
+    - Break up the day into 2 sections: 3hrs each broken by lunch break
   - How many?
-
-    Depends on length of Discovery Phase.
-
+    - Depends on length of Discovery Phase.
   - Account for time differences and time zones
+  - Break regularly
+    - Aim for timeboxed 25-minute example mapping sessions
+    - Sessions can be shorter than 25 minutes
+    - Take a 5-10 minute Break every 2 sessions or if a session goes longer than 45 minutes.
 
-  - Break regularly - aim for timeboxed 25-minute example mapping sessions. Take a 5-10 minute Break every 2 sessions or if a session goes longer than 45 minutes
-
-  ##### 
+  ​
 
 ## Process
 
@@ -89,23 +86,28 @@ Become familar with the *Example Mapping* process.  These are links to documents
      - As much as possible, address the riskiest cards as soon as possible
      - Deviate from the risk-priority only if doing a lower-priority card is needed to provide context
 
-  2. List any rules that we know already
+  2. Uncover *Rules*, *Examples*, and *questions*
 
-  3. For each rule, give one or more examples to illustrate it
+     - List any rules that we know already
+     - For each rule, give one or more examples to illustrate it
+     - Discuss any missing examples
+     - Determine if any new rules are being demonstrated by new examples
+     - Capture any questions
 
-  4. Discuss any missing examples
+     ###### Each card will be different
 
-  5. Determine if any new rules are being demonstrated by new examples
+     - It may be easiest to start with obvious rules, but in some cases you can use examples to discover a rule that's hard to formulate. 
+     - It's fine to start with either rules or examples, and going back and forth will help clarify things.
 
-  6. Capture any questions
+  3. Keep going until the story is clear OR WE RUN OUT OF TIME
 
-  7. Keep going until the story is clear OR WE RUN OUT OF TIME
-
-  8. At the 25 minute mark, take a thumbs-up or thumbs-down vote on whether the feature is understood well enough to move forward
+  4. At the 25 minute mark, take a thumbs-up or thumbs-down vote on whether the feature is understood well enough to move forward
 
      > “Whenever a conversation is going around in circles, it’s because you don’t have enough information.  Probably someone is missing from the conversation, or maybe you need to do some user research or a spike. Instead of letting everyone share their opinion about what they think the outcome should be, simply capture the question and move on.”
 
-     Do not wait 25 minutes to call it. As soon as the above behaviour is noted, move on
+     Do not wait 25 minutes to call it. As soon as the above behaviour is noted, move on.
+
+     If the card is processed in less than 25 minutes then move on to the next card or on to the break.
 
   ##### How to handle questions/spikes
 
