@@ -184,13 +184,32 @@ Become familar with the *Example Mapping* process.  These are links to documents
 
     ​	*"View Profile"*  =>  *"(3) View Profile"*
 
+  ##### True-up if necessary
+
+  - After going through a number of cards, if needed, go back and assess that the points sizes are staying relatively consistent
+
+    > The set of '3s' *are* generally smaller than the set of '5s'
+
     ​
 
-## Conclusion
+## Output / Outcomes
+
+- ##### Clarified storymap
+
+  - Over the course of the process, the original `Task`-level storymap will change.  Some Task will be removed or merged into together, some will be 'demoted' into `Development`-level cards
+
+- ##### Estimated `Development`-level cards that
+
+  - Are ready to be ported into Trello
+  - Do not contain `Gherkin` syntax, but they will note rules and examples to be extrapolated into `Given, When, Then` structures when development starts
+  - Have points-estimates relative to the collection of `Development`-level cards
+
+## Conclusion and Next Steps
 
 By the end of this workflow, you will have a set of `Development`-level cards ready to be pulled off and worked on.
 
+Next steps may be comparison of the time estimated in weeks in the Project Proposal against the points total to derive a 'needed velocity', a renegotiation on scope or budget if needed.
+
 If the project is small and limited scope, then all the cards can probably be exported from StoriesOnBoard to Trello.
 
-For larger projects there will probably be a phased release approach where only the cards in the immediate release are moved over to Trello.
-
+for larger projects there will probably be a phased release approach where only the cards in the immediate release are moved over to Trello.
