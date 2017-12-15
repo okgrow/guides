@@ -167,6 +167,7 @@ Become familar with the *Example Mapping* process.  These are links to documents
   - *The above does not mean everything gets bumped to next tier*
   - It *does* mean that 1's are *very small* and very likely making changes / additions to existing features
   - ***everything* is relative**, you should be considering *all* the work for *every* card
+  - Don't give higher point values on small tasks to be "conservative." That will distort the estimate, giving those tasks too much time relative to other work that needs to be done. Focus only on relative size
 
   ##### For each remaining `Development`-level card
 
