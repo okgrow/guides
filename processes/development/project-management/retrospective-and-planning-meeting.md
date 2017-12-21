@@ -1,11 +1,11 @@
 For each project the project lead runs a weekly retrospective and planning meeting as early as possible on Monday. This is usually for the develoment team only, we have a separate client meeting any time in the week.
 
-1. Retrospective
+1. #### Retrospective
 
    1. In the "retrospective notes" document for the project list what we’re happy/sad/neutral about with a to-do item to fix each “sad” item if possible
    2. Update iteration tracking spreadsheet (“burn-up chart”)
 
-2. Planning
+2. #### Planning
 
    1. Create a new list named “Done YYYY-MM-DD” for *this week's iteration*.
    2. Plan at least the next week’s worth of stories
@@ -20,7 +20,7 @@ For each project the project lead runs a weekly retrospective and planning meeti
    4. When a group of work is estimated together to be done as a specific phase or sprint then add a green tag to each card so that changes and additions become obvious.
    5. Make sure the client is moving things to “Done”
 
-3. Housekeeping
+3. #### Housekeeping
 
    1. Update the storiesonboard Trello integration
 
