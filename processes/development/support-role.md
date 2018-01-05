@@ -2,7 +2,7 @@
 
 We always have someone assigned to "support" (it must be someone who is not currently on a client project so that we don’t take time away from a paying client).
 
-This means responding to issues with client apps that have a monitoring agreement, and responding to issues on our open source projects.
+This means responding to issues with [client apps that have a monitoring agreement](https://docs.google.com/spreadsheets/d/1gIFiCPyVHNqO-vAFlOTSCeUe7AAdcrUqfhhD1jVMq7I/edit#gid=0), and responding to issues on our open source projects.
 
 ## Client apps
 

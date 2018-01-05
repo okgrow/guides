@@ -5,9 +5,9 @@ Our project management process is a form of Agile that has been adapted (and con
 ## Project roles
 
 Each project has the following roles:
-  - Project lead: responsible for all things. We take turns being project lead.
+  - Project lead: responsible for all things. We take turns being project lead. The project lead runs the [project meetings](#meetings)
   - Developer or designer: anyone else who’s working on the project.
-  - Project advisor: someone who’s not actively working on the project but keeps an eye on things and helps out where needed. The advisor runs the [project meetings](#meetings).
+  - Project advisor: someone who’s not actively working on the project but keeps an eye on things and helps out where needed.
 
 ## Weekly cadence
 
@@ -16,11 +16,11 @@ Each project has the following roles:
 
 ## Meetings
 
-The project advisor runs the meetings. Each project has the following meetings:
+The project lead runs the meetings. Each project has the following meetings:
 
-1. A weekly one hour [retrospective and planning meeting](retrospective-and-planning-meeting.md) as early as possible on Monday morning.
+1. A weekly one hour [retrospective and planning meeting](retrospective-and-planning-meeting.md) with the dev team only as early as possible on Monday morning.
 1. A weekly one-hour review meeting with the client whenever is convenient for everyone.
-1. We have a quick daily status meeting 3 days/week (every day except the day of the weekly meeting and investment day). (We would call it "stand-up" except that it's mostly via Google Hangouts so we're not necessarily standing). The advisor takes notes in [this format](templates/status-template.txt) and posts it in Slack.
+1. We have a quick (15 minutes) daily status meeting, with the dev team only, 3 days/week (every day except the day of the weekly meeting and investment day). (We would call it "stand-up" except that it's mostly via Google Hangouts so we're not necessarily standing).
 
 ## Tracking work
 
