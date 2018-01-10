@@ -37,10 +37,8 @@
     "styleguide:javascript": "JavaScript",
     "tools": "Useful Guides, Tools & Links",
     "Processes": "Processes",
-    "Philosophy": "Philosophy",
     "Services": "Services",
     "Blog": "Blog",
-    "Open Source": "Open Source",
     "Performance": "Performance",
     "Security": "Security",
     "Styleguide": "Styleguide",
@@ -49,7 +47,8 @@
     "Discovery Week": "Discovery Week",
     "Project Management": "Project Management",
     "New App Setup": "New App Setup",
-    "Scripts": "Scripts"
+    "Scripts": "Scripts",
+    "Open Source": "Open Source"
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",
