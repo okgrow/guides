@@ -1,0 +1,221 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Example Mapping and Estimation Process · Guides</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Example Mapping and Estimation Process · Guides"/><meta property="og:type" content="website"/><meta property="og:url" content="https://okgrow.github.io/guides/index.html"/><meta property="og:description" content="## Background"/><link rel="shortcut icon" href="/guides/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/guides/css/main.css"/></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/guides/"><img class="logo" src="/guides/img/logo-white.svg"/><h2 class="headerTitle">Guides</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="/guides/docs/dev:principles.html" target="_self">Processes</a></li><li><a href="/guides/docs/open-source:code-of-conduct.html" target="_self">Philosophy</a></li><li><a href="https://www.okgrow.com" target="_blank">Services</a></li><li><a href="https://www.okgrow.com/posts" target="_blank">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Discovery Week</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Development</h3><ul><li class="navListItem"><a class="navItem" href="/guides/docs/dev:principles.html">Principles</a></li><li class="navListItem"><a class="navItem" href="/guides/docs/dev:investment-time.html">Investment Time</a></li><li class="navListItem"><a class="navItem" href="/guides/docs/dev:support-role.html">Support Role</a></li><li class="navListItem"><a class="navItem" href="/guides/docs/dev:devops.html">DevOps</a></li></ul></div><div class="navGroup navGroupActive"><h3>Design Sprint</h3><ul><li class="navListItem"><a class="navItem" href="/guides/docs/design-sprint:preparation.html">Preparation</a></li><li class="navListItem"><a class="navItem" href="/guides/docs/design-sprint:before.html">Before</a></li><li class="navListItem"><a class="navItem" href="/guides/docs/design-sprint:kick-off.html">Kick off</a></li><li class="navListItem"><a class="navItem" href="/guides/docs/design-sprint:after.html">After</a></li></ul></div><div class="navGroup navGroupActive"><h3>Discovery Week</h3><ul><li class="navListItem"><a class="navItem" href="/guides/docs/discovery-week:intro.html">Introduction</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/guides/docs/discovery-week:example-mapping-estimating.html">Example Mapping</a></li></ul></div><div class="navGroup navGroupActive"><h3>Project Management</h3><ul><li class="navListItem"><a class="navItem" href="/guides/docs/project-management:agile-adaptation.html">Agile Adaptation</a></li><li class="navListItem"><a class="navItem" href="/guides/docs/project-management:retrospective-planning.html">Retrospective Planning</a></li></ul></div><div class="navGroup navGroupActive"><h3>New App Setup</h3><ul><li class="navListItem"><a class="navItem" href="/guides/docs/new-app-setup:production-staging.html">Production &amp; Staging</a></li><li class="navListItem"><a class="navItem" href="/guides/docs/new-app-setup:error-logging.html">Error Logging</a></li><li class="navListItem"><a class="navItem" href="/guides/docs/new-app-setup:continuous-integration.html">Continuous Integration</a></li></ul></div><div class="navGroup navGroupActive"><h3>Scripts</h3><ul><li class="navListItem"><a class="navItem" href="/guides/docs/scripts:heroku.html">Create Heroku App</a></li><li class="navListItem"><a class="navItem" href="/guides/docs/scripts:meteor-pkg.html">Publish Meteor Package</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/okgrow/guides/edit/master/docs/Processes-DiscoveryWeek-ExampleMappingEstimating.md" target="_blank">Edit</a><h1>Example Mapping and Estimation Process</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" name="background"></a><a href="#background" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Background</h2>
+<p>Become familar with the <em>Example Mapping</em> process. These are links to documents in the shared <em>Library</em> folder in the OKGROW Google Drive. (If you have trouble accessing it any of the docs or links in this guide, request access from Paul or Tony).</p>
+<h5><a class="anchor" aria-hidden="true" name="required-reading-and-viewing"></a><a href="#required-reading-and-viewing" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Required reading and viewing</h5>
+<ul>
+<li><a href="https://drive.google.com/a/okgrow.com/file/d/12I8KwqgWZXUY6C9zXyTKxGpH3xDp6EtE/view?usp=sharing">Original example mapping article (PDF)</a></li>
+<li><a href="https://www.youtube.com/watch?v=37zfyncCpkA">Agile Estimating - Mike Cohn (Video)</a></li>
+</ul>
+<h5><a class="anchor" aria-hidden="true" name="strongly-recommended"></a><a href="#strongly-recommended" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Strongly recommended</h5>
+<ul>
+<li><p>Short book (80 pages): <a href="https://drive.google.com/a/okgrow.com/file/d/1MRTXD-I8GME4Cp6RzRAubMt8U-emfL63/view?usp=sharing"><em>Discovery: Explore Behaviour Using Examples</em></a></p></li>
+<li><p>Chapter 6 from Agile Estimating and Planning (12 pages): <a href="https://drive.google.com/a/okgrow.com/file/d/10IsJMmfMythKIUj_wBG-rZz0KT44IHwF/view?usp=sharing">Estimating Techniques</a></p>
+<p>​</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" name="inputs-starting-resources"></a><a href="#inputs-starting-resources" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Inputs / Starting resources</h2>
+<ul>
+<li><h5><a class="anchor" aria-hidden="true" name="storymap"></a><a href="#storymap" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Storymap</h5>
+<ul>
+<li>Use <a href="https://okg-grow.storiesonboard.com">StoriesOnBoard</a></li>
+<li><a href="https://ok-grow.storiesonboard.com/m/storymap-sample-miorder">Sample story map (MiOrder)</a></li>
+</ul></li>
+<li><h5><a class="anchor" aria-hidden="true" name="trello-board-sync-ed-to-storiesonboard-storymap"></a><a href="#trello-board-sync-ed-to-storiesonboard-storymap" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Trello Board sync'ed to StoriesOnBoard storymap</h5>
+<ul>
+<li>StoriesOnBoard doc: <a href="http://blog.storiesonboard.com/setting_up_synchronization_with_trello/">Setting Up Sync with Trello</a></li>
+</ul></li>
+</ul>
+<ul>
+<li><h5><a class="anchor" aria-hidden="true" name="google-drive-example-map-file"></a><a href="#google-drive-example-map-file" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Google Drive Example Map File</h5>
+<ul>
+<li><a href="https://docs.google.com/a/okgrow.com/spreadsheets/d/1Wf4jsJFz3IiIV2KpTFoYGVMShe9lf0V2DhjfObVI9ew/edit?usp=sharing">Sample Example Map file (MiOrder)</a></li>
+</ul></li>
+</ul>
+<ul>
+<li><h5><a class="anchor" aria-hidden="true" name="members-of-project-team"></a><a href="#members-of-project-team" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Members of Project Team</h5>
+<ul>
+<li>At least 2 from Dev team</li>
+<li>Client will be expected to participate, but may not be practical to ask for 5+ hours per day for 1 week</li>
+</ul></li>
+<li><h5><a class="anchor" aria-hidden="true" name="scheduled-daily-if-possible-client-discovery-meetings-30-minutes"></a><a href="#scheduled-daily-if-possible-client-discovery-meetings-30-minutes" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scheduled Daily (if possible) Client Discovery Meetings (30 minutes)</h5>
+</li>
+<li><h5><a class="anchor" aria-hidden="true" name="scheduled-example-mapping-workshops"></a><a href="#scheduled-example-mapping-workshops" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scheduled Example Mapping Workshops</h5>
+<ul>
+<li>How long?
+<ul>
+<li>Full day</li>
+<li>Break up the day into 2 sections: 3hrs each broken by lunch break</li>
+</ul></li>
+<li>How many?
+<ul>
+<li>Depends on length of Discovery Phase.</li>
+</ul></li>
+<li>Account for time differences and time zones</li>
+<li>Break regularly
+<ul>
+<li>Aim for timeboxed 25-minute example mapping sessions</li>
+<li>Sessions can be shorter than 25 minutes</li>
+<li>Take a 5-10 minute Break every 2 sessions or if a session goes longer than 45 minutes.</li>
+</ul></li>
+</ul>
+<p>​</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" name="process"></a><a href="#process" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Process</h2>
+<ul>
+<li><h4><a class="anchor" aria-hidden="true" name="internal-kickoff"></a><a href="#internal-kickoff" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Internal Kickoff</h4>
+<h5><a class="anchor" aria-hidden="true" name="as-a-group"></a><a href="#as-a-group" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>As a group</h5>
+<ul>
+<li><h5><a class="anchor" aria-hidden="true" name="walkthrough-storymap"></a><a href="#walkthrough-storymap" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Walkthrough Storymap</h5>
+<p>Gain an understanding of the Project goals, value props. Good input (if available) is any Design Sprint output.</p></li>
+<li><h5><a class="anchor" aria-hidden="true" name="red-flag-critical-risky-ambiguous-task-level-cards"></a><a href="#red-flag-critical-risky-ambiguous-task-level-cards" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Red-flag Critical / Risky / Ambiguous <code>Task</code>-level cards</h5>
+<ul>
+<li>Any cards that are too vague / ambiguous</li>
+<li>Any cards involving unknown API or partners</li>
+<li>Any cards that involve a technology that we don't have experience in</li>
+</ul></li>
+<li><h5><a class="anchor" aria-hidden="true" name="for-each-flagged-card"></a><a href="#for-each-flagged-card" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For each flagged card</h5>
+<ol>
+<li>Come to a relative order from highest to lowest risk</li>
+<li>Determine if the client is required for the Example Mapping session for the card</li>
+</ol></li>
+</ul></li>
+<li><h4><a class="anchor" aria-hidden="true" name="example-mapping"></a><a href="#example-mapping" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example Mapping</h4>
+<h5><a class="anchor" aria-hidden="true" name="for-each-task-level-card-in-storymap-timebox-25-minutes"></a><a href="#for-each-task-level-card-in-storymap-timebox-25-minutes" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For each <code>Task</code>-level card in Storymap (TIMEBOX 25 minutes)</h5>
+<ol>
+<li><p>Identify the card, provide context</p>
+<ul>
+<li>As much as possible, address the riskiest cards as soon as possible</li>
+<li>Deviate from the risk-priority only if doing a lower-priority card is needed to provide context</li>
+</ul></li>
+<li><p>Uncover <em>Rules</em>, <em>Examples</em>, and <em>questions</em></p>
+<ul>
+<li>List any rules that we know already</li>
+<li>For each rule, give one or more examples to illustrate it</li>
+<li>Discuss any missing examples</li>
+<li>Determine if any new rules are being demonstrated by new examples</li>
+<li>Capture any questions</li>
+</ul>
+<h6><a class="anchor" aria-hidden="true" name="each-card-will-be-different"></a><a href="#each-card-will-be-different" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Each card will be different</h6>
+<ul>
+<li>It may be easiest to start with obvious rules, but in some cases you can use examples to discover a rule that's hard to formulate.</li>
+<li>It's fine to start with either rules or examples, and going back and forth will help clarify things.</li>
+</ul></li>
+<li><p>Keep going until the story is clear OR WE RUN OUT OF TIME</p></li>
+<li><p>At the 25 minute mark, take a thumbs-up or thumbs-down vote on whether the feature is understood well enough to move forward</p>
+<blockquote>
+<p>“Whenever a conversation is going around in circles, it’s because you don’t have enough information. Probably someone is missing from the conversation, or maybe you need to do some user research or a spike. Instead of letting everyone share their opinion about what they think the outcome should be, simply capture the question and move on.”</p>
+</blockquote>
+<p>Do not wait 25 minutes to call it. As soon as the above behaviour is noted, move on.</p>
+<p>If the card is processed in less than 25 minutes then move on to the next card or on to the break.</p></li>
+</ol>
+<h5><a class="anchor" aria-hidden="true" name="how-to-handle-questions-spikes"></a><a href="#how-to-handle-questions-spikes" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to handle questions/spikes</h5>
+<ul>
+<li>Capture them on a card (on StoriesOnBoard)</li>
+<li>Assign someone responsible for finding answers</li>
+<li>(at the end of each session) Export cards to Trello (using the StoriesOnBoard sync feature)</li>
+<li>Research and address questions off-line, on card</li>
+</ul>
+<h5><a class="anchor" aria-hidden="true" name="how-to-handle-client-participation-involvement-in-the-bdd-aspect"></a><a href="#how-to-handle-client-participation-involvement-in-the-bdd-aspect" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to handle Client participation/involvement in the &quot;BDD&quot; aspect</h5>
+<ul>
+<li><code>Task</code>-level cards that are red-flagged and require Client participation in the Kickoff Process should be earmarked for meetings with client.</li>
+<li>Use the standard Example Mapping process with the client involved to reveal rules and examples, resolve initial questions and reveal new ones</li>
+<li>Identify all questions including those that are the <em>Client's responsibility</em> to research and answer. Create question cards as normal</li>
+</ul></li>
+<li><h4><a class="anchor" aria-hidden="true" name="create-development-cards"></a><a href="#create-development-cards" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create <code>Development</code> Cards</h4>
+<h5><a class="anchor" aria-hidden="true" name="for-each-task-level-card-and-completed-example-map-sheet"></a><a href="#for-each-task-level-card-and-completed-example-map-sheet" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For each <code>Task</code>-level card and completed Example Map sheet</h5>
+<ul>
+<li>Break the task into 1 or more <code>Development</code>-level cards</li>
+<li><code>Development</code>-level cards are:
+<ul>
+<li>Smaller but complete chunks of functionality</li>
+<li>self-contained, <em>demonstrable</em>, <strong><em>testable</em></strong></li>
+<li>accompanied one or more rules and examples</li>
+</ul></li>
+<li><code>Development</code>-level cards will be
+<ul>
+<li>Estimated using story points</li>
+<li>Imported from StoriesOnBoard into Trello as work cards</li>
+</ul></li>
+<li>Each <em>Rule</em> naturally represents a potential way to split the task (ie. success rules vs failure rules)</li>
+<li>Look for natural seams and groupings in rules and the examples used to represent them, but don't get fixated on <code>1 rule per Dev card</code></li>
+<li>1-pager <a href="https://drive.google.com/a/okgrow.com/file/d/1azKBvlOEnkA65t__vu_qXXY7b05WgX5b/view?usp=sharing">How to Split a Story</a></li>
+<li>Good examples
+<ul>
+<li>Success scenario/happy path VS failure scenario/error paths</li>
+<li>Simple (most common scenario) VS alternate methods (pay in cash vs credit)</li>
+<li>Handle potential count preconditions (a list with 1 vs many vs none) if interesting or complex</li>
+</ul></li>
+<li>Bad card examples
+<ul>
+<li>&quot;Schema Design&quot;</li>
+<li>&quot;Database Design&quot;</li>
+<li>&quot;Menu Item UI&quot;</li>
+<li>&quot;Menu Item Query&quot;</li>
+</ul></li>
+</ul></li>
+<li><h4><a class="anchor" aria-hidden="true" name="add-estimates-to-development-level-cards"></a><a href="#add-estimates-to-development-level-cards" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add Estimates to <code>Development</code>-level Cards</h4>
+<h5><a class="anchor" aria-hidden="true" name="create-a-points-baseline-as-a-group"></a><a href="#create-a-points-baseline-as-a-group" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a POINTS BASELINE as a group</h5>
+<ul>
+<li>Look through your collection of <code>dev</code>cards and agree on an exemplar of a 3-point card</li>
+<li>Do the same and find 5-point card</li>
+<li>All other cards are measured <em>relative</em> to these 2 cards</li>
+</ul>
+<h5><a class="anchor" aria-hidden="true" name="notes-about-thinking-about-cards"></a><a href="#notes-about-thinking-about-cards" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Notes about thinking about cards</h5>
+<ul>
+<li>Each card represents the <em>full scope of work</em>
+<ul>
+<li>GraphQL / API</li>
+<li>UI implementation / design tweaks</li>
+<li>Routing</li>
+<li>Database</li>
+<li>Testing</li>
+<li>Done Done</li>
+</ul></li>
+<li><em>The above does not mean everything gets bumped to next tier</em></li>
+<li>It <em>does</em> mean that 1's are <em>very small</em> and very likely making changes / additions to existing features</li>
+<li><strong><em>everything</em> is relative</strong>, you should be considering <em>all</em> the work for <em>every</em> card</li>
+<li>Don't give higher point values on small tasks to be &quot;conservative.&quot; That will distort the estimate, giving those tasks too much time relative to other work that needs to be done. Focus only on relative size</li>
+</ul>
+<h5><a class="anchor" aria-hidden="true" name="for-each-remaining-development-level-card"></a><a href="#for-each-remaining-development-level-card" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For each remaining <code>Development</code>-level card</h5>
+<ul>
+<li><p>Use <a href="https://www.pointingpoker.com/">Pointing Poker site</a> to start a Planning Poker session</p></li>
+<li><p>Pick an un-estimated card</p></li>
+<li><p>Quickly Summarize / Review the card</p></li>
+<li><p>Everyone places their points 'bet'</p></li>
+<li><p>Discuss the discrepancies in assessment and decide on point value or re-vote</p></li>
+<li><p>Assign the points in StoriesOnBoard</p></li>
+<li><p>Include the estimate in the StoriesOnBoard card title</p>
+<p>​ <em>&quot;View Profile&quot;</em> =&gt; <em>&quot;(3) View Profile&quot;</em></p></li>
+</ul>
+<h5><a class="anchor" aria-hidden="true" name="true-up-if-necessary"></a><a href="#true-up-if-necessary" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>True-up if necessary</h5>
+<ul>
+<li><p>After going through a number of cards, if needed, go back and assess that the points sizes are staying relatively consistent</p>
+<blockquote>
+<p>The set of '3s' <em>are</em> generally smaller than the set of '5s'</p>
+</blockquote>
+<p>​</p></li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" name="output-outcomes"></a><a href="#output-outcomes" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Output / Outcomes</h2>
+<ul>
+<li><h5><a class="anchor" aria-hidden="true" name="clarified-storymap"></a><a href="#clarified-storymap" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Clarified storymap</h5>
+<ul>
+<li>Over the course of the process, the original <code>Task</code>-level storymap will change. Some Task will be removed or merged into together, some will be 'demoted' into <code>Development</code>-level cards</li>
+</ul></li>
+<li><h5><a class="anchor" aria-hidden="true" name="estimated-development-level-cards-that"></a><a href="#estimated-development-level-cards-that" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Estimated <code>Development</code>-level cards that</h5>
+<ul>
+<li>Are ready to be ported into Trello</li>
+<li>Do not contain <code>Gherkin</code> syntax, but they will note rules and examples to be extrapolated into <code>Given, When, Then</code> structures when development starts</li>
+<li>Have points-estimates relative to the collection of <code>Development</code>-level cards</li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" name="conclusion-and-next-steps"></a><a href="#conclusion-and-next-steps" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusion and Next Steps</h2>
+<p>By the end of this workflow, you will have a set of <code>Development</code>-level cards ready to be pulled off and worked on.</p>
+<p>Next steps may be comparison of the time estimated in weeks in the Project Proposal against the points total to derive a 'needed velocity', a renegotiation on scope or budget if needed.</p>
+<p>If the project is small and limited scope, then all the cards can probably be exported from StoriesOnBoard to Trello.</p>
+<p>for larger projects there will probably be a phased release approach where only the cards in the immediate release are moved over to Trello.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="discovery-week:intro.html">← Introduction</a><a class="docs-next button" href="project-management:agile-adaptation.html">Agile Adaptation →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/guides/" class="nav-home"><img src="/guides/img/flower.png" alt="Guides" width="66" height="58"/></a><div><h5>Services</h5><a href="https://www.okgrow.com/web">Web Development</a><a href="https://www.okgrow.com/javascript-consulting">Javascript Consulting</a><a href="https://www.okgrow.com/mobile">Mobile Development</a><a href="https://www.okgrow.com/training">Training</a></div><div><h5>Social</h5><a href="https://twitter.com/ok_grow">Twitter</a><a href="https://github.com/okgrow">GitHub</a><a href="https://www.facebook.com/okgrow/">Facebook</a><a href="https://www.instagram.com/ok_grow/">Instagram</a><a href="https://www.youtube.com/channel/UCemC4xuL1cZhVlixuoEjtSg">YouTube</a></div><div><h5>Contact</h5><a href="https://www.okgrow.com/posts">Blog</a><a href="https://www.okgrow.com/contact">Hire Us</a><a href="https://www.okgrow.com/join-us">Join Us</a><a href="mailto:hello@okgrow.com">hello@okgrow.com</a><a href="tel:1-855-747-9930">+1-855-747-9930</a></div></section><a href="https://www.okgrow.com/" class="fbOpenSource"><img src="/guides/img/logo-white.svg" alt="OK GROW!" width="170" height="45"/></a><section class="copyright">Copyright © 2018 OK GROW!</section></footer></div></body></html>
