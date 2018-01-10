@@ -26,8 +26,9 @@ const Flower = () => {
               transform: 'rotateY(90deg)',
             }}
           >
-            {group.map(d => (
+            {group.map((d, index) => (
               <path
+                key={index}
                 style={{
                   perspectiveOrigin: '50% 50%',
                   fill: siteConfig.colors.secondaryColor,

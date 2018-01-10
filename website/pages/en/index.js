@@ -99,7 +99,7 @@ const Phase1 = props => (
           "We like to do things consistently without having to re-invent the wheel or spend a lot of time making decisions each time something needs to be done. But we're not robots or slaves to an inflexible bureaucracy. We all like to constantly improve the way we do things and everyone is empowered to do that.",
         image: imgUrl('icon-1.png'),
         imageAlign: 'left',
-        // title: 'Try it Out',
+        title: 'Try it Out',
       },
     ]}
   </Block>
@@ -113,7 +113,7 @@ const Phase2 = props => (
           "We try new things as experiments which we document on our Experiments Trello board so we can see what has been tried before, how it turned out, and have a discussion around it. When they're a success we update these docs and do it the new way going forward.",
         image: imgUrl('icon-2.png'),
         imageAlign: 'right',
-        // title: 'Philosophy',
+        title: 'Processes',
       },
     ]}
   </Block>
