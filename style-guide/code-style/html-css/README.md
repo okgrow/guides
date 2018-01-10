@@ -1,3 +1,0 @@
-# Code Style - HTML/CSS at OK GROW!
-
-Currently under-construction...

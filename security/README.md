@@ -1,3 +1,0 @@
-#  Security Tips & Notes from OK GROW!
-
-Currently under-construction...

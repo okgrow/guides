@@ -1,0 +1,18 @@
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  10% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  90% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+}
