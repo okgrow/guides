@@ -1,10 +1,5 @@
 {
   "docs": {
-    "Open Source": [
-      "open-source:code-of-conduct",
-      "open-source:contributing",
-      "open-source:labels"
-    ],
     "Performance": ["performance:meteor"],
     "Security": ["security:meteor"],
     "Styleguide": ["styleguide:javascript", "styleguide:eslint"]
@@ -35,6 +30,11 @@
       "new-app-setup:error-logging",
       "new-app-setup:continuous-integration"
     ],
-    "Scripts": ["scripts:heroku", "scripts:meteor-pkg"]
+    "Scripts": ["scripts:heroku", "scripts:meteor-pkg"],
+    "Open Source": [
+      "open-source:code-of-conduct",
+      "open-source:contributing",
+      "open-source:labels"
+    ]
   }
 }
