@@ -73,9 +73,6 @@ class HomeSplash extends React.Component {
           <ProjectTitle />
           <PromoSection>
             <Button href={docUrl('dev:principles')}>Our Processes</Button>
-            <Button href={docUrl('open-source:code-of-conduct')}>
-              Our Philosophy
-            </Button>
             <Button href="https://www.okgrow.com/contact">Work with Us</Button>
           </PromoSection>
         </div>

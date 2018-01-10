@@ -24,7 +24,6 @@ const siteConfig = {
   organizationName: 'okgrow',
   headerLinks: [
     { doc: 'dev:principles', label: 'Processes' },
-    { doc: 'open-source:code-of-conduct', label: 'Philosophy' },
     // { doc: 'tools', label: 'Tools & Links' },
     { href: 'https://www.okgrow.com', label: 'Services', external: true },
     { href: 'https://www.okgrow.com/posts', label: 'Blog', external: true },
