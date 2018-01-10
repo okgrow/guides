@@ -36,5 +36,19 @@
       "open-source:contributing",
       "open-source:labels"
     ]
+  },
+  "training": {
+    "Introduction": ["training:intro"],
+    "Slides": [
+      "training:slides:configuring",
+      "training:slides:writing",
+      "training:slides:deploying",
+      "training:slides:api"
+    ],
+    "Source": [
+      "training:source:structure",
+      "training:source:editing",
+      "training:source:generating"
+    ]
   }
 }
