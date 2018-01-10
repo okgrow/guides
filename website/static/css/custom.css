@@ -1,3 +1,40 @@
+@font-face {
+  font-family: Graphik;
+  src: url('/guides/fonts/Graphik-Light-Web.woff2') format('woff2'),
+    url('/guides/fonts/Graphik-Light-Web.woff') format('woff');
+  font-weight: normal;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: Graphik;
+  src: url('/guides/fonts/Graphik-Medium-Web.woff2') format('woff2'),
+    url('/guides/fonts/Graphik-Medium-Web.woff') format('woff');
+  font-weight: bold;
+  font-display: optional;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: #0093ff;
+  color: white;
+  text-shadow: none;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: Graphik !important;
+  font-weight: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
 @keyframes fade {
   0% {
     opacity: 0;
