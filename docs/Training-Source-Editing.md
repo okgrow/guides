@@ -1,5 +1,5 @@
 ---
-id: training:source:editing
+id: training-source-editing
 title: Editing a workshop source
 ---
 

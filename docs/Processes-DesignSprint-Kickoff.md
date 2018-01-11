@@ -1,5 +1,5 @@
 ---
-id: design-sprint:kick-off
+id: design-sprint-kick-off
 title: Kick off call with the client
 sidebar_label: Kick off
 ---

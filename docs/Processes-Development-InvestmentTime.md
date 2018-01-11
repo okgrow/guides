@@ -1,5 +1,5 @@
 ---
-id: dev:investment-time
+id: dev-investment-time
 title: Investment Time
 ---
 

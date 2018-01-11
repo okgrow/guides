@@ -1,5 +1,5 @@
 ---
-id: dev:principles
+id: dev-principles
 title: Principles
 ---
 

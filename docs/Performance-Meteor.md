@@ -1,5 +1,5 @@
 ---
-id: performance:meteor
+id: performance-meteor
 title: Performance - Meteor
 sidebar_label: Meteor
 ---
@@ -8,7 +8,7 @@ This document was created to help ensure that we do not fall victim to common mi
 
 **NOTE**: This document is a work in progress and is not an exhaustive checklist. Please add any checks that you believe are missing.
 
-Don't forget to review our [Meteor - Security checklist](https://github.com/okgrow/guides/tree/master/security:meteor).
+Don't forget to review our [Meteor - Security checklist](https://github.com/okgrow/guides/tree/master/security-meteor).
 
 ## Client
 

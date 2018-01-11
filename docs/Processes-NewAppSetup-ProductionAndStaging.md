@@ -1,5 +1,5 @@
 ---
-id: new-app-setup:production-staging
+id: new-app-setup-production-staging
 title: Production & Staging
 ---
 

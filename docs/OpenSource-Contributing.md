@@ -1,5 +1,5 @@
 ---
-id: open-source:contributing
+id: open-source-contributing
 title: Contributing
 ---
 

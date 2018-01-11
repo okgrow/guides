@@ -1,5 +1,5 @@
 ---
-id: training:slides:writing
+id: training-slides-writing
 title: Writing slides for a workshop
 ---
 

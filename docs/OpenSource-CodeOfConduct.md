@@ -1,5 +1,5 @@
 ---
-id: open-source:code-of-conduct
+id: open-source-code-of-conduct
 title: Code of Conduct
 ---
 

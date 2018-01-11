@@ -1,5 +1,5 @@
 ---
-id: design-sprint:before
+id: design-sprint-before
 title: Before the Design Sprint
 sidebar_label: Before
 ---

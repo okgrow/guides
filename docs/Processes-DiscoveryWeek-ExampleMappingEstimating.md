@@ -1,5 +1,5 @@
 ---
-id: discovery-week:example-mapping-estimating
+id: discovery-week-example-mapping-estimating
 title: Example Mapping and Estimation Process
 sidebar_label: Example Mapping
 ---

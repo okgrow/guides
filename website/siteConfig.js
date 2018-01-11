@@ -5,16 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-/* List of projects/orgs using your project for the users page */
-const users = [
-  {
-    caption: 'User1',
-    image: '/guides/img/flower.png',
-    infoLink: 'https://www.okgrow.com',
-    pinned: true,
-  },
-];
-
 const siteConfig = {
   title: 'Guides' /* title for your website */,
   tagline: 'How we do things at OK GROW!',
@@ -23,13 +13,12 @@ const siteConfig = {
   projectName: 'guides',
   organizationName: 'okgrow',
   headerLinks: [
-    { doc: 'dev:principles', label: 'Processes' },
-    { doc: 'training:intro', label: 'Training' },
+    { doc: 'dev-principles', label: 'Processes' },
+    { doc: 'training-intro', label: 'Training' },
     // { doc: 'tools', label: 'Tools & Links' },
     { href: 'https://www.okgrow.com', label: 'Services', external: true },
     { href: 'https://www.okgrow.com/posts', label: 'Blog', external: true },
   ],
-  users,
   /* path to images for header/footer */
   headerIcon: 'img/logo-white.svg',
   footerIcon: 'img/flower.png',
@@ -51,7 +40,6 @@ const siteConfig = {
     // Highlight.js theme to use for syntax highlighting in code blocks
     theme: 'default',
   },
-  scripts: ['https://buttons.github.io/buttons.js'],
   // You may provide arbitrary config keys to be used as needed by your template.
   repoUrl: 'https://github.com/okgrow/guides',
   useEnglishUrl: false,

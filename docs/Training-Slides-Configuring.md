@@ -1,5 +1,5 @@
 ---
-id: training:slides:configuring
+id: training-slides-configuring
 title: Configuring the slides
 ---
 

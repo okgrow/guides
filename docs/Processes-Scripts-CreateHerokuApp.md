@@ -1,5 +1,5 @@
 ---
-id: scripts:heroku
+id: scripts-heroku
 title: Create Heroku App
 ---
 

@@ -1,5 +1,5 @@
 ---
-id: styleguide:javascript
+id: styleguide-javascript
 title: JavaScript
 ---
 

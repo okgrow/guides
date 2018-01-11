@@ -1,5 +1,5 @@
 ---
-id: styleguide:eslint
+id: styleguide-eslint
 title: ESLint
 ---
 

@@ -1,5 +1,5 @@
 ---
-id: project-management:retrospective-planning
+id: project-management-retrospective-planning
 title: Retrospective Planning
 ---
 

@@ -1,5 +1,5 @@
 ---
-id: training:source:structure
+id: training-source-structure
 title: Structure of the training source
 ---
 

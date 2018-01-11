@@ -1,5 +1,5 @@
 ---
-id: training:source:generating
+id: training-source-generating
 title: Generating a class repository
 ---
 

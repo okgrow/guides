@@ -1,5 +1,5 @@
 ---
-id: training:slides:api
+id: training-slides-api
 title: API Internals
 ---
 

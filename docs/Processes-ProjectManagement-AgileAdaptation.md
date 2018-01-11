@@ -1,5 +1,5 @@
 ---
-id: project-management:agile-adaptation
+id: project-management-agile-adaptation
 title: Agile Adaptation
 ---
 

@@ -1,5 +1,5 @@
 ---
-id: discovery-week:intro
+id: discovery-week-intro
 title: Introduction
 ---
 

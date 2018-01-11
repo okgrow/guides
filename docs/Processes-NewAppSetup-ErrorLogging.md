@@ -1,5 +1,5 @@
 ---
-id: new-app-setup:error-logging
+id: new-app-setup-error-logging
 title: Error Logging
 ---
 

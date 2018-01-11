@@ -1,5 +1,5 @@
 ---
-id: scripts:introduction
+id: scripts-introduction
 title: Introduction
 ---
 

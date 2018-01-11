@@ -1,5 +1,5 @@
 ---
-id: design-sprint:preparation
+id: design-sprint-preparation
 title: Prepare for the Design Sprint
 sidebar_label: Preparation
 ---

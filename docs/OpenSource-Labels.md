@@ -1,5 +1,5 @@
 ---
-id: open-source:labels
+id: open-source-labels
 title: GitHub Labels
 ---
 

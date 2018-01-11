@@ -1,5 +1,5 @@
 ---
-id: dev:devops
+id: dev-devops
 title: DevOps
 ---
 

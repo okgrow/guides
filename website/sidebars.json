@@ -1,54 +1,54 @@
 {
   "docs": {
-    "Performance": ["performance:meteor"],
-    "Security": ["security:meteor"],
-    "Styleguide": ["styleguide:javascript", "styleguide:eslint"]
+    "Performance": ["performance-meteor"],
+    "Security": ["security-meteor"],
+    "Styleguide": ["styleguide-javascript", "styleguide-eslint"]
   },
   "processes": {
     "Development": [
-      "dev:principles",
-      "dev:investment-time",
-      "dev:support-role",
-      "dev:devops"
+      "dev-principles",
+      "dev-investment-time",
+      "dev-support-role",
+      "dev-devops"
     ],
     "Design Sprint": [
-      "design-sprint:preparation",
-      "design-sprint:before",
-      "design-sprint:kick-off",
-      "design-sprint:after"
+      "design-sprint-preparation",
+      "design-sprint-before",
+      "design-sprint-kick-off",
+      "design-sprint-after"
     ],
     "Discovery Week": [
-      "discovery-week:intro",
-      "discovery-week:example-mapping-estimating"
+      "discovery-week-intro",
+      "discovery-week-example-mapping-estimating"
     ],
     "Project Management": [
-      "project-management:agile-adaptation",
-      "project-management:retrospective-planning"
+      "project-management-agile-adaptation",
+      "project-management-retrospective-planning"
     ],
     "New App Setup": [
-      "new-app-setup:production-staging",
-      "new-app-setup:error-logging",
-      "new-app-setup:continuous-integration"
+      "new-app-setup-production-staging",
+      "new-app-setup-error-logging",
+      "new-app-setup-continuous-integration"
     ],
-    "Scripts": ["scripts:heroku", "scripts:meteor-pkg"],
+    "Scripts": ["scripts-heroku", "scripts-meteor-pkg"],
     "Open Source": [
-      "open-source:code-of-conduct",
-      "open-source:contributing",
-      "open-source:labels"
+      "open-source-code-of-conduct",
+      "open-source-contributing",
+      "open-source-labels"
     ]
   },
   "training": {
-    "Introduction": ["training:intro"],
+    "Introduction": ["training-intro"],
     "Slides": [
-      "training:slides:configuring",
-      "training:slides:writing",
-      "training:slides:deploying",
-      "training:slides:api"
+      "training-slides-configuring",
+      "training-slides-writing",
+      "training-slides-deploying",
+      "training-slides-api"
     ],
     "Source": [
-      "training:source:structure",
-      "training:source:editing",
-      "training:source:generating"
+      "training-source-structure",
+      "training-source-editing",
+      "training-source-generating"
     ]
   }
 }

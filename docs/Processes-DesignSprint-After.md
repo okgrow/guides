@@ -1,5 +1,5 @@
 ---
-id: design-sprint:after
+id: design-sprint-after
 title: After the Design Sprint
 sidebar_label: After
 ---

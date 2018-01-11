@@ -1,5 +1,5 @@
 ---
-id: new-app-setup:continuous-integration
+id: new-app-setup-continuous-integration
 title: Continuous Integration
 ---
 

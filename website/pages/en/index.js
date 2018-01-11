@@ -20,7 +20,13 @@ function imgUrl(img) {
 }
 
 function docUrl(doc, language) {
-  return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
+  return (
+    siteConfig.baseUrl +
+    'docs/' +
+    (language ? language + '/' : '') +
+    doc +
+    '.html'
+  );
 }
 
 function pageUrl(page, language) {
@@ -72,7 +78,7 @@ class HomeSplash extends React.Component {
           <Flower />
           <ProjectTitle />
           <PromoSection>
-            <Button href={docUrl('dev:principles')}>Our Processes</Button>
+            <Button href={docUrl('dev-principles')}>Our Processes</Button>
             <Button href="https://www.okgrow.com/contact">Work with Us</Button>
           </PromoSection>
         </div>

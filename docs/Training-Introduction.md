@@ -1,5 +1,5 @@
 ---
-id: training:intro
+id: training-intro
 title: Introduction
 ---
 

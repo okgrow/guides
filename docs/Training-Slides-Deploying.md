@@ -1,5 +1,5 @@
 ---
-id: training:slides:deploying
+id: training-slides-deploying
 title: Deploying the slides
 ---
 

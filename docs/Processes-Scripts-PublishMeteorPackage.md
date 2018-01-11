@@ -1,5 +1,5 @@
 ---
-id: scripts:meteor-pkg
+id: scripts-meteor-pkg
 title: Publish Meteor Package
 ---
 
