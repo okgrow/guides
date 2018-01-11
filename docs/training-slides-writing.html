@@ -1,0 +1,98 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Writing slides for a workshop · Guides</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Writing slides for a workshop · Guides"/><meta property="og:type" content="website"/><meta property="og:url" content="https://okgrow.github.io/guides/index.html"/><meta property="og:description" content="The slides are based on an ejected [`create-react-app`](https://github.com/facebookincubator/create-react-app)."/><link rel="shortcut icon" href="/guides/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/guides/css/main.css"/></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/guides/"><img class="logo" src="/guides/img/logo-white.svg"/><h2 class="headerTitle">Guides</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="/guides/docs/dev-principles.html" target="_self">Processes</a></li><li><a href="/guides/docs/training-intro.html" target="_self">Training</a></li><li><a href="https://www.okgrow.com" target="_blank">Services</a></li><li><a href="https://www.okgrow.com/posts" target="_blank">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Slides</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Introduction</h3><ul><li class="navListItem"><a class="navItem" href="/guides/docs/training-intro.html">Introduction</a></li></ul></div><div class="navGroup navGroupActive"><h3>Slides</h3><ul><li class="navListItem"><a class="navItem" href="/guides/docs/training-slides-configuring.html">Configuring the slides</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/guides/docs/training-slides-writing.html">Writing slides for a workshop</a></li><li class="navListItem"><a class="navItem" href="/guides/docs/training-slides-deploying.html">Deploying the slides</a></li><li class="navListItem"><a class="navItem" href="/guides/docs/training-slides-api.html">API Internals</a></li></ul></div><div class="navGroup navGroupActive"><h3>Source</h3><ul><li class="navListItem"><a class="navItem" href="/guides/docs/training-source-structure.html">Structure of the training source</a></li><li class="navListItem"><a class="navItem" href="/guides/docs/training-source-editing.html">Editing a workshop source</a></li><li class="navListItem"><a class="navItem" href="/guides/docs/training-source-generating.html">Generating a class repository</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/okgrow/guides/edit/master/docs/Training-Slides-Writing.md" target="_blank">Edit</a><h1>Writing slides for a workshop</h1></header><article><div><span><p>The slides are based on an ejected <a href="https://github.com/facebookincubator/create-react-app"><code>create-react-app</code></a>.</p>
+<p>This gives us powerful tooling that we enhance to fit our needs.</p>
+<h2><a class="anchor" aria-hidden="true" name="app-structure"></a><a href="#app-structure" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>App structure</h2>
+<p>Below, a diagram of an expanded view of the app structure along with a corresponding screenshot.</p>
+<p><strong>🔖 When writing slides for a workshop, your focus is only on what is inside the <code>src/&lt;workshop directory&gt;</code> related to your workshop.</strong></p>
+<p>For instance, <code>src/advanced-graphql</code> or <code>src/graphql-fundamentals</code>.</p>
+<p><img src="/guides/img/training/directory-structure.png" alt="directory structure"></p>
+<h2><a class="anchor" aria-hidden="true" name="writing-slides"></a><a href="#writing-slides" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Writing slides</h2>
+<p>Slides are written to match a topic used in exercises.</p>
+<p>To add slides to a given topic, create a JS file named <em>exactly</em> like the topic, for instance <code>simple-query-on-the-client.js</code>. This file should export as default a list of React elements wrapped in the Spectacle's <code>&lt;Slide /&gt;</code> element.</p>
+<p><strong>To maximize readability and enforce consistency, we recommend to use a utility function called <code>renderSlide</code> that is located in the <code>utils</code> folder.</strong></p>
+<p>This function allows you to create slide with a title, markdown content, code snippets or custom React elements!</p>
+<p>Here is an example of slides on a topic:</p>
+<pre><code class="hljs css js"><span class="hljs-comment">// Import React, only needed if you use JSX, like below with the `element` property</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-comment">// Import Spectacle Core tags</span>
+<span class="hljs-keyword">import</span> { Image } <span class="hljs-keyword">from</span> <span class="hljs-string">'spectacle'</span>;
+
+<span class="hljs-comment">// Import the utility function to render workshop slide</span>
+<span class="hljs-keyword">import</span> { renderSlide } <span class="hljs-keyword">from</span> <span class="hljs-string">'../utils'</span>;
+
+<span class="hljs-comment">// note: this constant is transformed at build time by a custom Webpack loader</span>
+<span class="hljs-comment">// eslint-disable-next-line</span>
+<span class="hljs-keyword">const</span> { markdown, code, images } = __ASSETS__;
+
+<span class="hljs-comment">// a list of slides</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> [
+  renderSlide({
+    <span class="hljs-comment">// title of the slide</span>
+    title: <span class="hljs-string">'Using a Model'</span>,
+    <span class="hljs-comment">// custom element, here an image</span>
+    element: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">{images.model}</span> /&gt;</span>,
+  }),
+  renderSlide({
+    title: 'Using a Model',
+    // code snippet, default to javascript
+    code: code.modelUsage,
+  }),
+  renderSlide({
+    title: 'Create Place Mutation',
+    // markdown content
+    markdown: markdown.example,
+  }),
+  renderSlide({
+    title: 'Bonus: Variable as an Input Type',
+    // code snippet with options
+    code: {
+      source: code.inputType,
+      lang: 'graphql',
+      // add a badge
+      env: 'api',
+    },
+  }),
+];
+</span></code></pre>
+<p>Take inspiration on the existing slides to create your own! 😉</p>
+<h2><a class="anchor" aria-hidden="true" name="importing-assets"></a><a href="#importing-assets" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Importing assets</h2>
+<p>You may have notice that we get our assets from… a constant?! 🤔</p>
+<pre><code class="hljs css js"><span class="hljs-comment">// note: this constant is transformed at build time by a custom Webpack loader</span>
+<span class="hljs-comment">// eslint-disable-next-line</span>
+<span class="hljs-keyword">const</span> { markdown, code, images } = __ASSETS__;
+</code></pre>
+<p>On an earlier version of the training slides, we were requiring each asset by hand. This lead to huge list of <code>require</code> statements on top of each topic's slide file and it was easy to have a mistake.</p>
+<p>We now use a custom <code>assets-loader</code> in our webpack build to automatically match a topic's slide file with the related assets folder (see diagram above, look how a file name matches a directory name in <code>assets</code>).</p>
+<p>This help us to achieve such diffs, here for <code>apollo-link</code> topic in <code>advanced-graphql</code>.</p>
+<pre><code class="hljs css diff"><span class="hljs-deletion">- // Assets requirements is going to be abstracted to avoid long relative paths</span>
+<span class="hljs-deletion">- const markdown = {</span>
+<span class="hljs-deletion">-   goal: require('./assets/apollo-link/goal.md'),</span>
+<span class="hljs-deletion">-   apolloClient1: require('./assets/apollo-link/apolloClient1.md'),</span>
+<span class="hljs-deletion">-   apolloClient2: require('./assets/apollo-link/apolloClient2.md'),</span>
+<span class="hljs-deletion">-   concept: require('./assets/apollo-link/concept.md'),</span>
+<span class="hljs-deletion">- };</span>
+<span class="hljs-deletion">-  </span>
+<span class="hljs-deletion">- const code = {</span>
+<span class="hljs-deletion">-   apolloClient1: require('./assets/apollo-link/apolloClient1'),</span>
+<span class="hljs-deletion">-   apolloClient2: require('./assets/apollo-link/apolloClient2'),</span>
+<span class="hljs-deletion">-   terminatingLink: require('./assets/apollo-link/terminatingLink'),</span>
+<span class="hljs-deletion">-   nonTerminatingLink: require('./assets/apollo-link/nonTerminatingLink'),</span>
+<span class="hljs-deletion">-   additiveComposition: require('./assets/apollo-link/additiveComposition'),</span>
+<span class="hljs-deletion">-   directionalComposition: require('./assets/apollo-link/directionalComposition'),</span>
+<span class="hljs-deletion">- };</span>
+<span class="hljs-deletion">-  </span>
+<span class="hljs-deletion">- const images = {</span>
+<span class="hljs-deletion">-   additiveComposition: require('./assets/apollo-link/additiveComposition.png'),</span>
+<span class="hljs-deletion">-   directionalComposition: require('./assets/apollo-link/directionalComposition.png'),</span>
+<span class="hljs-deletion">- };</span>
+<span class="hljs-addition">+ // note: this constant is transformed at build time by a custom Webpack loader</span>
+<span class="hljs-addition">+ // eslint-disable-next-line</span>
+<span class="hljs-addition">+ const { markdown, code, images } = ASSETS;</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="training-slides-configuring.html">← Configuring the slides</a><a class="docs-next button" href="training-slides-deploying.html">Deploying the slides →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/guides/" class="nav-home"><img src="/guides/img/flower.png" alt="Guides" width="66" height="58"/></a><div><h5>Services</h5><a href="https://www.okgrow.com/web">Web Development</a><a href="https://www.okgrow.com/javascript-consulting">Javascript Consulting</a><a href="https://www.okgrow.com/mobile">Mobile Development</a><a href="https://www.okgrow.com/training">Training</a></div><div><h5>Social</h5><a href="https://twitter.com/ok_grow">Twitter</a><a href="https://github.com/okgrow">GitHub</a><a href="https://www.facebook.com/okgrow/">Facebook</a><a href="https://www.instagram.com/ok_grow/">Instagram</a><a href="https://www.youtube.com/channel/UCemC4xuL1cZhVlixuoEjtSg">YouTube</a></div><div><h5>Contact</h5><a href="https://www.okgrow.com/posts">Blog</a><a href="https://www.okgrow.com/contact">Hire Us</a><a href="https://www.okgrow.com/join-us">Join Us</a><a href="mailto:hello@okgrow.com">hello@okgrow.com</a><a href="tel:1-855-747-9930">+1-855-747-9930</a></div></section><a href="https://www.okgrow.com/" class="fbOpenSource"><img src="/guides/img/logo-white.svg" alt="OK GROW!" width="170" height="45"/></a><section class="copyright">Copyright © 2018 OK GROW!</section></footer></div></body></html>
