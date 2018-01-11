@@ -3,7 +3,6 @@
   src: url('/guides/fonts/Graphik-Light-Web.woff2') format('woff2'),
     url('/guides/fonts/Graphik-Light-Web.woff') format('woff');
   font-weight: normal;
-  font-display: optional;
 }
 
 @font-face {
@@ -11,7 +10,6 @@
   src: url('/guides/fonts/Graphik-Medium-Web.woff2') format('woff2'),
     url('/guides/fonts/Graphik-Medium-Web.woff') format('woff');
   font-weight: bold;
-  font-display: optional;
 }
 
 * {
