@@ -1809,6 +1809,20 @@ footer .copyright {
   }
 }
 
+@font-face {
+  font-family: Graphik;
+  src: url('/guides/fonts/Graphik-Light-Web.woff2') format('woff2'),
+    url('/guides/fonts/Graphik-Light-Web.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Graphik;
+  src: url('/guides/fonts/Graphik-Medium-Web.woff2') format('woff2'),
+    url('/guides/fonts/Graphik-Medium-Web.woff') format('woff');
+  font-weight: bold;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -1847,18 +1861,4 @@ body {
     opacity: 0;
     transform: rotateY(90deg);
   }
-}
-
-@font-face {
-  font-family: Graphik;
-  src: url('/guides/fonts/Graphik-Light-Web.woff2') format('woff2'),
-    url('/guides/fonts/Graphik-Light-Web.woff') format('woff');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: Graphik;
-  src: url('/guides/fonts/Graphik-Medium-Web.woff2') format('woff2'),
-    url('/guides/fonts/Graphik-Medium-Web.woff') format('woff');
-  font-weight: bold;
 }
