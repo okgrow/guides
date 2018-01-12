@@ -1,3 +1,0 @@
-#  Code Style - Ruby at OK GROW!
-
-Currently under-construction...
