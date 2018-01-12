@@ -4,11 +4,11 @@ title: Prepare for the Design Sprint
 sidebar_label: Preparation
 ---
 
-> Package we send out
+> The copy below is a package we send out to the client
 
 Congratulations! You are on your way to running a successful Sprint!
 
-##### Rules
+### Rules
 
 * Everyone participates
 * One conversation at a time
@@ -24,11 +24,11 @@ Congratulations! You are on your way to running a successful Sprint!
 * No part-time participants
 * Testing the Idea, not the design
 
-##### Focus on the Journey
+### Focus on the Journey
 
 We aren’t building a full mockup, we are validating (or invalidating) an idea. Reiterate this every day.
 
-##### Materials
+### Materials
 
 * Markers
 * Full-Poster sticky paper

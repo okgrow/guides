@@ -1,6 +1,6 @@
 ---
 id: project-management-retrospective-planning
-title: Retrospective Planning
+title: Retrospective Planning - Checklist
 ---
 
 For each project the project lead runs a weekly retrospective and planning meeting as early as possible on Monday. This is usually for the develoment team only, we have a separate client meeting any time in the week.

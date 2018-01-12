@@ -16,13 +16,13 @@ Each project has the following roles:
 ## Weekly cadence
 
 * Each team member is on a project 100% for one or more weeks.
-* We plan our work in weekly iterations which run from Monday to Thursday (Fridays are [investment time](#investment-time)).
+* We plan our work in weekly iterations which run from Monday to Thursday (Fridays are [investment time](dev-investment-time.html)).
 
 ## Meetings
 
 The project lead runs the meetings. Each project has the following meetings:
 
-1. A weekly one hour [retrospective and planning meeting](retrospective-and-planning-meeting.md) with the dev team only as early as possible on Monday morning.
+1. A weekly one hour [retrospective and planning meeting](project-management-retrospective-planning.html) with the dev team only as early as possible on Monday morning.
 1. A weekly one-hour review meeting with the client whenever is convenient for everyone.
 1. We have a quick (15 minutes) daily status meeting, with the dev team only, 3 days/week (every day except the day of the weekly meeting and investment day). (We would call it "stand-up" except that it's mostly via Google Hangouts so we're not necessarily standing).
 
@@ -50,5 +50,5 @@ We use Trello, with cards to represent user stories (or sometimes technical task
 * CI
   * Semaphore runs tests for each branch automatically.
   * Semaphore automatically deploys master to staging and resets data to a copy of production.
-  * See [Semaphore setup docs](https://docs.google.com/a/okgrow.com/document/d/19FhBBb7xLJNR4NV7sIHvWSAMjMhB1CrpexH7zCtLZB8/edit?usp=sharing). TODO
+  * See [Error Logging](new-app-setup-error-logging.html) section.
 * Each project has a shared project Google Drive folder. Anything not in the git repo (PSDs etc.) should be in there. (Actually work on them in there rather than copying them in later because it's too easy to forget!)

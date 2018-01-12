@@ -4,10 +4,10 @@ title: After the Design Sprint
 sidebar_label: After
 ---
 
-#### Share Results
+It's time to share results with the client.
 
-* Call with the client to go over the learnings from the testing and review capture document
-* Generate Capture Document
-* Give yourself 3 days to prepare this
-* Follow template, add/remove sections as necessary
-* Our value to the client is in the conclusion and our recommendations moving forward after the Design Sprint
+Within 3 days, generate the capture document, following the template and adding/removing sections as necessary.
+
+Our value to the client is in the conclusion and our recommendations moving forward after the Design Sprint.
+
+Call with the client to go over the learnings from the testing and review capture document with them.

@@ -22,6 +22,4 @@ We also use AWS services directly when necessary and have years of experience us
 
 ## Monitoring
 
-For apps that we are actively working on or that have a monitoring agreement we proactively monitor and resolve issues. This is the responsibility of the team actively working on the project if there is one, or else whoever is on [support](#support-role).
-
-TODO
+For apps that we are actively working on or that have a monitoring agreement we proactively monitor and resolve issues. This is the responsibility of the team actively working on the project if there is one, or else whoever is on [support](dev-support-role.html).

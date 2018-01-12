@@ -1,15 +1,13 @@
 ---
 id: new-app-setup-error-logging
-title: Error Logging
+title: Error Logging - Checklist
 ---
-
-### Error Logging
 
 We are using [Sentry.io](https://sentry.io) for error tracking and reporting. You can sign into sentry using single sign on with your gmail account.
 
 Depending on the project, you may create a new organisation for the project or create a new project under the existing OK GROW! organisation. Creating a new organisation is mainly for billing purposes and managing users outside of OK GROW!.
 
-#### Create a New Organisation:
+## Create a New Organisation
 
 1. Log in.
 1. Click the icon in the top left hand corner.
@@ -19,7 +17,7 @@ Depending on the project, you may create a new organisation for the project or c
    * Click "Invite Member" in the top right hand corner.
 1. Setup billing & usage, this will be with OK GROWS! credit card or the client's.
 
-#### Create Projects:
+## Create Projects
 
 1. Every app we build will need to have at least two projects to track errors. e.g - a staging and production project. The recommended syntax for a projects name is `myproject-staging` and `myproject-production`.
 1. Navigate to the organisations dashboard, in the top right select "New Project".
@@ -45,12 +43,12 @@ Depending on the project, you may create a new organisation for the project or c
    1. You should have this Alert Rule "An event is seen" and "Send a notification via Slack".
    1. Now save this rule :)
 
-#### Meteor App Setup
+## Meteor App Setup
 
 1. All you have to do is have used our base meteor app to get started.
 1. You will need to add the DSN and Public DSN from your sentry.io projects to your meteor settings for staging and production.
 
-#### Expo - React Native Setup
+## Expo - React Native Setup
 
 1. Ensure that you're using a version of Node that supports `async/await`(Node 7.6+).
 1. `npm install sentry-cli-binary -g`
@@ -62,7 +60,7 @@ For more details take a look at expo's docs [here](https://docs.expo.io/versions
 
 _Note:_ At the time of writing Expo isn't using the native integration yet, hopefully this will change in a future release. Please check the status and update the guide when this changes.
 
-#### React Native Setup
+## React Native Setup
 
 Follow the below steps if you are not using Expo for your React Native app.
 

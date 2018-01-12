@@ -15,4 +15,4 @@ These are the overarching principles that guide the actual details of the proces
 * Don't live with pain (duplicated code, glue code, yak-shaving). Take the time to solve the pain.
 * Automate where possible. Make builds, deployments, and common tasks as painless as possible. By automating, you save time for everyone.
 
-Browse the files and subdirectories here to see our various development processes documented.
+Browse the pages here to see our various development processes documented.

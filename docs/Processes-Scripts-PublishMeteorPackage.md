@@ -3,15 +3,23 @@ id: scripts-meteor-pkg
 title: Publish Meteor Package
 ---
 
+## Goal
+
+This script publishes a meteor package and tags it (must be in the root of the repo). This ensures that all published packages are committed, pushed, and tagged.
+
+Tagging releases is important in order to be able to debug previous versions
+and produce bug fixes releases.
+
+## Usage
+
+```sh
+publish-meteor-package
+```
+
+## Code
+
 ```sh
 #!/bin/bash
-
-# Publishes a meteor package and tags it (must be in the root of the repo)
-# This ensures that all published packages are committed, pushed, and tagged.
-# Tagging releases is important in order to be able to debug previous versions
-# and produce bug fixes releases.
-#
-# Usage: publish-meteor-package
 
 if [ ! -z "$(git status --porcelain)" ]; then
   echo "Git working directory is not clean"

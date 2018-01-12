@@ -1,27 +1,25 @@
 ---
 id: new-app-setup-production-staging
-title: Production & Staging
+title: Production & Staging - Checklist
 ---
 
 It's important to hit the ground running when starting a new project. To do that we use a checklist and make as few decisions as possible. We love trying new things but the first week of a new project is not the time for that.
 
 This assumes the discovery week has already happened.
 
-## Production and staging apps
-
 Use Heroku or Galaxy, based on project requirements, for hosting Meteor apps. This guide provides instructions for setting up either.
 
-### App Project
+## App Project
 
 Begin you new application by following the steps with the OKGROW! [`starter-kit`](https://github.com/okgrow/starter-kit).
 
-### Heroku
+## Heroku
 
 1. Add the Logentries Slack integration to the project's Slack channel
    1. Go to the project's Slack channel and, under "Channel Settings" click "Add an app or integration"
    1. Add Logentries as an integration and copy the web hook URL; save the integration
 
-#### Staging
+### Staging
 
 1. Create staging Heroku app using the [create-heroku-app](../../scripts/create-heroku-app) script. NOTE: You'll want to specify "-staging" in the name.
 1. Add other team members as collaborators on the app under the "Access" section.
@@ -37,7 +35,7 @@ Begin you new application by following the steps with the OKGROW! [`starter-kit`
 1. Add the mLab MongoDB add on.
    1. TODO: details
 
-#### Production
+### Production
 
 1. Create staging Heroku app using the [create-heroku-app](../../scripts/create-heroku-app) script. NOTE: You'll want to specify "-production" in the name.
 1. Add other team members as collaborators on the app under the "Access" section.
@@ -57,21 +55,21 @@ Begin you new application by following the steps with the OKGROW! [`starter-kit`
    1. TODO: details
    1. Create read-only user for production DB
 
-#### Database Information Document
+### Database Information Document
 
 Create a new spreadsheet in the project's "Development" folder on the Google Drive and record the database information from both staging and production databases.
 
-### Galaxy
+## Galaxy
 
-TODO: details
+Missing details, to complete.
 
-#### MongoDB Atlas
+## MongoDB Atlas
 
 MongoDB Atlas is the recommended database hosting provider. If you have an account, it will take about 5 minutes to setup. Detailed step-by-step instructions for getting setup and started can be found in our ["MongoDB Atlas Setup" blog post](https://www.okgrow.com/posts/mongodb-atlas-setup).
 
-### AWS (optional)
+## AWS
 
-**NOTE** Not all apps require AWS, so this section is optional.
+> Not all apps require AWS, this section is optional.
 
 1. Set up AWS account
    1. Client creates root account and gives us temporary password

@@ -9,7 +9,7 @@ This means responding to issues with [client apps that have a monitoring agreeme
 
 ## Client apps
 
-We use Kadira to report client-side and server-side errors. We have a zero-error policy for apps that we manage, meaning that every error report gets dealt with as follows:
+We use [Sentry](new-app-setup-error-logging.html) to report client-side and server-side errors. We have a zero-error policy for apps that we manage, meaning that every error report gets dealt with as follows:
 
 1. Add a card to Trello immediately
    * Add it to the bottom of Planned

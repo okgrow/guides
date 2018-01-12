@@ -3,13 +3,22 @@ id: scripts-heroku
 title: Create Heroku App
 ---
 
+## Goal
+
+This script creates a new Heroku app in a specified environment and adds it as a git remote.
+
+The environment name could be staging, production, etc
+
+## Usage
+
+```sh
+create-heroku-app <app name> <environment name>
+```
+
+## Code
+
 ```sh
 #!/bin/bash
-
-# Creates a new Heroku app and adds it as a git remote.
-# The environment name could be staging, production, etc
-#
-# Usage: create-heroku-app <app name> <environment name>
 
 APP=$1
 ENV=$2

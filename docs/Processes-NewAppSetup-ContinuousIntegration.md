@@ -1,19 +1,11 @@
 ---
 id: new-app-setup-continuous-integration
-title: Continuous Integration
+title: Continuous Integration - Checklist
 ---
 
-### Continuous Integration
+## Semaphore
 
-#### AWS Configuration (optional):
-
-1. Create IAM user with read-only access to the production S3 bucket and read/write access to the staging S3 bucket:
-   1. [Add Policy](semaphore-iam-user-policy.json)
-   1. Ensure the user has API credentials and no password
-
-#### Semaphore
-
-##### Project
+### Project
 
 1. Create a new project in Semaphore
    * **NOTE** Currently, Paul needs to do this step. Will fix.
@@ -41,7 +33,7 @@ title: Continuous Integration
    1. **Configuration Files**
       1. Add the application's `settings.json` file
 
-##### Staging Server
+### Staging Server
 
 On the Semaphore project page click “Set Up Deployment”.
 
@@ -54,7 +46,7 @@ On the Semaphore project page click “Set Up Deployment”.
 1. On the servers screen, click the "Edit Server" button
 1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [staging app deploy config](semaphore-staging-deploy-config)
 
-##### Production Server
+### Production Server
 
 On the Semaphore project page click the + button beside "Servers" to add a new server.
 
@@ -67,7 +59,7 @@ On the Semaphore project page click the + button beside "Servers" to add a new s
 1. On the servers screen, click the "Edit Server" button
 1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [production app deploy config](semaphore-production-deploy-config).
 
-#### Slack Integration
+## Slack Integration
 
 1. Go to the project's Slack channel and, under "Channel Settings" click "Add an app or integration"
 1. Add Sempahore as an integration and copy the web hook URL; save the integration
@@ -75,26 +67,18 @@ On the Semaphore project page click the + button beside "Servers" to add a new s
 1. # Add the web hook URL and select "Build and Deploy" from the "Receive After" dropdown
 1. Currently you can follow the steps taken for the Rapunzl project.
 
-# MongoDB Atlas
+## MongoDB Atlas
 
 If the project is using Galaxy to host the app the MongoDB Atlas is the recommended hosting provider. If you already have an account it will take you about 5 mins to setup. You can find detailed step-by-step instructions to getting setup and started in our blog post [here](https://www.okgrow.com/posts/mongodb-atlas-setup).
 
 Atlas is the best option if wishing to scale CPU & Memory independently to it's storage & disk I/O, cheapest for using the WiredTiger Storage engine, encrypting data at rest, have 3 to 7 data bearing nodes, continuous backups & snapshots.
 
-# CI
-
-#### AWS config:
-
-1. Create IAM user with read-only access to production S3 bucket and read/write access to staging S3 bucket
-   1. [Add policy](https://drive.google.com/open?id=0B4JoTt-NyIq5Y2RuYjZPTFAwd0U)
-   2. Ensure the user has API credentials, no password
-
-#### MongoDB create users:
+## MongoDB create users:
 
 1. Create read-only user for production DB
 2. Create user on staging DB (not read-only)
 
-#### Semaphore config:
+## Semaphore config:
 
 1. Create new project
    1. NOTE: Paul needs to do this step currently. Will fix...
@@ -124,6 +108,14 @@ Atlas is the best option if wishing to scale CPU & Memory independently to it's 
    1. Go to Project Settings / Notifications / Webhooks in Semaphore
    1. Add the webhook URl and select 'Build and Deploy' from the 'Receive After' dropdown
 
-#### Heroku config
+## Heroku config
 
 1. In Heroku: Under ‘Access’, add [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) as a collaborator in the staging and production Heroku app
+
+## AWS Configuration
+
+> This section is optional
+
+1. Create IAM user with read-only access to the production S3 bucket and read/write access to the staging S3 bucket:
+   1. [Add Policy](semaphore-iam-user-policy.json)
+   1. Ensure the user has API credentials and no password
