@@ -64,7 +64,7 @@ On the Semaphore project page click the + button beside "Servers" to add a new s
 1. Go to the project's Slack channel and, under "Channel Settings" click "Add an app or integration"
 1. Add Sempahore as an integration and copy the web hook URL; save the integration
 1. On Semaphore, go to Project Settings / Notifications / Webhooks
-1. # Add the web hook URL and select "Build and Deploy" from the "Receive After" dropdown
+1. **Add the web hook URL and select "Build and Deploy" from the "Receive After" dropdown**
 1. Currently you can follow the steps taken for the Rapunzl project.
 
 ## MongoDB Atlas
