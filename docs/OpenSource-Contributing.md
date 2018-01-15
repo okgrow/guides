@@ -47,4 +47,4 @@ Pull requests are **always welcome**. We'll strive hard to prioritize PRs over i
 
 ## Code of Conduct
 
-Please abide by the [Code of Conduct](CODE_OF_CONDUCT.md).
+Please abide by the [Code of Conduct](open-source-code-of-conduct.html).
