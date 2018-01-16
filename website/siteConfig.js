@@ -8,8 +8,8 @@
 const siteConfig = {
   title: 'Guides' /* title for your website */,
   tagline: 'How we do things at OK GROW!',
-  url: 'https://okgrow.github.io' /* your website url */,
-  baseUrl: '/guides/' /* base url for your project */,
+  url: 'https://guides.okgrow.com' /* your website url */,
+  baseUrl: '/' /* base url for your project */,
   projectName: 'guides',
   organizationName: 'okgrow',
   headerLinks: [
