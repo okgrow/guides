@@ -10,6 +10,7 @@ const siteConfig = {
   tagline: 'How we do things at OK GROW!',
   url: 'https://guides.okgrow.com' /* your website url */,
   baseUrl: '/' /* base url for your project */,
+  cname: 'guides.okgrow.com',
   projectName: 'guides',
   organizationName: 'okgrow',
   headerLinks: [

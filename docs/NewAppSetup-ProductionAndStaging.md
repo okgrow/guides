@@ -21,9 +21,9 @@ Begin you new application by following the steps with the OKGROW! [`starter-kit`
 
 ### Staging
 
-1. Create staging Heroku app using the [create-heroku-app](../../scripts/create-heroku-app) script.
-   - NOTE: You'll want to specify "-staging" in the name.
-   - NOTE: This should be run from within the project folder
+1. Create staging Heroku app using the [create-heroku-app](https://github.com/okgrow/guides/blob/master/scripts/create-heroku-app) script.
+   * NOTE: You'll want to specify "-staging" in the name.
+   * NOTE: This should be run from within the project folder
 1. Add other team members as collaborators on the app under the "Access" section.
    1. Add accounts+semaphoredeploy@okgrow.com as a collaborator.
 1. For meteor projects use [our fork of the "horse" buildpack](https://github.com/okgrow/meteor-buildpack-horse.git)
@@ -39,9 +39,9 @@ Begin you new application by following the steps with the OKGROW! [`starter-kit`
 
 ### Production
 
-1. Create production Heroku app using the [create-heroku-app](../../scripts/create-heroku-app) script.
-   - NOTE: You'll want to specify "-production" in the name.
-   - NOTE: This should be run from within the project folder
+1. Create production Heroku app using the [create-heroku-app](https://github.com/okgrow/guides/blob/master/scripts/create-heroku-app) script.
+   * NOTE: You'll want to specify "-production" in the name.
+   * NOTE: This should be run from within the project folder
 1. Add other team members as collaborators on the app under the "Access" section.
    1. Add accounts+semaphoredeploy@okgrow.com as a collaborator.
 1. For meteor projects use [our fork of the "horse" buildpack](https://github.com/okgrow/meteor-buildpack-horse.git)
