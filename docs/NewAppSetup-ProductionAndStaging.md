@@ -24,7 +24,7 @@ Begin you new application by following the steps with the OKGROW! [`starter-kit`
 1. You must first Create or Join a Team where the Heroku Apps will be hosted.
    1. NOTE: Billing must be setup for the team before you can create the staging & production apps.
 1. If you are creating the Team, you will need to fill out the billing information and invite your team members to the Team as Admins.
-1. Additionally you will need to create/or add a developers@<domain>.com as a team member with member access permission.
+1. Additionally you will need to create/or add a `developers@<domain>.com` as a team member with member access permission.
    1. You will need to record the API key for this user from Heroku and add it to the semaphore CI deployment servers.
 
 ### Staging
