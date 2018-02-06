@@ -1,6 +1,6 @@
 ---
 id: new-app-setup-error-logging
-title: Error Logging - Checklist
+title: Sentry Error Logging - Checklist
 ---
 
 We are using [Sentry.io](https://sentry.io) for error tracking and reporting. You can sign into sentry using single sign on with your gmail account.
