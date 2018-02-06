@@ -31,7 +31,6 @@
       "new-app-setup-error-logging",
       "new-app-setup-continuous-integration"
     ],
-    "Scripts": ["scripts-heroku", "scripts-meteor-pkg"],
     "Open Source": [
       "open-source-code-of-conduct",
       "open-source-contributing",
