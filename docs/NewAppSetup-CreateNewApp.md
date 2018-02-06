@@ -23,7 +23,7 @@ Add the Logentries Slack integration to the project's Slack channel:
 1. Save the integration
 
 ### Staging
-1. Run the [`create-heroku-app <app-name>-staging staging`](../../scripts/create-heroku-app) script from within the app project folder
+1. Run the [`create-heroku-app <app-name>-staging staging`](https://github.com/okgrow/guides/blob/master/scripts/create-heroku-app) script from within the app project folder
 1. Login to Heroku and add team members and `accounts+semaphoredeploy@okgrow.com` as collaborators on the app in the "Access" section
 1. ~~Use [our fork of the "horse" buildpack](https://github.com/okgrow/meteor-buildpack-horse.git)~~ (done by script)
 1. Configure the Heroku Logentries add-on:
@@ -38,7 +38,7 @@ Add the Logentries Slack integration to the project's Slack channel:
     1. TODO: details
 
 ### Production
-1. Run the [`create-heroku-app <app-name>-production production`](../../scripts/create-heroku-app) script from within the app project folder
+1. Run the [`create-heroku-app <app-name>-production production`](https://github.com/okgrow/guides/blob/master/scripts/create-heroku-app) script from within the app project folder
 1. Login to Heroku and add team members and `accounts+semaphoredeploy@okgrow.com` as collaborators on the app in the "Access" section
 1. ~~Use [our fork of the "horse" buildpack](https://github.com/okgrow/meteor-buildpack-horse.git)~~ (done by script)
 1. Configure the Heroku Logentries add-on:
@@ -83,13 +83,15 @@ MongoDB Atlas is the recommended database hosting provider. If you have an accou
 
 ### S3
 #### Staging
-    1. Create a staging S3 bucket named `<app-name>-app-staging` with the [public-read bucket policy](s3-bucket-public-read-policy.json)
-    1. Create a staging IAM user with API credentials, no password, [this policy](app-iam-user-policy.json) and access only to staging S3 bucket
+
+    1. Create a staging S3 bucket named `<app-name>-app-staging` with the [public-read bucket policy](https://github.com/okgrow/guides/blob/master/scripts/s3-bucket-public-read-policy.json)
+    1. Create a staging IAM user with API credentials, no password, [this policy](https://github.com/okgrow/guides/blob/master/scripts/app-iam-user-policy.json) and access only to staging S3 bucket
     1. On Heroku, set `METEOR_SETTINGS` environment variable on the staging app in same format as [default settings.json.example file](https://drive.google.com/open?id=0B4JoTt-NyIq5WUtWOFlkSDlXT2s) but with line-ends removed
 
 #### Production
-    1. Create a production S3 bucket named `<app-name>-app-production` with the [public-read bucket policy](s3-bucket-public-read-policy.json)
-    1. Create a production IAM user with API credentials, no password, [this policy](app-iam-user-policy.json) and access only to production S3 bucket
+
+    1. Create a production S3 bucket named `<app-name>-app-production` with the [public-read bucket policy](https://github.com/okgrow/guides/blob/master/scripts/s3-bucket-public-read-policy.json)
+    1. Create a production IAM user with API credentials, no password, [this policy](https://github.com/okgrow/guides/blob/master/scripts/app-iam-user-policy.json) and access only to production S3 bucket
     1. On Heroku, set `METEOR_SETTINGS` environment variable on the production app in same format as [default settings.json.example file](https://drive.google.com/open?id=0B4JoTt-NyIq5WUtWOFlkSDlXT2s) but with line-ends removed
 
 
@@ -136,7 +138,7 @@ Add the DSN and Public DSN from your sentry.io projects to your staging and prod
 #### Expo
 (Follow the below steps if you are using Expo for your React Native app.)
 
-1. Ensure that you're using a version of Node that supports `async/await`(Node 7.6+).
+1. Ensure that you're using a version of Node that supports `async/await` (Node 7.6+).
 1. `npm install sentry-cli-binary -g`
 1. `npm install sentry-expo --save`
 1. For the next steps please follow these [instructions](https://docs.sentry.io/clients/react-native/expo/) from sentry.
@@ -151,7 +153,7 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
 
 1. `npm install react-native-sentry --save`
 1. `react-native link react-native-sentry`
-1. When linking you will be asked to provide the following(details are in your sentry project):
+1. When linking you will be asked to provide the following (details are in your sentry project):
     1. `DSN`
     1. `organization slug`
     1. `project slug`
@@ -184,7 +186,7 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
     1. Choose Heroku, then manual, and then master.
     1. Enter the API key for the [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) Heroku user, check our Accounts.
     1. Select the Production Heroku app for this project from the list, and name it “Production”
-    1. Add the [production app deploy config](semaphore-production-deploy-config)
+    1. Add the [production app deploy config](https://github.com/okgrow/guides/blob/master/scripts/semaphore-production-deploy-config)
 1. Add Slack notifications (no email)
     1. Go to the project's slack channel and add an integration
     1. Add sempahore as an integration and make note of the webhook URL, then save the integration
@@ -198,7 +200,7 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
 1. Edit project Settings by clicking "Project settings":
     1. **Build Settings**
         1. Set the "Node.js version" to "node.js 7.10.1" (or later)
-        1. Add these lines under setup: [Semaphore build settings](semaphore-build-settings)
+        1. Add these lines under setup: [Semaphore build settings](https://github.com/okgrow/guides/blob/master/scripts/semaphore-build-settings)
     1. **Environment Variables**
         1. Add these variables (you'll get the values for these from the "Database Information" document created above):
             * `PRODUCTION_DB_HOST`
@@ -226,7 +228,7 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
 1. Select the Staging Heroku app for this project from the list; name the server “Staging”
 1. On the Semaphore project page, under "Servers", click the server name (e.g., "Staging")
 1. On the servers screen, click the "Edit Server" button
-1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [staging app deploy config](semaphore-staging-deploy-config)
+1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [staging app deploy config](https://github.com/okgrow/guides/blob/master/scripts/semaphore-staging-deploy-config)
 
 ### Configure the Production Server
 1. Click the + button beside "Servers" on the Semaphore project page to add a new server.
@@ -237,7 +239,7 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
 1. Select the Production Heroku app for this project from the list; name the server “Production”
 1. On the Semaphore project page, under "Servers", click the server name (e.g., "Production")
 1. On the servers screen, click the "Edit Server" button
-1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [production app deploy config](semaphore-production-deploy-config).
+1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [production app deploy config](https://github.com/okgrow/guides/blob/master/scripts/semaphore-production-deploy-config).
 
 ### Configure Semaphore Slack Integration
 1. In the project's Slack channel, click "Add an app or integration" under "Channel Settings"
@@ -251,4 +253,4 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
 In Heroku, under ‘Access’, add `accounts+semaphoredeploy@okgrow.com` as a collaborator in the staging and production servers.
 
 ### Configure AWS
-Create an IAM user with API credentials, no password, with [this policy](semaphore-iam-user-policy.json) and read-only access to the production S3 bucket and read-write access to the staging S3 bucket.
+Create an IAM user with API credentials, no password, with [this policy](https://github.com/okgrow/guides/blob/master/scripts/semaphore-iam-user-policy.json) and read-only access to the production S3 bucket and read-write access to the staging S3 bucket.
