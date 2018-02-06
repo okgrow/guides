@@ -19,13 +19,19 @@ Begin you new application by following the steps with the OKGROW! [`starter-kit`
    1. Go to the project's Slack channel and, under "Channel Settings" click "Add an app or integration"
    1. Add Logentries as an integration and copy the web hook URL; save the integration
 
+### Create or Join Team
+
+1. You must first Create or Join a Team where the Heroku Apps will be hosted.
+   1. NOTE: Billing must be setup for the team before you can create the staging & production apps.
+1. If you are creating the Team, you will need to fill out the billing information and invite your team members to the Team as Admins.
+1. Additionally you will need to create/or add a developers@<domain>.com as a team member with member access permission.
+   1. You will need to record the API key for this user from Heroku and add it to the semaphore CI deployment servers.
+
 ### Staging
 
 1. Create staging Heroku app using the [create-heroku-app](https://github.com/okgrow/guides/blob/master/scripts/create-heroku-app) script.
    * NOTE: You'll want to specify "-staging" in the name.
    * NOTE: This should be run from within the project folder
-1. Add other team members as collaborators on the app under the "Access" section.
-   1. Add accounts+semaphoredeploy@okgrow.com as a collaborator.
 1. For meteor projects use [our fork of the "horse" buildpack](https://github.com/okgrow/meteor-buildpack-horse.git)
 1. Configure the Logentries add-on in Heroku
    1. Disable some notifications which get triggered by every web socket connection:
@@ -34,16 +40,14 @@ Begin you new application by following the steps with the OKGROW! [`starter-kit`
       1. Idle connection
    1. Disable email for all notifications and add the Slack web hook URL
       * **NOTE** This is a process that involves editing each notification. (TODO: details)
-1. Add the mLab MongoDB add on.
-   1. TODO: details
+1. Set your MongoDB URL in your environment URL variable
+   1. Retrieve your URL from the MongoDB Service you have selected to use (MongoDB Atlas or mLab)
 
 ### Production
 
 1. Create production Heroku app using the [create-heroku-app](https://github.com/okgrow/guides/blob/master/scripts/create-heroku-app) script.
    * NOTE: You'll want to specify "-production" in the name.
    * NOTE: This should be run from within the project folder
-1. Add other team members as collaborators on the app under the "Access" section.
-   1. Add accounts+semaphoredeploy@okgrow.com as a collaborator.
 1. For meteor projects use [our fork of the "horse" buildpack](https://github.com/okgrow/meteor-buildpack-horse.git)
    1. Configure the Logentries add-on in Heroku
       1. Disable some notifications which get triggered by every web socket connection:
@@ -55,8 +59,8 @@ Begin you new application by following the steps with the OKGROW! [`starter-kit`
 1. Configure Mailgun add-on
    1. Add DNS records (TODO: more details)
    1. Edit `MAILGUN_*` env vars to contain the info for the verified domain (instead of the sandbox domain).
-1. Add the Compose MongoDB add on.
-   1. TODO: details
+1. Set your MongoDB URL in your environment URL variable
+   1. Retrieve your URL from the MongoDB Service you have selected to use (MongoDB Atlas or Compose)
    1. Create read-only user for production DB
 
 ### Database Information Document
