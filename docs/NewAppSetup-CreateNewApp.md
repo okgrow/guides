@@ -167,25 +167,22 @@ Create a "database information" spreadsheet in the project's Google Drive "Devel
 1. Log in to the `ok-grow` organisation with your account
 1. Click the icon in the top left hand corner
 1. Select "New Organization" then follow the prompts
+1. Navigate to the organisations dashboard, in the top right select "New Project"
+1. Follow the prompts and setup the project
 1. You should now have an organisation and one project, you will now need to add anyone one the project to the organisation
 1. Navigate to the organisation's settings page, select "Members" and click "Invite Member" in the top right hand corner
 1. Setup billing & usage, this will be with OK GROWS! credit card or the client's
 
-### Create Projects
-1. Every app we build will need to have at least two projects to track errors. e.g - a staging and production project. The recommended syntax for a projects name is `myproject-staging` and `myproject-production`
-1. Navigate to the organisations dashboard, in the top right select "New Project"
-1. Follow the prompts and setup the project
+### Configure Project
 1. Navigate to the "Project Settings" and set the following fields:
-    1. Email: Subject Prefix to the projects name
-    1. Event Settings: Default environment to staging or production
     1. The Project Name & Short Name should be the same
-    1. The Team should be the Team for the organisation the project belongs to. If the project is under OK GROW! then set it to OK GROW!
+    1. Email: Subject Prefix to the project name
+    1. Event Settings: Default environment to staging or production
 1. Next navigate to All Integrations and add the following:
     1. Github - Optional
     1. Slack - Mandatory
     1. Trello - Recommended
 1. Once these integrations have been added you will need to set them up
-    1. Github - (Optional) Follow instructions to setup
     1. Slack - You will need to go to [here](https://okgrow.slack.com/apps/A0F814BEV-sentry) and select "Add Configuration", and follow the prompts. Add a descripitive label to state what project the error logging is for. Save the settings and copy the Webhook URL and add it to the sentry website. You can use the same URL for both staging & production
     1. Trello - Follow these [instructions](https://github.com/damianzaremba/sentry-trello/blob/master/HOW_TO_SETUP.md) to get the API key & token. Once the keys have been saved you will need to add the Trello Organization where the Trello Board exists. **NOTE:** These keys are associated with your Trello user account
 1. Next navigate to "Alerts" and select "Rules".
@@ -197,7 +194,7 @@ Create a "database information" spreadsheet in the project's Google Drive "Devel
     1. Save this rule
 
 ### Meteor App Setup (web)
-Add the DSN and Public DSN from your sentry.io projects to your staging and production Meteor `settings.json` files.
+Add the DSN and Public DSN from your sentry.io projects to your staging and production Meteor `settings.json` files and set the environment to `staging` or `production`.
 
 ### React Native App Setup (mobile)
 
