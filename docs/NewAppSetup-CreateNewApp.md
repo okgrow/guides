@@ -25,6 +25,48 @@ Add the Logentries Slack integration to the project's Slack channel:
 ## ??? - Setup Database Server (MongoDB Atlas)
 MongoDB Atlas is the recommended database hosting provider. If you have an account, it will take about 5 minutes to setup. Detailed step-by-step instructions for getting setup and started can be found in our ["MongoDB Atlas Setup" blog post](https://www.okgrow.com/posts/mongodb-atlas-setup).
 
+### Create Client Orginsation Steps
+1. Login to Atlas using your OK GROW! account. If you don't have one create one and setup your 2fa.
+1. Go to Account Settings -> Organizations (top right corner, drop down menu on your username & select Organizations) or use this [url](https://cloud.mongodb.com/v2#/account/organizations)
+1. Create a new Organization
+1. Provide the name of the organization & select MongoDB Atlas
+1. Provide email address for the members you wish to invite to the org (client & team mates)
+1. Left hand side under Organization go to Settings -> then select Payment Method. (You can add the credit card info for the org or ask the client to enter themselves)
+1. Left hand side under Organization go to Projects -> then select New Project & enter the name of the project & invite the users you want to the project
+
+### Create and Setup Staging and Production DBs
+1. Now Create the Projects Clusters (MongoDB nodes/db) for both staging & production by selecting Build a New Cluster.
+1. Suggested names for the clusters can projectName-production & projectName-staging
+1. Set the MongoDB Version that Meteor currently supports (3.4, soon will be 3.6)
+1. Cloud Provider & Region should be set the same as where your app server will be located
+1. Select the Instance size.
+    1. Staging can most likely get away with the Free M0, or the cheap M2 ($9per month), M5 ($25 per month)
+    1. Production should be at least the M10  instance
+    1. Decide if you want to encrypt the storage volumes. It's a trade off between perf & security. Depending on your application this isn’t always a necessary requirement, unless you plan on storing confidential data unencrypted in the DB (which you shouldn't ever do).
+    1. Enable Backup on only the Production Cluster
+    1. Set the admin username & password (use the autogen secure password button) & record this somewhere safely to use for connecting to any of your clusters in the project.
+1. For a more detailed walkthrough of these next steps, check the ["MongoDB Atlas Setup" blog post](https://www.okgrow.com/posts/mongodb-atlas-setup).
+1. Security IP Whitelisting or AWS Peering
+      1. You will need to create a whitelist of IP addresses that you wish to allow the db to receive connections from.
+      1. The quick alternative until semaphore supports IP addresses is to select the option to whitelist all addresses e.g -> `0.0.0.0/0`
+1. Create the Meteor User (This user will be used for the `"MONGO_URL"`)
+    1. Select: “Create new user”.
+    1. Set the “User Name”.
+    1. Select “Read/Write any Database”.
+    1. Create a password and save it! We need it for our MongoDB connection url for our Apps Environment variables.
+ 1. Create the Oplog User (This user will be used for the `"MONGO_OPLOG_URL"`)
+    1. Select: “Create new user”.
+    1. Click “advanced”.
+    1. Set access to “read” @ “local”.
+    1. Create a password and save it! We need it for our Meteor Oplog connection url for our Apps Environment variables.
+ 1. Create a backup & read only user [Optional]
+   1. Select: `“Create new user”`.
+    1. Click `“advanced”`.
+    1. Set access to `“backup” @ “anyDatabases”`.
+    1. Set access to `“read” @ “anyDatabases”`.
+    1. Create a password and save it! We can use this for reading/completing a backup from MongoDB.
+
+
 1. Create a read-write user on the staging DB:
     1. TODO: details
 1. Create a read-only user on the production DB:
@@ -47,13 +89,18 @@ Create a "database information" spreadsheet in the project's Google Drive "Devel
 1. Add team members as collaborators on the app in the "Access" section
 1. Set the `METEOR_SETTINGS` "config variable" in "Settings" in same format as the default `settings.json.example` file but with line-ends removed
 1. Set the `MONGO_URL` "config variable" in "Settings"
+1. Set the `ERROR_PAGE_URL` "config variable" in "Settings" to `<app-name>-app-staging/public/error.html` (**NOTE:** This will be setup below.)
+1. Set the `MAINTENANCE_PAGE_URL` "config variable" in "Settings" to `<app-name>-app-staging/public/maintenance.html` (**NOTE:** This will be setup below.)
 1. Configure the Heroku Logentries add-on:
     1. Disable these notifications:
         - High response time
         - Connection closed w/o response
         - Idle connection
     1. Disable email and add the Slack web hook URL for all notifications:
-        - TODO: details (**NOTE:** This involves editing each notification!)
+        1. Click edit for the tag
+        1. Under the "Add an Alert" section, uncheck email
+        1. Select Slack (under "Other Options")
+        1. Paste the webhook URL, the save changes
 
 ### Production
 1. Run the [`create-heroku-app <app-name>-production production <heroku-team-name>`](https://github.com/okgrow/guides/blob/master/scripts/create-heroku-app) script from within the app project folder
@@ -61,13 +108,18 @@ Create a "database information" spreadsheet in the project's Google Drive "Devel
 1. Add team members as collaborators on the app in the "Access"
 1. Set the `METEOR_SETTINGS` "config variable" in "Settings" in same format as the default `settings.json.example` file but with line-ends removed
 1. Set the `MONGO_URL` "config variable" in "Settings"
+1. Set the `ERROR_PAGE_URL` "config variable" in "Settings" to `<app-name>-app-production/public/error.html` (**NOTE:** This will be setup below.)
+1. Set the `MAINTENANCE_PAGE_URL` "config variable" in "Settings" to `<app-name>-app-production/public/maintenance.html` (**NOTE:** This will be setup below.)
 1. Configure the Heroku Logentries add-on:
     1. Disable these notifications:
         - High response time
         - Connection closed w/o response
         - Idle connection
     1. Disable email and add the Slack web hook URL for all notifications:
-        - TODO: details (**NOTE:** This involves editing each notification!)
+        1. Click edit for the tag
+        1. Under the "Add an Alert" section, uncheck email
+        1. Select Slack (under "Other Options")
+        1. Paste the webhook URL, the save changes
 1. Configure the Heroku Mailgun add-on:
     1. Add DNS records:
         - TODO: details
@@ -78,10 +130,11 @@ Create a "database information" spreadsheet in the project's Google Drive "Devel
 ### AWS Root Account and Users
 1. Have the client create a root account and gives us a temporary password
 1. Login with the client's root account
-1. Set a custom IAM login domain
+1. On the IAM Management Console Dashboard customize the "IAM users sign-in link" with a name based on the project or client
+1. Configure a password policy (1 uppercase, 1 lowercase, 1 number and 1 non-alphanumeric is probably a good minimum without being overly annoying)
 1. Create an IAM user for each developer:
     1. Attach the "AdministratorAccess" policy
-    1. Add 2-factor authentication (MFA)
+    1. Add 2-factor authentication (MFA) (**NOTE:** User must do this themselves)
 1. **CRITICAL:** Ask client to change their root account password and add 2-factor authenticatin (MFA)
 
 ### CloudWatch and Route 53
@@ -91,15 +144,20 @@ Create a "database information" spreadsheet in the project's Google Drive "Devel
     1. Set up alert notification to `<project-name>@okgrow.com`
 
 ### S3
+#### Development
+1. Create a development S3 bucket named `<app-name>-app-development` with the [public-read bucket policy](https://github.com/okgrow/guides/blob/master/scripts/s3-bucket-public-read-policy.json)
+1. Create a development IAM user (`<app-name>-app-development`) with API credentials, no password, [this policy](https://github.com/okgrow/guides/blob/master/scripts/app-iam-user-policy.json) and access only to development S3 bucket
+    - **NOTE:** You'll need to change `APPNAME-app-STAGING_OR_PRODUCTION`
+
 #### Staging
 1. Create a staging S3 bucket named `<app-name>-app-staging` with the [public-read bucket policy](https://github.com/okgrow/guides/blob/master/scripts/s3-bucket-public-read-policy.json)
     - **NOTE:** You'll need to change `MY_BUCKET_NAME`
-1. Create a staging IAM user with API credentials, no password, [this policy](https://github.com/okgrow/guides/blob/master/scripts/app-iam-user-policy.json) and access only to staging S3 bucket
+1. Create a staging IAM user (`<app-name>-app-staging`) with API credentials, no password, [this policy](https://github.com/okgrow/guides/blob/master/scripts/app-iam-user-policy.json) and access only to staging S3 bucket
     - **NOTE:** You'll need to change `APPNAME-app-STAGING_OR_PRODUCTION`
 
 #### Production
 1. Create a production S3 bucket named `<app-name>-app-production` with the [public-read bucket policy](https://github.com/okgrow/guides/blob/master/scripts/s3-bucket-public-read-policy.json)
-1. Create a production IAM user with API credentials, no password, [this policy](https://github.com/okgrow/guides/blob/master/scripts/app-iam-user-policy.json) and access only to production S3 bucket
+1. Create a production IAM user (`<app-name>-app-production`) with API credentials, no password, [this policy](https://github.com/okgrow/guides/blob/master/scripts/app-iam-user-policy.json) and access only to production S3 bucket
     - **NOTE:** You'll need to change `APPNAME-app-STAGING_OR_PRODUCTION`
 
 
