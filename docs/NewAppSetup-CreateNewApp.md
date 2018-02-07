@@ -34,13 +34,18 @@ MongoDB Atlas is the recommended database hosting provider. If you have an accou
 Create a "database information" spreadsheet in the project's Google Drive "Development" with the database details for the staging and production databases.
 
 ### Heroku Team
-TODO: details
+1. Login to Heroku
+1. In the "Personal" menu in the upper left, select "+ New Team"
+    1. Give the team a name
+    1. Enter the client's credit card information
+    1. Click "Create Team"
 
 ### Staging
 1. Run the [`create-heroku-app <app-name>-staging staging <heroku-team-name>`](https://github.com/okgrow/guides/blob/master/scripts/create-heroku-app) script from within the app project folder
 1. Login to Heroku
 1. Invite the client as a member for the app in the "Access" section
 1. Add team members as collaborators on the app in the "Access" section
+1. Set the `METEOR_SETTINGS` "config variable" in "Settings" in same format as the default `settings.json.example` file but with line-ends removed
 1. Set the `MONGO_URL` "config variable" in "Settings"
 1. Configure the Heroku Logentries add-on:
     1. Disable these notifications:
@@ -54,6 +59,7 @@ TODO: details
 1. Run the [`create-heroku-app <app-name>-production production <heroku-team-name>`](https://github.com/okgrow/guides/blob/master/scripts/create-heroku-app) script from within the app project folder
 1. Invite the client as a member for the app in the "Access" section
 1. Add team members as collaborators on the app in the "Access"
+1. Set the `METEOR_SETTINGS` "config variable" in "Settings" in same format as the default `settings.json.example` file but with line-ends removed
 1. Set the `MONGO_URL` "config variable" in "Settings"
 1. Configure the Heroku Logentries add-on:
     1. Disable these notifications:
@@ -87,13 +93,14 @@ TODO: details
 ### S3
 #### Staging
 1. Create a staging S3 bucket named `<app-name>-app-staging` with the [public-read bucket policy](https://github.com/okgrow/guides/blob/master/scripts/s3-bucket-public-read-policy.json)
+    - **NOTE:** You'll need to change `MY_BUCKET_NAME`
 1. Create a staging IAM user with API credentials, no password, [this policy](https://github.com/okgrow/guides/blob/master/scripts/app-iam-user-policy.json) and access only to staging S3 bucket
-1. On Heroku, set the `METEOR_SETTINGS` "config variable" in "Settings" in same format as [default settings.json.example file](https://drive.google.com/open?id=0B4JoTt-NyIq5WUtWOFlkSDlXT2s) but with line-ends removed
+    - **NOTE:** You'll need to change `APPNAME-app-STAGING_OR_PRODUCTION`
 
 #### Production
 1. Create a production S3 bucket named `<app-name>-app-production` with the [public-read bucket policy](https://github.com/okgrow/guides/blob/master/scripts/s3-bucket-public-read-policy.json)
 1. Create a production IAM user with API credentials, no password, [this policy](https://github.com/okgrow/guides/blob/master/scripts/app-iam-user-policy.json) and access only to production S3 bucket
-1. On Heroku, set the `METEOR_SETTINGS` "config variable" in "Settings" in same format as [default settings.json.example file](https://drive.google.com/open?id=0B4JoTt-NyIq5WUtWOFlkSDlXT2s) but with line-ends removed
+    - **NOTE:** You'll need to change `APPNAME-app-STAGING_OR_PRODUCTION`
 
 
 ## Setup Error Logging (Sentry)
@@ -131,10 +138,10 @@ TODO: details
     1. You should have this Alert Rule "An event is seen" and "Send a notification via Slack"
     1. Save this rule
 
-### Meteor App Setup
+### Meteor App Setup (web)
 Add the DSN and Public DSN from your sentry.io projects to your staging and production Meteor `settings.json` files.
 
-### React Native App Setup
+### React Native App Setup (mobile)
 
 #### Expo
 (Follow the below steps if you are using Expo for your React Native app.)
@@ -165,20 +172,19 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
 
 ## Setup Continuous Integration (Semaphore)
 
-### Semaphore config:
+### Organisation and Project
 1. Login to your Semaphore account (if you haven't been added to OK GROW!'s account, ask to be added.)
 1. Create a new _organisation_ in Semaphore for the client project
 1. Create/Add a new project
     - TODO: details
 
-#### Project Settings
-##### Build Settings
-1. Go to [https://semaphoreci.com/okgrow/](https://semaphoreci.com/okgrow/)&lt;PROJECT_NAME&gt;/settings
+### Project Settings
+#### Build Settings
 1. Set the Node version to node.js 8.9.1 (or later)
 1. Add these lines under setup: [Semaphore build settings](semaphore-build-settings)
-1. **NOTE:** You may also need to add more project specific steps.
+    - TODO: The build settings needs to be split into web/mobile
 
-##### Environment Variables
+#### Environment Variables
 1. Add these variables (you'll get the values for these from the "Database Information" document created above):
     * `PRODUCTION_DB_HOST`
     * `PRODUCTION_DB_PORT`
@@ -193,16 +199,16 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
     * `AWS_ACCESS_KEY_ID`
     * `AWS_SECRET_ACCESS_KEY`
 
-##### Configuration Files
-1. Add the application's `settings.json` file
-1. Add the project's `app-production.json` file
-1. Add the project's `app-staging.json` file
+#### Configuration Files
+1. **Web:** Add the application's `settings.json` file
+1. **Mobile:** Add the project's `app-production.json` file
+1. **Mobile:** Add the project's `app-staging.json` file
 
-##### Branches
+#### Branches
 1. Set the cancellation strategy to "Cancel queued and started builds", then "Save Branch Settings"
 
-### Configure the Staging Server
-1. Click “Set Up Deployment” on the Semaphore project page.
+### Staging Server
+1. Click “Set Up Deployment” on the Semaphore project page
 1. Select "Heroku":
     1. Select "Automatic"
     1. Select the "master" branch
@@ -211,8 +217,9 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
 1. On the Semaphore project page, under "Servers", click the server name (e.g., "Staging")
 1. On the servers screen, click the "Edit Server" button
 1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [staging app deploy config](https://github.com/okgrow/guides/blob/master/scripts/semaphore-staging-deploy-config)
+    - TODO: The deploy config needs to be split into web/mobile
 
-### Configure the Production Server
+### Production Server
 1. Click the + button beside "Servers" on the Semaphore project page to add a new server.
 1. Select "Heroku":
     1. Select "Automatic"
@@ -221,7 +228,9 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
 1. Select the Production Heroku app for this project from the list; name the server “Production”
 1. On the Semaphore project page, under "Servers", click the server name (e.g., "Production")
 1. On the servers screen, click the "Edit Server" button
-1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [production app deploy config](https://github.com/okgrow/guides/blob/master/scripts/semaphore-production-deploy-config).
+1. Uncheck "Deploy automatically"
+1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [production app deploy config](https://github.com/okgrow/guides/blob/master/scripts/semaphore-production-deploy-config)
+    - TODO: The deploy config needs to be split into web/mobile
 
 ### Configure Semaphore Slack Integration
 1. In the project's Slack channel, click "Add an app" under "Channel Settings"
@@ -231,4 +240,4 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
 1. On Semaphore, in Project Settings / Notifications / Webhooks, add the web hook URL and select "Build and Deploy" from the "Receive After" dropdown
 
 ### Configure AWS
-Create an IAM user with API credentials, no password, with [this policy](https://github.com/okgrow/guides/blob/master/scripts/semaphore-iam-user-policy.json) and read-only access to the production S3 bucket and read-write access to the staging S3 bucket.
+Create an IAM user with API credentials, no password, with [this policy](https://github.com/okgrow/guides/blob/master/scripts/semaphore-iam-user-policy.json) and read-only access to the production S3 bucket and read-write access to the staging S3 bucket. **NOTE:** You'll need to change `APPNAME-app-staging` and `APPNAME-app-production`.
