@@ -63,17 +63,62 @@ Begin you new application by following the steps with the OKGROW! [`starter-kit`
    1. Retrieve your URL from the MongoDB Service you have selected to use (MongoDB Atlas or Compose)
    1. Create read-only user for production DB
 
+## Database Setup
+
 ### Database Information Document
 
-Create a new spreadsheet in the project's "Development" folder on the Google Drive and record the database information from both staging and production databases.
-
-## Galaxy
-
-Missing details, to complete.
+Create a new spreadsheet in the project's "Development" folder in Google Drive and record any relevant database information for both staging and production databases.
 
 ## MongoDB Atlas
 
-MongoDB Atlas is the recommended database hosting provider. If you have an account, it will take about 5 minutes to setup. Detailed step-by-step instructions for getting setup and started can be found in our ["MongoDB Atlas Setup" blog post](https://www.okgrow.com/posts/mongodb-atlas-setup).
+MongoDB Atlas is the recommended database hosting provider. If you have an account, it will take about 5 minutes to setup. If this is your first time & wish to understand more about setting up MongoDB for staging/production follow this detailed step-by-step instructions in our ["MongoDB Atlas Setup" blog post](https://www.okgrow.com/posts/mongodb-atlas-setup).
+
+### MongoDB Atlas - Create Client Orginsation Steps
+
+1. Login to Atlas using your okgrow account. If you don't have one create one & setup your 2fa.
+1. Go to Account Settings -> Organizations (top right corner, drop down menu on your username & select Organizations) or use this [url](https://cloud.mongodb.com/v2#/account/organizations)
+1. Create a new Organization
+1. Provide the name of the organization & select MongoDB Atlas
+1. Provide email address for the members you wish to invite to the org (client & team mates)
+1. Left hand side under Organization go to Settings -> then select Payment Method. (You can add the credit card info for the org or ask the client to enter themselves)
+1. Left hand side under Organization go to Projects -> then select New Project & enter the name of the project & invite the users you want to the project
+
+### MongoDB Atlas - Create & setup your Staging & Production DB
+1. Now Create the Projects Clusters (MongoDB nodes/db) for both staging & production by selecting Build a New Cluster.
+1. Suggested names for the clusters can projectName-production & projectName-staging
+1. Set the MongoDB Version that Meteor currently supports (3.4, soon will be 3.6)
+1. Cloud Provider & Region should be set the same as where your app server will be located
+1. Select the Instance size. 
+    1. Staging can most likely get away with the Free M0, or the cheap M2 ($9per month), M5 ($25 per month)
+    1. Production should be at least the M10  instance
+    1. Decide if you want to encrypt the storage volumes. It's a trade off between perf & security. Depending on your application this isn’t always a necessary requirement, unless you plan on storing confidential data unencrypted in the DB (which you shouldn't ever do).
+    1. Enable Backup on only the Production Cluster 
+    1. Set the admin username & password (use the autogen secure password button) & record this somewhere safely to use for connecting to any of your clusters in the project.
+1. For a more detailed walkthrough of these next steps, check the ["MongoDB Atlas Setup" blog post](https://www.okgrow.com/posts/mongodb-atlas-setup).
+1. Security IP Whitelisting or AWS Peering
+      1. You will need to create a whitelist of IP addresses that you wish to allow the db to receive connections from.
+      1. The quick alternative until semaphore supports IP addresses is to select the option to whitelist all addresses e.g -> `0.0.0.0/0` 
+1. Create the Meteor User (This user will be used for the `"MONGO_URL"`)
+    1. Select: “Create new user”.
+    1. Set the “User Name”.
+    1. Select “Read/Write any Database”.
+    1. Create a password and save it! We need it for our MongoDB connection url for our Apps Environment variables.
+ 1. Create the Oplog User (This user will be used for the `"MONGO_OPLOG_URL"`)
+    1. Select: “Create new user”.
+    1. Click “advanced”.
+    1. Set access to “read” @ “local”.
+    1. Create a password and save it! We need it for our Meteor Oplog connection url for our Apps Environment variables.
+ 1. Create a backup & read only user [Optional]
+   1. Select: `“Create new user”`.
+    1. Click `“advanced”`.
+    1. Set access to `“backup” @ “anyDatabases”`.
+    1. Set access to `“read” @ “anyDatabases”`.
+    1. Create a password and save it! We can use this for reading/completing a backup from MongoDB.
+
+## Meteor Galaxy Deployment
+
+Missing details, to complete.
+
 
 ## AWS
 
