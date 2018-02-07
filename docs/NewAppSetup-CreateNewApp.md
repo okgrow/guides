@@ -25,7 +25,6 @@ Add the Logentries Slack integration to the project's Slack channel:
 ### Staging
 1. Run the [`create-heroku-app <app-name>-staging staging`](https://github.com/okgrow/guides/blob/master/scripts/create-heroku-app) script from within the app project folder
 1. Login to Heroku and add team members and `accounts+semaphoredeploy@okgrow.com` as collaborators on the app in the "Access" section
-1. ~~Use [our fork of the "horse" buildpack](https://github.com/okgrow/meteor-buildpack-horse.git)~~ (done by script)
 1. Configure the Heroku Logentries add-on:
     1. Disable these notifications:
         - High response time
@@ -33,14 +32,12 @@ Add the Logentries Slack integration to the project's Slack channel:
         - Idle connection
     1. Disable email and add the Slack web hook URL for all notifications:
         - TODO: details (**NOTE:** This involves editing each notification!)
-1. ~~Add the mLab MongoDB add on~~ (done by script)
 1. Create a read-write user on the staging DB:
     1. TODO: details
 
 ### Production
 1. Run the [`create-heroku-app <app-name>-production production`](https://github.com/okgrow/guides/blob/master/scripts/create-heroku-app) script from within the app project folder
 1. Login to Heroku and add team members and `accounts+semaphoredeploy@okgrow.com` as collaborators on the app in the "Access" section
-1. ~~Use [our fork of the "horse" buildpack](https://github.com/okgrow/meteor-buildpack-horse.git)~~ (done by script)
 1. Configure the Heroku Logentries add-on:
     1. Disable these notifications:
         - High response time
@@ -52,7 +49,6 @@ Add the Logentries Slack integration to the project's Slack channel:
     1. Add DNS records:
         - TODO: details
     1. Edit `MAILGUN_*` environment variables to contain the info for the verified domain instead of the sandbox domain
-1. ~~Add the Compose MongoDB add on.~~ (done by script)
 1. Create a read-only user on the production DB:
     1. TODO: details
 
@@ -167,57 +163,37 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
 ### Semaphore config:
 1. Login to your Semaphore account (if you haven't been added to OK GROW!'s account, ask to be added.)
 1. Create a new _organization_ in Semaphore for the client project
-1. Edit Build Settings:
+1. Create/Add a new project
+
+#### Build Settings
     1. Go to [https://semaphoreci.com/okgrow/](https://semaphoreci.com/okgrow/)&lt;PROJECT_NAME&gt;/settings
-    1. Set the Node version to node.js 7.10.1 (or later)
+    1. Set the Node version to node.js 8.9.1 (or later)
     1. Add these lines under setup: [Semaphore build settings](semaphore-build-settings)
     1. **NOTE:** You may also need to add more project specific steps.
-1. Edit Project Settings:
-    1. Under "Configuration Files" add the project's `settings.json` file.
+
+#### Environment Variables
+    1. Add these variables (you'll get the values for these from the "Database Information" document created above):
+        * `PRODUCTION_DB_HOST`
+        * `PRODUCTION_DB_PORT`
+        * `PRODUCTION_DB_NAME`
+        * `PRODUCTION_DB_USERNAME`
+        * `PRODUCTION_DB_PASSWORD`
+        * `STAGING_DB_HOST`
+        * `STAGING_DB_PORT`
+        * `STAGING_DB_NAME`
+        * `STAGING_DB_USERNAME`
+        * `STAGING_DB_PASSWORD`
+        * `AWS_ACCESS_KEY_ID` (optional)
+        * `AWS_SECRET_ACCESS_KEY` (optional)
+        * `APPNAME` (optional - used on AWS setup)
+
+#### Configuration Files
+    1. Add the application's `settings.json` file
+
+#### Project Settings
     1. Under "Configuration Files" add the project's `app-production.json` file.
     1. Under "Configuration Files" add the project's `app-staging.json` file.
     1. Under "Branches" change the cancellation strategy to "queued and started builds".
-1. On the Sempahore project homepage click “Set Up Deployment” (staging)
-    1. Choose Heroku, then automatic, and then master.
-    1. Enter the API key for the [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) Heroku user.
-    1. Select the Staging Heroku app for this project from the list, and name it “Staging”.
-    1. Add the [staging app deploy config](semaphore-staging-deploy-config)
-1. Add a new server by clicking the + button beside 'Servers' (production)
-    1. Choose Heroku, then manual, and then master.
-    1. Enter the API key for the [accounts+semaphoredeploy@okgrow.com](mailto:accounts+semaphoredeploy@okgrow.com) Heroku user, check our Accounts.
-    1. Select the Production Heroku app for this project from the list, and name it “Production”
-    1. Add the [production app deploy config](https://github.com/okgrow/guides/blob/master/scripts/semaphore-production-deploy-config)
-1. Add Slack notifications (no email)
-    1. Go to the project's slack channel and add an integration
-    1. Add sempahore as an integration and make note of the webhook URL, then save the integration
-    1. Go to Project Settings / Notifications / Webhooks in Semaphore
-    1. Add the webhook URl and select 'Build and Deploy' from the 'Receive After' dropdown
-
-### Create a Project
-1. Login to your Semaphore account (if you haven't been added to OK GROW!'s account, ask to be added.)
-1. Create a new _organization_ in Semaphore for the client project
-1. Select your project (listed as **okgrow / [project-name]**)
-1. Edit project Settings by clicking "Project settings":
-    1. **Build Settings**
-        1. Set the "Node.js version" to "node.js 7.10.1" (or later)
-        1. Add these lines under setup: [Semaphore build settings](https://github.com/okgrow/guides/blob/master/scripts/semaphore-build-settings)
-    1. **Environment Variables**
-        1. Add these variables (you'll get the values for these from the "Database Information" document created above):
-            * `PRODUCTION_DB_HOST`
-            * `PRODUCTION_DB_PORT`
-            * `PRODUCTION_DB_NAME`
-            * `PRODUCTION_DB_USERNAME`
-            * `PRODUCTION_DB_PASSWORD`
-            * `STAGING_DB_HOST`
-            * `STAGING_DB_PORT`
-            * `STAGING_DB_NAME`
-            * `STAGING_DB_USERNAME`
-            * `STAGING_DB_PASSWORD`
-            * `AWS_ACCESS_KEY_ID` (optional)
-            * `AWS_SECRET_ACCESS_KEY` (optional)
-            * `APPNAME` (optional - used on AWS setup)
-    1. **Configuration Files**
-        1. Add the application's `settings.json` file
 
 ### Configure the Staging Server
 1. Click “Set Up Deployment” on the Semaphore project page.
@@ -240,6 +216,7 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
 1. On the Semaphore project page, under "Servers", click the server name (e.g., "Production")
 1. On the servers screen, click the "Edit Server" button
 1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [production app deploy config](https://github.com/okgrow/guides/blob/master/scripts/semaphore-production-deploy-config).
+
 
 ### Configure Semaphore Slack Integration
 1. In the project's Slack channel, click "Add an app or integration" under "Channel Settings"
