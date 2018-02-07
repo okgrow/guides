@@ -97,23 +97,35 @@ MongoDB Atlas is the recommended database hosting provider. If you have an accou
 1. For a more detailed walkthrough of these next steps, check the ["MongoDB Atlas Setup" blog post](https://www.okgrow.com/posts/mongodb-atlas-setup).
 1. Security IP Whitelisting or AWS Peering
       1. You will need to create a whitelist of IP addresses that you wish to allow the db to receive connections from.
-      1. The quick alternative until semaphore supports IP addresses is to select the option to whitelist all addresses e.g -> `0.0.0.0/0` 
+      1. The quick alternative until semaphore supports IP addresses is to select the option to whitelist all addresses e.g -> `0.0.0.0/0`.
+1. You can set the IP whitelist at the same time as retrieving your MongoDB connection url for your App (`MONGO_URL`)
+   1. Select `Connect` on the cluster and you will be prompoted to set your IP Whitelists
+   1. Then Select `Connect Your Application` to get your MongoDb connection urls.
+   1. Select the MongoDB Driver version you are using and copy the connection url which will become your (`MONGO_URL` & `MONGO_OPLOG_URL`)
+   1. The connection string contains the superadmin as the user and defaults to using a `test` db for the cluster.
+   1. Example mongo url format for a 3 Node Cluster -> `mongodb://<username>:<password>@<host>:<port>,<host>:<port>,<host>:<port>/<dbName>?ssl=true&replicaSet=<replicaSet name>&authSource=admin`.
+   1. For your `MONGO_URL` you need to replace `test` with the name of the db that you wish to use (recomend using name of the project & use the same db name for staging/production clusters).
+   1. For your `MONGO_OPLOG_URL` you need to replace `test` with `local`, to understand why please read ["MongoDB Atlas Setup" blog post](https://www.okgrow.com/posts/mongodb-atlas-setup).
+   1. Note: The db will be created when you first run your Meteor App and it connects to MongoDB. The db name is always after the last Node, see the above example format.
+   1. If you wish to manually create a db it is possible by connecting to the db via the mongo shell & doing the following -> `use <db name>` & then `db.<collectionName>.insert({"fake": "collection & doc to manually create a new db"})`.
+   1. You will need to swap out the `username:password` with the Users that you will create in the next steps below.
 1. Create the Meteor User (This user will be used for the `"MONGO_URL"`)
     1. Select: “Create new user”.
     1. Set the “User Name”.
     1. Select “Read/Write any Database”.
     1. Create a password and save it! We need it for our MongoDB connection url for our Apps Environment variables.
- 1. Create the Oplog User (This user will be used for the `"MONGO_OPLOG_URL"`)
+1. Create the Oplog User (This user will be used for the `"MONGO_OPLOG_URL"`)
     1. Select: “Create new user”.
     1. Click “advanced”.
     1. Set access to “read” @ “local”.
     1. Create a password and save it! We need it for our Meteor Oplog connection url for our Apps Environment variables.
- 1. Create a backup & read only user [Optional]
+1. Create a backup & read only user [Optional]
    1. Select: `“Create new user”`.
     1. Click `“advanced”`.
     1. Set access to `“backup” @ “anyDatabases”`.
     1. Set access to `“read” @ “anyDatabases”`.
     1. Create a password and save it! We can use this for reading/completing a backup from MongoDB.
+
 
 ## Meteor Galaxy Deployment
 
