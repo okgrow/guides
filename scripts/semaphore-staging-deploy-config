@@ -8,14 +8,20 @@ unzip awscli-bundle.zip
 wget -qO- https://toolbelt.heroku.com/install.sh | sh
 # Copy production mongo data to staging
 heroku maintenance:on
-## install mongo 3.2 client so that we can connect to mongo 3.2 server
-wget http://repo.mongodb.org/apt/ubuntu/dists/trusty/mongodb-org/3.2/multiverse/binary-amd64/mongodb-org-tools_3.2.6_amd64.deb
-wget http://repo.mongodb.org/apt/ubuntu/dists/trusty/mongodb-org/3.2/multiverse/binary-amd64/mongodb-org-shell_3.2.6_amd64.deb
-sudo dpkg -i ./mongodb-org-tools_3.2.6_amd64.deb
-sudo dpkg -i ./mongodb-org-shell_3.2.6_amd64.deb
-mongodump --host $PRODUCTION_DB_HOST --port $PRODUCTION_DB_PORT --db $PRODUCTION_DB_NAME -u $PRODUCTION_DB_USERNAME -p $PRODUCTION_DB_PASSWORD -o mongodump
-echo 'db.getCollectionNames().forEach(function(c) {if (c.indexOf("system.") == -1) {db.getCollection(c).drop();}})' | mongo $STAGING_DB_HOST:$STAGING_DB_PORT/$STAGING_DB_NAME -u $STAGING_DB_USERNAME -p $STAGING_DB_PASSWORD
-mongorestore -h $STAGING_DB_HOST:$STAGING_DB_PORT -d $STAGING_DB_NAME -u $STAGING_DB_USERNAME -p $STAGING_DB_PASSWORD mongodump/*
+
+## Install mongo 3.4 client so that we can connect to mongo 3.4 server
+## Note: You should use the same client as your Mongo Server, currently Meteor defaults to 3.4, soon it will 3.6
+wget https://repo.mongodb.org/apt/ubuntu/dists/trusty/mongodb-org/3.4/multiverse/binary-amd64/mongodb-org-tools_3.4.10_amd64.deb
+wget https://repo.mongodb.org/apt/ubuntu/dists/trusty/mongodb-org/3.4/multiverse/binary-amd64/mongodb-org-shell_3.4.10_amd64.deb
+sudo dpkg -i ./mongodb-org-tools_3.4.10_amd64.deb
+sudo dpkg -i ./mongodb-org-shell_3.4.10_amd64.deb
+
+# Dump production db:
+mongodump --host $PRODUCTION_DB_HOST --db $PRODUCTION_DB_NAME --ssl --username $PRODUCTION_DB_USERNAME --password $PRODUCTION_DB_PASSWORD --authenticationDatabase admin --db $PRODUCTION_DB_NAME --verbose --out mongo_dump
+
+# Drop & Restore data (collections) to staging db:
+mongorestore --host $STAGING_DB_HOST --db $STAGING_DB_NAME --username $STAGING_DB_USERNAME --password $STAGING_DB_PASSWORD --ssl --authenticationDatabase admin --drop --verbose mongo_dump/*
+
 # Copy production S3 data to staging
 ~/bin/aws s3 sync --delete --size-only s3://$APPNAME-app-production s3://$APPNAME-app-staging
 heroku maintenance:off
