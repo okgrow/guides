@@ -89,8 +89,8 @@ Create a "database information" spreadsheet in the project's Google Drive "Devel
 1. Add team members as collaborators on the app in the "Access" section
 1. Set the `METEOR_SETTINGS` "config variable" in "Settings" in same format as the default `settings.json.example` file but with line-ends removed
 1. Set the `MONGO_URL` "config variable" in "Settings"
-1. Set the `ERROR_PAGE_URL` "config variable" in "Settings" to `<app-name>-app-staging/public/error.html` (**NOTE:** This will be setup below.)
-1. Set the `MAINTENANCE_PAGE_URL` "config variable" in "Settings" to `<app-name>-app-staging/public/maintenance.html` (**NOTE:** This will be setup below.)
+1. Set the `ERROR_PAGE_URL` "config variable" in "Settings" to `https://s3.amazonaws.com/<app-name>-app-staging/maintenance.html` (**NOTE:** This will be setup below.)
+1. Set the `MAINTENANCE_PAGE_URL` "config variable" in "Settings" to `https://s3.amazonaws.com/<app-name>-app-staging/maintenance.html` (**NOTE:** This will be setup below.)
 1. Configure the Heroku Logentries add-on:
     1. Disable these notifications:
         - High response time
@@ -108,8 +108,8 @@ Create a "database information" spreadsheet in the project's Google Drive "Devel
 1. Add team members as collaborators on the app in the "Access"
 1. Set the `METEOR_SETTINGS` "config variable" in "Settings" in same format as the default `settings.json.example` file but with line-ends removed
 1. Set the `MONGO_URL` "config variable" in "Settings"
-1. Set the `ERROR_PAGE_URL` "config variable" in "Settings" to `<app-name>-app-production/public/error.html` (**NOTE:** This will be setup below.)
-1. Set the `MAINTENANCE_PAGE_URL` "config variable" in "Settings" to `<app-name>-app-production/public/maintenance.html` (**NOTE:** This will be setup below.)
+1. Set the `ERROR_PAGE_URL` "config variable" in "Settings" to `https://s3.amazonaws.com/<app-name>-app-production/error.html` (**NOTE:** This will be setup below.)
+1. Set the `MAINTENANCE_PAGE_URL` "config variable" in "Settings" to `https://s3.amazonaws.com/<app-name>-app-production/maintenance.html` (**NOTE:** This will be setup below.)
 1. Configure the Heroku Logentries add-on:
     1. Disable these notifications:
         - High response time
