@@ -47,20 +47,20 @@ MongoDB Atlas is the recommended database hosting provider. If you have an accou
     1. Set the admin username & password (use the autogen secure password button) & record this somewhere safely to use for connecting to any of your clusters in the project.
 1. For a more detailed walkthrough of these next steps, check the ["MongoDB Atlas Setup" blog post](https://www.okgrow.com/posts/mongodb-atlas-setup).
 1. Security IP Whitelisting or AWS Peering
-      1. You will need to create a whitelist of IP addresses that you wish to allow the db to receive connections from.
-      1. The quick alternative until semaphore supports IP addresses is to select the option to whitelist all addresses e.g -> `0.0.0.0/0`
+    1. You will need to create a whitelist of IP addresses that you wish to allow the db to receive connections from.
+    1. The quick alternative until semaphore supports IP addresses is to select the option to whitelist all addresses e.g -> `0.0.0.0/0`
 1. Create the Meteor User (This user will be used for the `"MONGO_URL"`)
     1. Select: “Create new user”.
     1. Set the “User Name”.
     1. Select “Read/Write any Database”.
     1. Create a password and save it! We need it for our MongoDB connection url for our Apps Environment variables.
- 1. Create the Oplog User (This user will be used for the `"MONGO_OPLOG_URL"`)
+1. Create the Oplog User (This user will be used for the `"MONGO_OPLOG_URL"`)
     1. Select: “Create new user”.
     1. Click “advanced”.
     1. Set access to “read” @ “local”.
     1. Create a password and save it! We need it for our Meteor Oplog connection url for our Apps Environment variables.
- 1. Create a backup & read only user [Optional]
-   1. Select: `“Create new user”`.
+1. Create a backup & read only user [Optional]
+    1. Select: `“Create new user”`.
     1. Click `“advanced”`.
     1. Set access to `“backup” @ “anyDatabases”`.
     1. Set access to `“read” @ “anyDatabases”`.
@@ -72,10 +72,10 @@ MongoDB Atlas is the recommended database hosting provider. If you have an accou
 1. Create a read-only user on the production DB:
     1. TODO: details
 
-### ??? - Database Information Document
-Create a "database information" spreadsheet in the project's Google Drive "Development" with the database details for the staging and production databases.
+~~### ??? - Database Information Document~~
+~~Create a "database information" spreadsheet in the project's Google Drive "Development" with the database details for the staging and production databases.~~
 
-### Heroku Team
+### Heroku Team (client task)
 1. Login to Heroku
 1. In the "Personal" menu in the upper left, select "+ New Team"
     1. Give the team a name
@@ -126,6 +126,9 @@ Create a "database information" spreadsheet in the project's Google Drive "Devel
     1. Edit `MAILGUN_*` "config variable" in "Settings" to contain the info for the verified domain instead of the sandbox domain
 
 
+## Setup DNA
+TODO: details
+
 ## Setup AWS
 ### AWS Root Account and Users
 1. Have the client create a root account and gives us a temporary password
@@ -146,6 +149,7 @@ Create a "database information" spreadsheet in the project's Google Drive "Devel
 ### S3
 #### Development
 1. Create a development S3 bucket named `<app-name>-app-development` with the [public-read bucket policy](https://github.com/okgrow/guides/blob/master/scripts/s3-bucket-public-read-policy.json)
+    - **NOTE:** You'll need to change `MY_BUCKET_NAME`
 1. Create a development IAM user (`<app-name>-app-development`) with API credentials, no password, [this policy](https://github.com/okgrow/guides/blob/master/scripts/app-iam-user-policy.json) and access only to development S3 bucket
     - **NOTE:** You'll need to change `APPNAME-app-STAGING_OR_PRODUCTION`
 
@@ -179,19 +183,20 @@ Create a "database information" spreadsheet in the project's Google Drive "Devel
     1. Email: Subject Prefix to the project name
     1. Event Settings: Default environment to staging or production
 1. Next navigate to All Integrations and add the following:
-    1. Github - Optional
     1. Slack - Mandatory
-    1. Trello - Recommended
+    1. ~~Trello - Recommended~~
+    1. ~~Github - Optional~~
 1. Once these integrations have been added you will need to set them up
     1. Slack - You will need to go to [here](https://okgrow.slack.com/apps/A0F814BEV-sentry) and select "Add Configuration", and follow the prompts. Add a descripitive label to state what project the error logging is for. Save the settings and copy the Webhook URL and add it to the sentry website. You can use the same URL for both staging & production
-    1. Trello - Follow these [instructions](https://github.com/damianzaremba/sentry-trello/blob/master/HOW_TO_SETUP.md) to get the API key & token. Once the keys have been saved you will need to add the Trello Organization where the Trello Board exists. **NOTE:** These keys are associated with your Trello user account
+    1. ~~Trello - Follow these [instructions](https://github.com/damianzaremba/sentry-trello/blob/master/HOW_TO_SETUP.md) to get the API key & token. Once the keys have been saved you will need to add the Trello Organization where the Trello Board exists. **NOTE:** These keys are associated with your Trello user account~~
+    1. ~~Github - TODO: details~~
 1. Next navigate to "Alerts" and select "Rules".
     1. Select "Edit Rule"
     1. Delete the two default rules and actions
     1. Add the rule "An event is seen"
     1. Add the "Send a notification via [service]", once added you can select to add Slack
     1. You should have this Alert Rule "An event is seen" and "Send a notification via Slack"
-    1. Save this rule
+    1. Save the rule
 
 ### Meteor App Setup (web)
 Add the DSN and Public DSN from your sentry.io projects to your staging and production Meteor `settings.json` files and set the environment to `staging` or `production`.
@@ -253,6 +258,7 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
     * `STAGING_DB_PASSWORD`
     * `AWS_ACCESS_KEY_ID`
     * `AWS_SECRET_ACCESS_KEY`
+    * `APPNAME`
 
 #### Configuration Files
 1. **Web:** Add the application's `settings.json` file
@@ -272,7 +278,6 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
 1. On the Semaphore project page, under "Servers", click the server name (e.g., "Staging")
 1. On the servers screen, click the "Edit Server" button
 1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [staging app deploy config](https://github.com/okgrow/guides/blob/master/scripts/semaphore-staging-deploy-config)
-    - TODO: The deploy config needs to be split into web/mobile
 
 ### Production Server
 1. Click the + button beside "Servers" on the Semaphore project page to add a new server.
@@ -285,7 +290,6 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
 1. On the servers screen, click the "Edit Server" button
 1. Uncheck "Deploy automatically"
 1. Under "Deploy commands" click the "Change deploy commands" link and paste the contents from [production app deploy config](https://github.com/okgrow/guides/blob/master/scripts/semaphore-production-deploy-config)
-    - TODO: The deploy config needs to be split into web/mobile
 
 ### Configure Semaphore Slack Integration
 1. In the project's Slack channel, click "Add an app" under "Channel Settings"
