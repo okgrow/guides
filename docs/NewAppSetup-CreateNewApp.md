@@ -12,6 +12,71 @@ To hit the ground running on a new project we use a standard procedure and make 
 Start a new application by following the steps in the OK GROW! [`starter-kit`](https://github.com/okgrow/starter-kit).
 
 
+## Setup Database Server (MongoDB Atlas)
+
+### Create Client Organisation (**QUESTION:** client task?)
+1. Create an account or login to [Atlas](https://www.mongodb.com/cloud/atlas) using your OK GROW! account.
+    - **NOTE:** Configure 2-factor authentication your account
+1. Go to [Account Settings -> Organizations](https://cloud.mongodb.com/v2#/account/organizations)
+1. Create a new organization with a name (probably the client or project name) and select MongoDB Atlas
+1. Provide email addresses for the members to invite to the organisation
+1. Go to Settings -> Billing Overview -> Payment Method and add the credit card for the client
+1. Go to Projects and create a new project with a name and invite users
+
+### Create and Setup Staging and Production DBs
+1. Create the Projects Clusters (MongoDB nodes/db) for both staging & production by selecting Build a New Cluster.
+1. Create two clusters:
+    - `<app-name>-production`
+    - `<app-name>-staging`
+1. Set the MongoDB Version that Meteor currently supports
+1. Cloud Provider & Region should be set the same as where your app server will be located
+1. Select the Instance sizes:
+    1. Staging: Free M0
+    1. Production: M10
+    1. Enable Backup on the Production Cluster
+    1. Set the administrator username and password:
+        - use the autogen secure password button
+        - record this password somewhere secure
+
+(??? can we ditch this or include the details here ???) For a more detailed walkthrough of these next steps, check the ["MongoDB Atlas Setup" blog post](https://www.okgrow.com/posts/mongodb-atlas-setup).
+
+#### Security IP Whitelisting
+1. Create a whitelist of IP addresses to allow the DB to receive connections from
+    - Until Semaphore supports IP addresses whitelist _all_ addresses (e.g., `0.0.0.0/0`)
+1. Set the IP whitelist when retrieving your MongoDB connection URL (i.e., `MONGO_URL`)
+    1. Select "Connect" on the cluster and you will be prompted to set your IP Whitelists
+    1. Then Select "Connect Your Application" to get your MongoDb connection URLs
+    1. Select the MongoDB Driver version you are using and copy the connection URL which will become your (i.e., `MONGO_URL` and `MONGO_OPLOG_URL`)
+        - Example mongo URL format for a 3 Node Cluster: `mongodb://<username>:<password>@<host>:<port>,<host>:<port>,<host>:<port>/<dbName>?ssl=true&replicaSet=<replicaSet name>&authSource=admin`
+        - **NOTE:** The connection string contains the administrator as the user and defaults to using a `test` DB for the cluster
+        - Replace `test` with `<appname>` in the `MONGO_URL`
+        - ??? - Replace `test` with `local` in the `MONGO_OPLOG_URL` (for details read ["MongoDB Atlas Setup" blog post](https://www.okgrow.com/posts/mongodb-atlas-setup))
+
+**NOTE:**
+- The database will be created when you first run your Meteor app and it connects to MongoDB
+- The db name is always after the last Node, see the above example format
+- If you wish to manually create a db it is possible by connecting to the db via the mongo shell & doing the following -> `use <db name>` & then `db.<collectionName>.insert({"fake": "collection & doc to manually create a new db"})`
+- You will change the `username:password` to the users you will create next
+
+#### Create the Meteor User (This user will be used for the `MONGO_URL`)
+1. Select: “Create new user”
+1. Set the “User Name”
+1. Select “Read/Write any Database”
+1. Create a password and save it
+
+#### (**QUESTION: do we need this anymore?) Create the Oplog User (This user will be used for the `MONGO_OPLOG_URL`)
+1. Select: “Create new user”
+1. Click “advanced”
+1. Set access to “read” @ “local”
+1. Create a password and save it
+
+#### Create Backup User [Optional - really?]
+1. Select: “Create new user”
+1. Click “advanced”
+1. Set access to “backup” @ “anyDatabases”
+1. Set access to “read” @ “anyDatabases”
+1. Create a password and save it
+
 ## Setup Application Servers (Heroku)
 
 ### Logentries Slack Integration
@@ -22,71 +87,20 @@ Add the Logentries Slack integration to the project's Slack channel:
 1. Copy the web hook URL
 1. Save the integration
 
-## ??? - Setup Database Server (MongoDB Atlas)
-MongoDB Atlas is the recommended database hosting provider. If you have an account, it will take about 5 minutes to setup. Detailed step-by-step instructions for getting setup and started can be found in our ["MongoDB Atlas Setup" blog post](https://www.okgrow.com/posts/mongodb-atlas-setup).
-
-### Create Client Orginsation Steps
-1. Login to Atlas using your OK GROW! account. If you don't have one create one and setup your 2fa.
-1. Go to Account Settings -> Organizations (top right corner, drop down menu on your username & select Organizations) or use this [url](https://cloud.mongodb.com/v2#/account/organizations)
-1. Create a new Organization
-1. Provide the name of the organization & select MongoDB Atlas
-1. Provide email address for the members you wish to invite to the org (client & team mates)
-1. Left hand side under Organization go to Settings -> then select Payment Method. (You can add the credit card info for the org or ask the client to enter themselves)
-1. Left hand side under Organization go to Projects -> then select New Project & enter the name of the project & invite the users you want to the project
-
-### Create and Setup Staging and Production DBs
-1. Now Create the Projects Clusters (MongoDB nodes/db) for both staging & production by selecting Build a New Cluster.
-1. Suggested names for the clusters can projectName-production & projectName-staging
-1. Set the MongoDB Version that Meteor currently supports (3.4, soon will be 3.6)
-1. Cloud Provider & Region should be set the same as where your app server will be located
-1. Select the Instance size.
-    1. Staging can most likely get away with the Free M0, or the cheap M2 ($9per month), M5 ($25 per month)
-    1. Production should be at least the M10  instance
-    1. Decide if you want to encrypt the storage volumes. It's a trade off between perf & security. Depending on your application this isn’t always a necessary requirement, unless you plan on storing confidential data unencrypted in the DB (which you shouldn't ever do).
-    1. Enable Backup on only the Production Cluster
-    1. Set the admin username & password (use the autogen secure password button) & record this somewhere safely to use for connecting to any of your clusters in the project.
-1. For a more detailed walkthrough of these next steps, check the ["MongoDB Atlas Setup" blog post](https://www.okgrow.com/posts/mongodb-atlas-setup).
-1. Security IP Whitelisting or AWS Peering
-    1. You will need to create a whitelist of IP addresses that you wish to allow the db to receive connections from.
-    1. The quick alternative until semaphore supports IP addresses is to select the option to whitelist all addresses e.g -> `0.0.0.0/0`
-1. Create the Meteor User (This user will be used for the `"MONGO_URL"`)
-    1. Select: “Create new user”.
-    1. Set the “User Name”.
-    1. Select “Read/Write any Database”.
-    1. Create a password and save it! We need it for our MongoDB connection url for our Apps Environment variables.
-1. Create the Oplog User (This user will be used for the `"MONGO_OPLOG_URL"`)
-    1. Select: “Create new user”.
-    1. Click “advanced”.
-    1. Set access to “read” @ “local”.
-    1. Create a password and save it! We need it for our Meteor Oplog connection url for our Apps Environment variables.
-1. Create a backup & read only user [Optional]
-    1. Select: `“Create new user”`.
-    1. Click `“advanced”`.
-    1. Set access to `“backup” @ “anyDatabases”`.
-    1. Set access to `“read” @ “anyDatabases”`.
-    1. Create a password and save it! We can use this for reading/completing a backup from MongoDB.
-
-
-1. Create a read-write user on the staging DB:
-    1. TODO: details
-1. Create a read-only user on the production DB:
-    1. TODO: details
-
-~~### ??? - Database Information Document~~
-~~Create a "database information" spreadsheet in the project's Google Drive "Development" with the database details for the staging and production databases.~~
-
-### Heroku Team (client task)
+### Heroku Team (**QUESTION:** client task?)
 1. Login to Heroku
 1. In the "Personal" menu in the upper left, select "+ New Team"
     1. Give the team a name
     1. Enter the client's credit card information
     1. Click "Create Team"
+    1. Invite the client as a member for the app in the "Access" section
+    1. Add team members as collaborators on the app in the "Access" section
 
 ### Staging
+1. Login to Heroku using the Heroku command-line tools
+    - TODO: details
 1. Run the [`create-heroku-app <app-name>-staging staging <heroku-team-name>`](https://github.com/okgrow/guides/blob/master/scripts/create-heroku-app) script from within the app project folder
 1. Login to Heroku
-1. Invite the client as a member for the app in the "Access" section
-1. Add team members as collaborators on the app in the "Access" section
 1. Set the `METEOR_SETTINGS` "config variable" in "Settings" in same format as the default `settings.json.example` file but with line-ends removed
 1. Set the `MONGO_URL` "config variable" in "Settings"
 1. Set the `ERROR_PAGE_URL` "config variable" in "Settings" to `https://s3.amazonaws.com/<app-name>-app-staging/maintenance.html` (**NOTE:** This will be setup below.)
@@ -126,19 +140,21 @@ MongoDB Atlas is the recommended database hosting provider. If you have an accou
     1. Edit `MAILGUN_*` "config variable" in "Settings" to contain the info for the verified domain instead of the sandbox domain
 
 
-## Setup DNA
+## Setup DNS
 TODO: details
 
 ## Setup AWS
-### AWS Root Account and Users
-1. Have the client create a root account and gives us a temporary password
+### AWS Root Account and Users (client task)
+1. Create a root account and gives us a temporary password
+
+### AWS Users
 1. Login with the client's root account
 1. On the IAM Management Console Dashboard customize the "IAM users sign-in link" with a name based on the project or client
 1. Configure a password policy (1 uppercase, 1 lowercase, 1 number and 1 non-alphanumeric is probably a good minimum without being overly annoying)
 1. Create an IAM user for each developer:
     1. Attach the "AdministratorAccess" policy
     1. Add 2-factor authentication (MFA) (**NOTE:** User must do this themselves)
-1. **CRITICAL:** Ask client to change their root account password and add 2-factor authenticatin (MFA)
+1. **CRITICAL:** Ask client to change their root account password and add 2-factor authentication (MFA)
 
 ### CloudWatch and Route 53
 1. Create AWS Route 53 Health Check with alert for the production hostname (_not_ the `*.herokuapp.com` hostname):
@@ -167,7 +183,7 @@ TODO: details
 
 ## Setup Error Logging (Sentry)
 
-### Create a New Organisation
+### Create a New Organisation (**QUESTION:** client task?)
 1. Log in to the `ok-grow` organisation with your account
 1. Click the icon in the top left hand corner
 1. Select "New Organization" then follow the prompts
@@ -232,7 +248,7 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
 
 ## Setup Continuous Integration (Semaphore)
 
-### Organisation and Project
+### Organisation and Project (**QUESTION:** client task?)
 1. Login to your Semaphore account (if you haven't been added to OK GROW!'s account, ask to be added.)
 1. Create a new _organisation_ in Semaphore for the client project
 1. Create/Add a new project
@@ -242,7 +258,6 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
 #### Build Settings
 1. Set the Node version to node.js 8.9.1 (or later)
 1. Add these lines under setup: [Semaphore build settings](semaphore-build-settings)
-    - TODO: The build settings needs to be split into web/mobile
 
 #### Environment Variables
 1. Add these variables (you'll get the values for these from the "Database Information" document created above):
