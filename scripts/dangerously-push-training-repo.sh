@@ -19,12 +19,8 @@ if [ ! -z "$(git status --porcelain)" ]; then
   exit 1
 fi
 
-function force-push() {
-  echo "🔥 Force pushing $1..."
-  git checkout $1
-  git push --force origin $1
-}
-
 for BRANCH in $BRANCHES ; do
-  force-push $BRANCH
+  echo "🔥 Force pushing $BRANCH..."
+  git checkout $BRANCH
+  git push --force origin $BRANCH
 done
