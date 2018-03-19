@@ -24,4 +24,3 @@ for BRANCH in $BRANCHES ; do
   git checkout $BRANCH
   git push --force origin $BRANCH
 done
-x
