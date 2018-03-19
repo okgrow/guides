@@ -11,7 +11,7 @@ Let's say you want to run GraphQL Fundamentals training on March 5. 2018. Please
 git remote add graphql-fundamentals https://github.com/okgrow/graphql-fundamentals
 ```
 
-2. Check out the `graphql-fundamentals` branch and reate a new branch with the date of the workshop:
+2. Check out the `graphql-fundamentals` branch and create a new branch with the date of the workshop:
 
 ```
 git checkout graphql-fundamentals
