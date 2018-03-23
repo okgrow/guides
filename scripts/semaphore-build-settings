@@ -1,11 +1,12 @@
 cd web/
 curl https://install.meteor.com/ | sh
 meteor --version
-meteor npm install
+meteor npm install -g yarn
+meteor yarn
 cp /home/runner/settings.json settings.json
-meteor npm run lint
-meteor npm run unit-test
-npm install -g exp
+meteor yarn run lint
+meteor yarn run unit-test
+yarn global add exp
 cd ../mobile
 mv app-staging.json app.json
 cat app.json
