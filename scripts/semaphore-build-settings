@@ -9,9 +9,9 @@ npm install -g exp
 cd ../mobile
 mv app-staging.json app.json
 cat app.json
-npm install
-npm run lint
-npm test
-npm --version
+yarn
+yarn run lint
+yarn test
+yarn --version
 node --version
 exp --version
