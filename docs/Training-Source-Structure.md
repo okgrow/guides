@@ -8,7 +8,7 @@ title: Structure of the training source
 Workshops are based on one another, thanks to Git branches:
 
 1. `react-fundamentals` lays out the base of a React app
-2. `graphql-fundemantals` adds a simple GraphQL backend
+2. `graphql-fundamantals` adds a simple GraphQL backend
 3. `advanced-graphql` transform it in a real-world app.
 
 ## Workshop start commit
