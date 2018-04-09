@@ -11,7 +11,7 @@ git push --force heroku $BRANCH_NAME:master
 # configure watched file limit
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 # install required toolset
-npm install -g exp
+yarn global add exp
 # login to expo with correct credentials
 exp logout
 exp login -u $EXPO_PRODUCTION_USERNAME -p $EXPO_PRODUCTION_PASSWORD
@@ -19,8 +19,8 @@ exp whoami
 cd mobile
 mv app-production.json app.json
 cat app.json
-npm install
-npm --version
+yarn
+yarn --version
 node --version
 exp --version
 exp publish -s $EXPO_PRODUCTION_EMAIL

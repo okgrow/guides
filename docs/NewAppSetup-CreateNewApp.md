@@ -223,8 +223,8 @@ Add the DSN and Public DSN from your sentry.io projects to your staging and prod
 (Follow the below steps if you are using Expo for your React Native app.)
 
 1. Ensure that you're using a version of Node that supports `async/await` (Node 7.6+).
-1. `npm install sentry-cli-binary -g`
-1. `npm install sentry-expo --save`
+1. `yarn global add sentry-cli-binary`
+1. `yarn add sentry-expo`
 1. For the next steps please follow these [instructions](https://docs.sentry.io/clients/react-native/expo/) from sentry.
 1. You must complete the above instructions for adding `sentry.config().install()` to your `main.js` or `app.js` and uploading source maps.
 
@@ -235,7 +235,7 @@ For more details See [Expo's docs](https://docs.expo.io/versions/latest/guides/u
 #### Standard React Native
 (Follow the below steps if you are not using Expo for your React Native app.)
 
-1. `npm install react-native-sentry --save`
+1. `yarn add react-native-sentry`
 1. `react-native link react-native-sentry`
 1. When linking you will be asked to provide the following (details are in your sentry project):
     1. `DSN`
