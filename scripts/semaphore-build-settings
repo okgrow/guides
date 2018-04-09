@@ -1,4 +1,8 @@
-cd web/
+#
+# Web (NOTE: If web-only, remove "cd web")
+#
+
+cd web
 curl https://install.meteor.com/ | sh
 meteor --version
 meteor npm install -g yarn
@@ -6,6 +10,11 @@ meteor yarn
 cp /home/runner/settings.json settings.json
 meteor yarn run lint
 meteor yarn run unit-test
+
+#
+# Mobile (Expo) (NOTE: If web-only, remove "cd ../mobile")
+#
+
 yarn global add exp
 cd ../mobile
 mv app-staging.json app.json
