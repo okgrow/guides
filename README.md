@@ -16,5 +16,5 @@ To deploy:
 
 ```sh
 cd website
-GIT_USER=<YOUR_GITHUB_USERNAME> yarn publish-gh-pages
+GIT_USER=<YOUR_GITHUB_USERNAME> USE_SSH=true yarn publish-gh-pages
 ```
