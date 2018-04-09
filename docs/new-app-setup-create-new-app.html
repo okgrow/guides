@@ -1,0 +1,392 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Create New App - Procedure · Guides</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Create New App - Procedure · Guides"/><meta property="og:type" content="website"/><meta property="og:url" content="https://guides.okgrow.com/index.html"/><meta property="og:description" content="**NOTE:** This procedure assumes Discovery Week is complete."/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/logo-white.svg"/><h2 class="headerTitle">Guides</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="/docs/dev-principles.html" target="_self">Processes</a></li><li><a href="/docs/training-intro.html" target="_self">Training</a></li><li><a href="https://www.okgrow.com" target="_blank">Services</a></li><li><a href="https://www.okgrow.com/posts" target="_blank">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>New App Setup</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Development</h3><ul><li class="navListItem"><a class="navItem" href="/docs/dev-principles.html">Principles</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-investment-time.html">Investment Time</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-support-role.html">Support Role</a></li><li class="navListItem"><a class="navItem" href="/docs/dev-devops.html">DevOps</a></li></ul></div><div class="navGroup navGroupActive"><h3>Design Sprint</h3><ul><li class="navListItem"><a class="navItem" href="/docs/design-sprint-preparation.html">Preparation</a></li><li class="navListItem"><a class="navItem" href="/docs/design-sprint-before.html">Before</a></li><li class="navListItem"><a class="navItem" href="/docs/design-sprint-kick-off.html">Kick off</a></li><li class="navListItem"><a class="navItem" href="/docs/design-sprint-after.html">After</a></li></ul></div><div class="navGroup navGroupActive"><h3>Discovery Week</h3><ul><li class="navListItem"><a class="navItem" href="/docs/discover-week-why.html">Why a discovery week?</a></li><li class="navListItem"><a class="navItem" href="/docs/discover-week-checklist.html">Checklist - Before the week</a></li><li class="navListItem"><a class="navItem" href="/docs/discovery-week-example-mapping-estimating.html">Example Mapping</a></li></ul></div><div class="navGroup navGroupActive"><h3>Project Management</h3><ul><li class="navListItem"><a class="navItem" href="/docs/project-management-agile-adaptation.html">Agile Adaptation</a></li><li class="navListItem"><a class="navItem" href="/docs/project-management-retrospective-planning.html">Retrospective Planning - Checklist</a></li></ul></div><div class="navGroup navGroupActive"><h3>New App Setup</h3><ul><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/new-app-setup-create-new-app.html">Create New App - Procedure</a></li></ul></div><div class="navGroup navGroupActive"><h3>Open Source</h3><ul><li class="navListItem"><a class="navItem" href="/docs/open-source-code-of-conduct.html">Code of Conduct</a></li><li class="navListItem"><a class="navItem" href="/docs/open-source-contributing.html">Contributing</a></li><li class="navListItem"><a class="navItem" href="/docs/open-source-labels.html">GitHub Labels</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/okgrow/guides/edit/master/docs/NewAppSetup-CreateNewApp.md" target="_blank">Edit</a><h1>Create New App - Procedure</h1></header><article><div><span><p><strong>NOTE:</strong> This procedure assumes Discovery Week is complete.</p>
+<p>To hit the ground running on a new project we use a standard procedure and make as few ad-hoc decisions as possible. We love trying new things but the first week of a new project is not the time for that. This document is that procedure.</p>
+<h2><a class="anchor" aria-hidden="true" name="setup-base-app-starter-kit"></a><a href="#setup-base-app-starter-kit" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup Base App (<code>starter-kit</code>)</h2>
+<p>Start a new application by following the steps in the OK GROW! <a href="https://github.com/okgrow/starter-kit"><code>starter-kit</code></a>.</p>
+<h2><a class="anchor" aria-hidden="true" name="setup-database-server-mongodb-atlas"></a><a href="#setup-database-server-mongodb-atlas" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup Database Server (MongoDB Atlas)</h2>
+<h3><a class="anchor" aria-hidden="true" name="create-client-organisation-question-client-task"></a><a href="#create-client-organisation-question-client-task" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create Client Organisation (<strong>QUESTION:</strong> client task?)</h3>
+<ol>
+<li>Create an account or login to <a href="https://www.mongodb.com/cloud/atlas">Atlas</a> using your OK GROW! account.
+<ul>
+<li><strong>NOTE:</strong> Configure 2-factor authentication your account</li>
+</ul></li>
+<li>Go to <a href="https://cloud.mongodb.com/v2#/account/organizations">Account Settings -&gt; Organizations</a></li>
+<li>Create a new organization with a name (probably the client or project name) and select MongoDB Atlas</li>
+<li>Provide email addresses for the members to invite to the organisation</li>
+<li>Go to Settings -&gt; Billing Overview -&gt; Payment Method and add the credit card for the client</li>
+<li>Go to Projects and create a new project with a name and invite users</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" name="create-and-setup-staging-and-production-dbs"></a><a href="#create-and-setup-staging-and-production-dbs" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create and Setup Staging and Production DBs</h3>
+<ol>
+<li>Create the Projects Clusters (MongoDB nodes/db) for both staging &amp; production by selecting Build a New Cluster.</li>
+<li>Create two clusters:
+<ul>
+<li><code>&lt;app-name&gt;-production</code></li>
+<li><code>&lt;app-name&gt;-staging</code></li>
+</ul></li>
+<li>Set the MongoDB Version that Meteor currently supports</li>
+<li>Cloud Provider &amp; Region should be set the same as where your app server will be located</li>
+<li>Select the Instance sizes:
+<ol>
+<li>Staging: Free M0</li>
+<li>Production: M10</li>
+<li>Enable Backup on the Production Cluster</li>
+<li>Set the administrator username and password:
+<ul>
+<li>use the autogen secure password button</li>
+<li>record this password somewhere secure</li>
+</ul></li>
+</ol></li>
+</ol>
+<p>(??? can we ditch this or include the details here ???) For a more detailed walkthrough of these next steps, check the <a href="https://www.okgrow.com/posts/mongodb-atlas-setup">&quot;MongoDB Atlas Setup&quot; blog post</a>.</p>
+<h4><a class="anchor" aria-hidden="true" name="security-ip-whitelisting"></a><a href="#security-ip-whitelisting" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Security IP Whitelisting</h4>
+<ol>
+<li>Create a whitelist of IP addresses to allow the DB to receive connections from
+<ul>
+<li>Until Semaphore supports IP addresses whitelist <em>all</em> addresses (e.g., <code>0.0.0.0/0</code>)</li>
+</ul></li>
+<li>Set the IP whitelist when retrieving your MongoDB connection URL (i.e., <code>MONGO_URL</code>)
+<ol>
+<li>Select &quot;Connect&quot; on the cluster and you will be prompted to set your IP Whitelists</li>
+<li>Then Select &quot;Connect Your Application&quot; to get your MongoDb connection URLs</li>
+<li>Select the MongoDB Driver version you are using and copy the connection URL which will become your (i.e., <code>MONGO_URL</code> and <code>MONGO_OPLOG_URL</code>)
+<ul>
+<li>Example mongo URL format for a 3 Node Cluster: <code>mongodb://&lt;username&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;,&lt;host&gt;:&lt;port&gt;,&lt;host&gt;:&lt;port&gt;/&lt;dbName&gt;?ssl=true&amp;replicaSet=&lt;replicaSet name&gt;&amp;authSource=admin</code></li>
+<li><strong>NOTE:</strong> The connection string contains the administrator as the user and defaults to using a <code>test</code> DB for the cluster</li>
+<li>Replace <code>test</code> with <code>&lt;appname&gt;</code> in the <code>MONGO_URL</code></li>
+<li>??? - Replace <code>test</code> with <code>local</code> in the <code>MONGO_OPLOG_URL</code> (for details read <a href="https://www.okgrow.com/posts/mongodb-atlas-setup">&quot;MongoDB Atlas Setup&quot; blog post</a>)</li>
+</ul></li>
+</ol></li>
+</ol>
+<p><strong>NOTE:</strong></p>
+<ul>
+<li>The database will be created when you first run your Meteor app and it connects to MongoDB</li>
+<li>The db name is always after the last Node, see the above example format</li>
+<li>If you wish to manually create a db it is possible by connecting to the db via the mongo shell &amp; doing the following -&gt; <code>use &lt;db name&gt;</code> &amp; then <code>db.&lt;collectionName&gt;.insert({&quot;fake&quot;: &quot;collection &amp; doc to manually create a new db&quot;})</code></li>
+<li>You will change the <code>username:password</code> to the users you will create next</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" name="create-the-meteor-user-this-user-will-be-used-for-the-mongo-url"></a><a href="#create-the-meteor-user-this-user-will-be-used-for-the-mongo-url" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create the Meteor User (This user will be used for the <code>MONGO_URL</code>)</h4>
+<ol>
+<li>Select: “Create new user”</li>
+<li>Set the “User Name”</li>
+<li>Select “Read/Write any Database”</li>
+<li>Create a password and save it</li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" name="question-do-we-need-this-anymore-create-the-oplog-user-this-user-will-be-used-for-the-mongo-oplog-url"></a><a href="#question-do-we-need-this-anymore-create-the-oplog-user-this-user-will-be-used-for-the-mongo-oplog-url" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>(**QUESTION: do we need this anymore?) Create the Oplog User (This user will be used for the <code>MONGO_OPLOG_URL</code>)</h4>
+<ol>
+<li>Select: “Create new user”</li>
+<li>Click “advanced”</li>
+<li>Set access to “read” @ “local”</li>
+<li>Create a password and save it</li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" name="create-backup-user-optional-really"></a><a href="#create-backup-user-optional-really" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create Backup User [Optional - really?]</h4>
+<ol>
+<li>Select: “Create new user”</li>
+<li>Click “advanced”</li>
+<li>Set access to “backup” @ “anyDatabases”</li>
+<li>Set access to “read” @ “anyDatabases”</li>
+<li>Create a password and save it</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" name="setup-application-servers-heroku"></a><a href="#setup-application-servers-heroku" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup Application Servers (Heroku)</h2>
+<h3><a class="anchor" aria-hidden="true" name="logentries-slack-integration"></a><a href="#logentries-slack-integration" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Logentries Slack Integration</h3>
+<p>Add the Logentries Slack integration to the project's Slack channel:</p>
+<ol>
+<li>In the project's Slack channel, click &quot;Add an app&quot; under &quot;Channel Settings&quot;</li>
+<li>Add the Logentries integration</li>
+<li>Copy the web hook URL</li>
+<li>Save the integration</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" name="heroku-team-question-client-task"></a><a href="#heroku-team-question-client-task" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Heroku Team (<strong>QUESTION:</strong> client task?)</h3>
+<ol>
+<li>Login to Heroku</li>
+<li>In the &quot;Personal&quot; menu in the upper left, select &quot;+ New Team&quot;
+<ol>
+<li>Give the team a name</li>
+<li>Enter the client's credit card information</li>
+<li>Click &quot;Create Team&quot;</li>
+<li>Invite the client as a member for the app in the &quot;Access&quot; section</li>
+<li>Add team members as collaborators on the app in the &quot;Access&quot; section</li>
+</ol></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" name="staging"></a><a href="#staging" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Staging</h3>
+<ol>
+<li>Login to Heroku using the Heroku command-line tools
+<ul>
+<li>TODO: details</li>
+</ul></li>
+<li>Run the <a href="https://github.com/okgrow/guides/blob/master/scripts/create-heroku-app"><code>create-heroku-app &lt;app-name&gt;-staging staging &lt;heroku-team-name&gt;</code></a> script from within the app project folder</li>
+<li>Login to Heroku</li>
+<li>Set the <code>METEOR_SETTINGS</code> &quot;config variable&quot; in &quot;Settings&quot; in same format as the default <code>settings.json.example</code> file but with line-ends removed</li>
+<li>Set the <code>MONGO_URL</code> &quot;config variable&quot; in &quot;Settings&quot;</li>
+<li>Set the <code>ERROR_PAGE_URL</code> &quot;config variable&quot; in &quot;Settings&quot; to <code>https://s3.amazonaws.com/&lt;app-name&gt;-app-staging/maintenance.html</code> (<strong>NOTE:</strong> This will be setup below.)</li>
+<li>Set the <code>MAINTENANCE_PAGE_URL</code> &quot;config variable&quot; in &quot;Settings&quot; to <code>https://s3.amazonaws.com/&lt;app-name&gt;-app-staging/maintenance.html</code> (<strong>NOTE:</strong> This will be setup below.)</li>
+<li>Configure the Heroku Logentries add-on:
+<ol>
+<li>Disable these notifications:
+<ul>
+<li>High response time</li>
+<li>Connection closed w/o response</li>
+<li>Idle connection</li>
+</ul></li>
+<li>Disable email and add the Slack web hook URL for all notifications:
+<ol>
+<li>Click edit for the tag</li>
+<li>Under the &quot;Add an Alert&quot; section, uncheck email</li>
+<li>Select Slack (under &quot;Other Options&quot;)</li>
+<li>Paste the webhook URL, the save changes</li>
+</ol></li>
+</ol></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" name="production"></a><a href="#production" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Production</h3>
+<ol>
+<li>Run the <a href="https://github.com/okgrow/guides/blob/master/scripts/create-heroku-app"><code>create-heroku-app &lt;app-name&gt;-production production &lt;heroku-team-name&gt;</code></a> script from within the app project folder</li>
+<li>Invite the client as a member for the app in the &quot;Access&quot; section</li>
+<li>Add team members as collaborators on the app in the &quot;Access&quot;</li>
+<li>Set the <code>METEOR_SETTINGS</code> &quot;config variable&quot; in &quot;Settings&quot; in same format as the default <code>settings.json.example</code> file but with line-ends removed</li>
+<li>Set the <code>MONGO_URL</code> &quot;config variable&quot; in &quot;Settings&quot;</li>
+<li>Set the <code>ERROR_PAGE_URL</code> &quot;config variable&quot; in &quot;Settings&quot; to <code>https://s3.amazonaws.com/&lt;app-name&gt;-app-production/error.html</code> (<strong>NOTE:</strong> This will be setup below.)</li>
+<li>Set the <code>MAINTENANCE_PAGE_URL</code> &quot;config variable&quot; in &quot;Settings&quot; to <code>https://s3.amazonaws.com/&lt;app-name&gt;-app-production/maintenance.html</code> (<strong>NOTE:</strong> This will be setup below.)</li>
+<li>Configure the Heroku Logentries add-on:
+<ol>
+<li>Disable these notifications:
+<ul>
+<li>High response time</li>
+<li>Connection closed w/o response</li>
+<li>Idle connection</li>
+</ul></li>
+<li>Disable email and add the Slack web hook URL for all notifications:
+<ol>
+<li>Click edit for the tag</li>
+<li>Under the &quot;Add an Alert&quot; section, uncheck email</li>
+<li>Select Slack (under &quot;Other Options&quot;)</li>
+<li>Paste the webhook URL, the save changes</li>
+</ol></li>
+</ol></li>
+<li>Configure the Heroku Mailgun add-on:
+<ol>
+<li>Add DNS records:
+<ul>
+<li>TODO: details</li>
+</ul></li>
+<li>Edit <code>MAILGUN_*</code> &quot;config variable&quot; in &quot;Settings&quot; to contain the info for the verified domain instead of the sandbox domain</li>
+</ol></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" name="setup-dns"></a><a href="#setup-dns" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup DNS</h2>
+<p>TODO: details</p>
+<h2><a class="anchor" aria-hidden="true" name="setup-aws"></a><a href="#setup-aws" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup AWS</h2>
+<h3><a class="anchor" aria-hidden="true" name="aws-root-account-and-users-client-task"></a><a href="#aws-root-account-and-users-client-task" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AWS Root Account and Users (client task)</h3>
+<ol>
+<li>Create a root account and gives us a temporary password</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" name="aws-users"></a><a href="#aws-users" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AWS Users</h3>
+<ol>
+<li>Login with the client's root account</li>
+<li>On the IAM Management Console Dashboard customize the &quot;IAM users sign-in link&quot; with a name based on the project or client</li>
+<li>Configure a password policy (1 uppercase, 1 lowercase, 1 number and 1 non-alphanumeric is probably a good minimum without being overly annoying)</li>
+<li>Create an IAM user for each developer:
+<ol>
+<li>Attach the &quot;AdministratorAccess&quot; policy</li>
+<li>Add 2-factor authentication (MFA) (<strong>NOTE:</strong> User must do this themselves)</li>
+</ol></li>
+<li><strong>CRITICAL:</strong> Ask client to change their root account password and add 2-factor authentication (MFA)</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" name="cloudwatch-and-route-53"></a><a href="#cloudwatch-and-route-53" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CloudWatch and Route 53</h3>
+<ol>
+<li>Create AWS Route 53 Health Check with alert for the production hostname (<em>not</em> the <code>*.herokuapp.com</code> hostname):
+<ol>
+<li>Add <code>?ping=aws</code> to monitoring URL</li>
+<li>Set up string matching for something that appears in the beginning (in the first few hundred bytes) of the page (e.g., the title)</li>
+<li>Set up alert notification to <code>&lt;project-name&gt;@okgrow.com</code></li>
+</ol></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" name="s3"></a><a href="#s3" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>S3</h3>
+<h4><a class="anchor" aria-hidden="true" name="development"></a><a href="#development" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Development</h4>
+<ol>
+<li>Create a development S3 bucket named <code>&lt;app-name&gt;-app-development</code> with the <a href="https://github.com/okgrow/guides/blob/master/scripts/s3-bucket-public-read-policy.json">public-read bucket policy</a>
+<ul>
+<li><strong>NOTE:</strong> You'll need to change <code>MY_BUCKET_NAME</code></li>
+</ul></li>
+<li>Create a development IAM user (<code>&lt;app-name&gt;-app-development</code>) with API credentials, no password, <a href="https://github.com/okgrow/guides/blob/master/scripts/app-iam-user-policy.json">this policy</a> and access only to development S3 bucket
+<ul>
+<li><strong>NOTE:</strong> You'll need to change <code>APPNAME-app-STAGING_OR_PRODUCTION</code></li>
+</ul></li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" name="staging"></a><a href="#staging" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Staging</h4>
+<ol>
+<li>Create a staging S3 bucket named <code>&lt;app-name&gt;-app-staging</code> with the <a href="https://github.com/okgrow/guides/blob/master/scripts/s3-bucket-public-read-policy.json">public-read bucket policy</a>
+<ul>
+<li><strong>NOTE:</strong> You'll need to change <code>MY_BUCKET_NAME</code></li>
+</ul></li>
+<li>Create a staging IAM user (<code>&lt;app-name&gt;-app-staging</code>) with API credentials, no password, <a href="https://github.com/okgrow/guides/blob/master/scripts/app-iam-user-policy.json">this policy</a> and access only to staging S3 bucket
+<ul>
+<li><strong>NOTE:</strong> You'll need to change <code>APPNAME-app-STAGING_OR_PRODUCTION</code></li>
+</ul></li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" name="production"></a><a href="#production" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Production</h4>
+<ol>
+<li>Create a production S3 bucket named <code>&lt;app-name&gt;-app-production</code> with the <a href="https://github.com/okgrow/guides/blob/master/scripts/s3-bucket-public-read-policy.json">public-read bucket policy</a></li>
+<li>Create a production IAM user (<code>&lt;app-name&gt;-app-production</code>) with API credentials, no password, <a href="https://github.com/okgrow/guides/blob/master/scripts/app-iam-user-policy.json">this policy</a> and access only to production S3 bucket
+<ul>
+<li><strong>NOTE:</strong> You'll need to change <code>APPNAME-app-STAGING_OR_PRODUCTION</code></li>
+</ul></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" name="setup-error-logging-sentry"></a><a href="#setup-error-logging-sentry" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup Error Logging (Sentry)</h2>
+<h3><a class="anchor" aria-hidden="true" name="create-a-new-organisation-question-client-task"></a><a href="#create-a-new-organisation-question-client-task" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a New Organisation (<strong>QUESTION:</strong> client task?)</h3>
+<ol>
+<li>Log in to the <code>ok-grow</code> organisation with your account</li>
+<li>Click the icon in the top left hand corner</li>
+<li>Select &quot;New Organization&quot; then follow the prompts</li>
+<li>Navigate to the organisations dashboard, in the top right select &quot;New Project&quot;</li>
+<li>Follow the prompts and setup the project</li>
+<li>You should now have an organisation and one project, you will now need to add anyone one the project to the organisation</li>
+<li>Navigate to the organisation's settings page, select &quot;Members&quot; and click &quot;Invite Member&quot; in the top right hand corner</li>
+<li>Setup billing &amp; usage, this will be with OK GROWS! credit card or the client's</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" name="configure-project"></a><a href="#configure-project" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configure Project</h3>
+<ol>
+<li>Navigate to the &quot;Project Settings&quot; and set the following fields:
+<ol>
+<li>The Project Name &amp; Short Name should be the same</li>
+<li>Email: Subject Prefix to the project name</li>
+<li>Event Settings: Default environment to staging or production</li>
+</ol></li>
+<li>Next navigate to All Integrations and add the following:
+<ol>
+<li>Slack - Mandatory</li>
+<li><del>Trello - Recommended</del></li>
+<li><del>Github - Optional</del></li>
+</ol></li>
+<li>Once these integrations have been added you will need to set them up
+<ol>
+<li>Slack - You will need to go to <a href="https://okgrow.slack.com/apps/A0F814BEV-sentry">here</a> and select &quot;Add Configuration&quot;, and follow the prompts. Add a descripitive label to state what project the error logging is for. Save the settings and copy the Webhook URL and add it to the sentry website. You can use the same URL for both staging &amp; production</li>
+<li><del>Trello - Follow these <a href="https://github.com/damianzaremba/sentry-trello/blob/master/HOW_TO_SETUP.md">instructions</a> to get the API key &amp; token. Once the keys have been saved you will need to add the Trello Organization where the Trello Board exists. <strong>NOTE:</strong> These keys are associated with your Trello user account</del></li>
+<li><del>Github - TODO: details</del></li>
+</ol></li>
+<li>Next navigate to &quot;Alerts&quot; and select &quot;Rules&quot;.
+<ol>
+<li>Select &quot;Edit Rule&quot;</li>
+<li>Delete the two default rules and actions</li>
+<li>Add the rule &quot;An event is seen&quot;</li>
+<li>Add the &quot;Send a notification via [service]&quot;, once added you can select to add Slack</li>
+<li>You should have this Alert Rule &quot;An event is seen&quot; and &quot;Send a notification via Slack&quot;</li>
+<li>Save the rule</li>
+</ol></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" name="meteor-app-setup-web"></a><a href="#meteor-app-setup-web" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Meteor App Setup (web)</h3>
+<p>Add the DSN and Public DSN from your sentry.io projects to your staging and production Meteor <code>settings.json</code> files and set the environment to <code>staging</code> or <code>production</code>.</p>
+<h3><a class="anchor" aria-hidden="true" name="react-native-app-setup-mobile"></a><a href="#react-native-app-setup-mobile" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>React Native App Setup (mobile)</h3>
+<h4><a class="anchor" aria-hidden="true" name="expo"></a><a href="#expo" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Expo</h4>
+<p>(Follow the below steps if you are using Expo for your React Native app.)</p>
+<ol>
+<li>Ensure that you're using a version of Node that supports <code>async/await</code> (Node 7.6+).</li>
+<li><code>yarn global add sentry-cli-binary</code></li>
+<li><code>yarn add sentry-expo</code></li>
+<li>For the next steps please follow these <a href="https://docs.sentry.io/clients/react-native/expo/">instructions</a> from sentry.</li>
+<li>You must complete the above instructions for adding <code>sentry.config().install()</code> to your <code>main.js</code> or <code>app.js</code> and uploading source maps.</li>
+</ol>
+<p>For more details See <a href="https://docs.expo.io/versions/latest/guides/using-sentry.html#content">Expo's docs</a>.</p>
+<p><strong>NOTE:</strong> At the time of writing Expo isn't using the native integration yet. Please check the status and update the guide when this changes.</p>
+<h4><a class="anchor" aria-hidden="true" name="standard-react-native"></a><a href="#standard-react-native" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Standard React Native</h4>
+<p>(Follow the below steps if you are not using Expo for your React Native app.)</p>
+<ol>
+<li><code>yarn add react-native-sentry</code></li>
+<li><code>react-native link react-native-sentry</code></li>
+<li>When linking you will be asked to provide the following (details are in your sentry project):
+<ol>
+<li><code>DSN</code></li>
+<li><code>organization slug</code></li>
+<li><code>project slug</code></li>
+<li><code>Auth token</code></li>
+</ol></li>
+</ol>
+<p><strong>NOTE:</strong> Sentry only supports <code>react-native</code> &gt;= 0.38. For details see the <a href="https://docs.sentry.io/clients/react-native/">Sentry docs</a>.</p>
+<h2><a class="anchor" aria-hidden="true" name="setup-continuous-integration-semaphore"></a><a href="#setup-continuous-integration-semaphore" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup Continuous Integration (Semaphore)</h2>
+<h3><a class="anchor" aria-hidden="true" name="organisation-and-project-question-client-task"></a><a href="#organisation-and-project-question-client-task" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Organisation and Project (<strong>QUESTION:</strong> client task?)</h3>
+<ol>
+<li>Login to your Semaphore account (if you haven't been added to OK GROW!'s account, ask to be added.)</li>
+<li>Create a new <em>organisation</em> in Semaphore for the client project</li>
+<li>Create/Add a new project
+<ul>
+<li>TODO: details</li>
+</ul></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" name="project-settings"></a><a href="#project-settings" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Project Settings</h3>
+<h4><a class="anchor" aria-hidden="true" name="build-settings"></a><a href="#build-settings" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build Settings</h4>
+<ol>
+<li>Set the Node version to node.js 8.9.1 (or later)</li>
+<li>Add these lines under setup: <a href="semaphore-build-settings">Semaphore build settings</a></li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" name="environment-variables"></a><a href="#environment-variables" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Environment Variables</h4>
+<ol>
+<li>Add these variables (you'll get the values for these from the &quot;Database Information&quot; document created above):
+<ul>
+<li><code>PRODUCTION_DB_HOST</code></li>
+<li><code>PRODUCTION_DB_PORT</code></li>
+<li><code>PRODUCTION_DB_NAME</code></li>
+<li><code>PRODUCTION_DB_USERNAME</code></li>
+<li><code>PRODUCTION_DB_PASSWORD</code></li>
+<li><code>STAGING_DB_HOST</code></li>
+<li><code>STAGING_DB_PORT</code></li>
+<li><code>STAGING_DB_NAME</code></li>
+<li><code>STAGING_DB_USERNAME</code></li>
+<li><code>STAGING_DB_PASSWORD</code></li>
+<li><code>AWS_ACCESS_KEY_ID</code></li>
+<li><code>AWS_SECRET_ACCESS_KEY</code></li>
+<li><code>APPNAME</code></li>
+</ul></li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" name="configuration-files"></a><a href="#configuration-files" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration Files</h4>
+<ol>
+<li><strong>Web:</strong> Add the application's <code>settings.json</code> file</li>
+<li><strong>Mobile:</strong> Add the project's <code>app-production.json</code> file</li>
+<li><strong>Mobile:</strong> Add the project's <code>app-staging.json</code> file</li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" name="branches"></a><a href="#branches" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Branches</h4>
+<ol>
+<li>Set the cancellation strategy to &quot;Cancel queued and started builds&quot;, then &quot;Save Branch Settings&quot;</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" name="staging-server"></a><a href="#staging-server" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Staging Server</h3>
+<ol>
+<li>Click “Set Up Deployment” on the Semaphore project page</li>
+<li>Select &quot;Heroku&quot;:
+<ol>
+<li>Select &quot;Automatic&quot;</li>
+<li>Select the &quot;master&quot; branch</li>
+</ol></li>
+<li>Enter the API key for the client's Heroku user</li>
+<li>Select the Staging Heroku app for this project from the list; name the server “Staging”</li>
+<li>On the Semaphore project page, under &quot;Servers&quot;, click the server name (e.g., &quot;Staging&quot;)</li>
+<li>On the servers screen, click the &quot;Edit Server&quot; button</li>
+<li>Under &quot;Deploy commands&quot; click the &quot;Change deploy commands&quot; link and paste the contents from <a href="https://github.com/okgrow/guides/blob/master/scripts/semaphore-staging-deploy-config">staging app deploy config</a></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" name="production-server"></a><a href="#production-server" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Production Server</h3>
+<ol>
+<li>Click the + button beside &quot;Servers&quot; on the Semaphore project page to add a new server.</li>
+<li>Select &quot;Heroku&quot;:
+<ol>
+<li>Select &quot;Automatic&quot;</li>
+<li>Select the &quot;master&quot; branch</li>
+</ol></li>
+<li>Enter the API key for the client's Heroku user</li>
+<li>Select the Production Heroku app for this project from the list; name the server “Production”</li>
+<li>On the Semaphore project page, under &quot;Servers&quot;, click the server name (e.g., &quot;Production&quot;)</li>
+<li>On the servers screen, click the &quot;Edit Server&quot; button</li>
+<li>Uncheck &quot;Deploy automatically&quot;</li>
+<li>Under &quot;Deploy commands&quot; click the &quot;Change deploy commands&quot; link and paste the contents from <a href="https://github.com/okgrow/guides/blob/master/scripts/semaphore-production-deploy-config">production app deploy config</a></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" name="configure-semaphore-slack-integration"></a><a href="#configure-semaphore-slack-integration" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configure Semaphore Slack Integration</h3>
+<ol>
+<li>In the project's Slack channel, click &quot;Add an app&quot; under &quot;Channel Settings&quot;</li>
+<li>Add the Sempahore integration</li>
+<li>Copy the web hook URL</li>
+<li>Save the integration</li>
+<li>On Semaphore, in Project Settings / Notifications / Webhooks, add the web hook URL and select &quot;Build and Deploy&quot; from the &quot;Receive After&quot; dropdown</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" name="configure-aws"></a><a href="#configure-aws" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configure AWS</h3>
+<p>Create an IAM user with API credentials, no password, with <a href="https://github.com/okgrow/guides/blob/master/scripts/semaphore-iam-user-policy.json">this policy</a> and read-only access to the production S3 bucket and read-write access to the staging S3 bucket. <strong>NOTE:</strong> You'll need to change <code>APPNAME-app-staging</code> and <code>APPNAME-app-production</code>.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="project-management-retrospective-planning.html">← Retrospective Planning - Checklist</a><a class="docs-next button" href="open-source-code-of-conduct.html">Code of Conduct →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/flower.png" alt="Guides" width="66" height="58"/></a><div><h5>Services</h5><a href="https://www.okgrow.com/web">Web Development</a><a href="https://www.okgrow.com/javascript-consulting">Javascript Consulting</a><a href="https://www.okgrow.com/mobile">Mobile Development</a><a href="https://www.okgrow.com/training">Training</a></div><div><h5>Social</h5><a href="https://twitter.com/ok_grow">Twitter</a><a href="https://github.com/okgrow">GitHub</a><a href="https://www.facebook.com/okgrow/">Facebook</a><a href="https://www.instagram.com/ok_grow/">Instagram</a><a href="https://www.youtube.com/channel/UCemC4xuL1cZhVlixuoEjtSg">YouTube</a></div><div><h5>Contact</h5><a href="https://www.okgrow.com/posts">Blog</a><a href="https://www.okgrow.com/contact">Hire Us</a><a href="https://www.okgrow.com/join-us">Join Us</a><a href="mailto:hello@okgrow.com">hello@okgrow.com</a><a href="tel:1-855-747-9930">+1-855-747-9930</a></div></section><a href="https://www.okgrow.com/" class="fbOpenSource"><img src="/img/logo-white.svg" alt="OK GROW!" width="170" height="45"/></a><section class="copyright">Copyright © 2018 OK GROW!</section></footer></div></body></html>
