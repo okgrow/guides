@@ -1,7 +1,13 @@
 #!/bin/bash
 
+# Creates a new Heroku app and adds it as a git remote.
+# The environment name could be staging, production, etc
+#
+# Usage: create-heroku-app <app name> <environment name> <team>
+
 APP=$1
 ENV=$2
+TEAM=$3
 
 
 fail() {
@@ -29,12 +35,15 @@ if [ -z "$ENV" ] ; then
   fail "Missing Heroku remote (environment name) parameter"
 fi
 
-heroku apps:create --buildpack https://github.com/okgrow/meteor-buildpack-horse.git -r $ENV $APP || fail
+if [ -z "$TEAM" ] ; then
+  fail "Missing Heroku team name parameter"
+fi
+
+heroku apps:create --buildpack https://github.com/okgrow/meteor-buildpack-horse.git -r $ENV $APP --team $TEAM || fail
 heroku_command addons:create mongolab
 heroku_command config:add ROOT_URL="https://$APP.herokuapp.com"
 heroku_command config:add ENV=$ENV
 heroku_command labs:enable http-session-affinity
-#heroku_command labs:enable log-runtime-metrics
 
 heroku_command addons:create logentries:le_tryit
 heroku_command addons:create mailgun:starter
