@@ -27,9 +27,7 @@
       "project-management-retrospective-planning"
     ],
     "New App Setup": [
-      "new-app-setup-production-staging",
-      "new-app-setup-error-logging",
-      "new-app-setup-continuous-integration"
+      "new-app-setup-create-new-app"
     ],
     "Open Source": [
       "open-source-code-of-conduct",
