@@ -15,10 +15,10 @@ Each project has the following roles:
 * Delivery manager: keeps an eye on schedule, scope and workflow. Liase with Product owner on budget, schedule and scope decisions.
 * Project advisor: someone who’s not actively working on the project but keeps an eye on things and helps out where needed.
 
-## Weekly cadence
+## 2-week cadence
 
-* Each team member is on a project 100% for one or more weeks.
-* We plan our work in weekly iterations which run from Monday to Thursday (Fridays are [investment time](dev-investment-time.html)).
+* Each team member is on a project 100% for one or more iterations.
+* We plan our work in 2-week iterations which run from Monday to the following Thursday (Fridays are [investment time](dev-investment-time.html)).
 
 ## Meetings
 
