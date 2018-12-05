@@ -57,9 +57,11 @@ The cards for this iteration are organized into an 'Active Sprint' board.  Cards
 
 * If there's anything in the "testing & code review" list on Trello then test and review that before starting a new card.
   * Review the code (there should be a PR associated with it, hopefully linked in a comment on the Trello card).
-  * Test it
+  * Review the BDD rules/examples/scenarios written for the feature.
+  * Review the tests written for it. Run the tests and test it manually.
+  * If testing was difficult for the feature, explore briefly how it can be tested or what needs to be in place to test in the future.
   * Comment on the PR and let the author merge and deploy it
-* If there's nothing to test then take the card from the top of "This week" (move it into "In progress" and add yourself to it).
+* If there's nothing to test then take the card from the top of "This week/To do" (move it into "In progress" and add yourself to it).
 * Develop the feature on its own local branch (rebasing against master if it has not yet been shared).
 * Push branch to GitHub and move card to the "testing & code review" list.
 * CI
