@@ -30,15 +30,28 @@ The project lead runs the meetings. Each project has the following meetings:
 
 ## Tracking work
 
-We use Trello, with cards to represent user stories (or sometimes technical tasks) and lists to show the state of each card. Cards move from left to right across the following columns:
+We use Trello or Jira with cards to represent user stories (or sometimes technical tasks) and lists to show the state of each card.
+
+### In Trello
+
+Cards move from left to right across the following columns:
 
 1. Future: ideas for future work that isn't currently planned. Dump anything here.
 1. Planned: things that we've definitely agreed to do within the current phase only.
-1. This week: things that we're going to do this week. We fill this up at the weekly planning meeting.
+1. This iteration: things that we're going to do this iteration. We fill this up at the first weekly planning meeting of the iteration.
 1. In progress: actively being worked on right now.
 1. Testing and code review: being tested and reviewed by another developer.
-1. Client review: ready for you to review on the staging server.
-1. Done YYYY-MM-DD: We have one of these for each iteration (note this is the date of the iteration start, i.e. the date of the weekly meeting). This contains cards that are done (accepted by the client) during the iteration that starts
+1. Client review: ready for the client to review on the staging server.
+1. Done YYYY-MM-DD: We have one of these for each iteration (note this is the date of the iteration start, i.e. the date of the weekly meeting). This contains cards that are done (accepted by the client) during the iteration that starts.
+
+### In Jira
+
+The cards for this iteration are organized into an 'Active Sprint' board.  Cards move from left to right across the following columns in the board:
+
+1. Todo: things that we're going to do this iteration. These cards were added during the creation of the sprint during the [planning meeting](project-management-retrospective-planning.html).
+1. In progress: actively being worked on right now.
+1. Client review: ready for the client to review on the staging server.
+1. Done: contains the cards that are done (accepted by the client) during the iteration
 
 ## Development workflow
 
