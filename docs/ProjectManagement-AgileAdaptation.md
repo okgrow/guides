@@ -13,7 +13,6 @@ Each project has the following roles:
 * Project lead: a member of the technical team. Responsible for all things. We take turns being project lead. The project lead runs the [project meetings](#meetings)
 * Developer or designer: anyone else on the technical team who’s working on the project.
 * Delivery manager: keeps an eye on schedule, scope and workflow. Liase with Product owner on budget, schedule and scope decisions.
-* Project advisor: someone who’s not actively working on the project but keeps an eye on things and helps out where needed.
 
 ## 2-week cadence
 
