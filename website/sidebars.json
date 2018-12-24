@@ -5,7 +5,7 @@
     "Styleguide": ["styleguide-javascript", "styleguide-eslint"]
   },
   "processes": {
-    "Development": [
+    "Overview": [
       "dev-principles",
       "dev-investment-time",
       "dev-support-role",
